@@ -102,6 +102,30 @@
 
     window.handlePublicEoISubmit = handlePublicEoISubmit;
 
+    function prefillSector(sectorValue) {
+        const select = document.getElementById("eoi-sector");
+        if (!select) return;
+        // Try exact match first
+        let matched = false;
+        for (let i = 0; i < select.options.length; i++) {
+            if (select.options[i].text.includes(sectorValue) || select.options[i].value.includes(sectorValue)) {
+                select.selectedIndex = i;
+                matched = true;
+                break;
+            }
+        }
+        if (!matched && select.options.length > 1) {
+            // fallback to first sensible
+            select.selectedIndex = 1;
+        }
+        // scroll to form
+        const formEl = document.getElementById("partner-form");
+        if (formEl) {
+            formEl.scrollIntoView({ behavior: "smooth", block: "start" });
+            setTimeout(() => select.focus(), 650);
+        }
+    }
+
     document.addEventListener("DOMContentLoaded", function () {
         const form = document.getElementById("public-eoi-form");
         if (!form) return;
@@ -114,5 +138,18 @@
             honeypot.setAttribute("autocomplete", "off");
             honeypot.setAttribute("tabindex", "-1");
         }
+
+        // Wire project "Propose to Sponsor" buttons for prefill
+        document.querySelectorAll(".propose-btn").forEach(function (btn) {
+            btn.addEventListener("click", function (e) {
+                const sector = btn.getAttribute("data-sector") || "";
+                if (sector) {
+                    // allow default hash scroll but prefill after
+                    setTimeout(function () {
+                        prefillSector(sector);
+                    }, 120);
+                }
+            });
+        });
     });
 })();

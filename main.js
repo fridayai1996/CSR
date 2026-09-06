@@ -76,7 +76,7 @@
 
     // Load centralized header component into #site-header
     if ($('#site-header').length > 0) {
-        $('#site-header').load('header.html?v=20260901c', function () {
+        $('#site-header').load('header.html?v=20260906a', function () {
             // Highlight active navigation link
             const currentPath = window.location.pathname.split('/').pop() || 'index.html';
             $('#main-nav-links a').each(function () {
@@ -99,7 +99,7 @@
 
     // Load centralized footer component into #site-footer
     if ($('#site-footer').length > 0) {
-        $('#site-footer').load('footer.html?v=20260901c', function () {
+        $('#site-footer').load('footer.html?v=20260906a', function () {
             if (window.i18nEngine && typeof window.i18nEngine.setLanguage === 'function') {
                 window.i18nEngine.setLanguage(window.i18nEngine.getCurrentLang());
             }
@@ -111,14 +111,7 @@
         new WOW().init();
     }
 
-    // Sticky Navbar
-    $(window).scroll(function () {
-        if ($(this).scrollTop() > 45) {
-            $('.navbar').addClass('sticky-top shadow-sm');
-        } else {
-            $('.navbar').removeClass('sticky-top shadow-sm');
-        }
-    });
+    // Sticky nav is CSS (.site-nav-bar). No scroll listener.
     
     // Dropdown on mouse hover
     const $dropdown = $(".dropdown");
@@ -155,17 +148,23 @@
         });
     }
 
-    // Back to top button
-    $(window).scroll(function () {
-        if ($(this).scrollTop() > 100) {
-            $('.back-to-top').fadeIn('slow');
-        } else {
-            $('.back-to-top').fadeOut('slow');
-        }
-    });
-    $('.back-to-top').click(function () {
-        $('html, body').animate({scrollTop: 0}, 1500, 'easeInOutExpo');
-        return false;
+    var backTop = document.querySelector(".back-to-top");
+    var sentinel = document.getElementById("main-content") || document.querySelector(".hero-banner, .bg-header, .bg-district-header, .bg-contact-header");
+    if (backTop && sentinel && "IntersectionObserver" in window) {
+        var io = new IntersectionObserver(function (entries) {
+            if (entries[0] && entries[0].isIntersecting) {
+                backTop.classList.remove("is-visible");
+            } else {
+                backTop.classList.add("is-visible");
+            }
+        }, { threshold: 0 });
+        io.observe(sentinel);
+    } else if (backTop) {
+        backTop.classList.add("is-visible");
+    }
+    $(".back-to-top").on("click", function (event) {
+        event.preventDefault();
+        window.scrollTo({ top: 0, behavior: "smooth" });
     });
 
     // Testimonials carousel safely

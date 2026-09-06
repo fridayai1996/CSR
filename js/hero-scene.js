@@ -5,6 +5,13 @@
     if (!canvas) return;
 
     function initInteractiveCanvas() {
+        var reduce = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+        if (reduce) {
+            // Static subtle background only – no particles or mouse for official low-motion
+            canvas.style.opacity = "0.15";
+            return;
+        }
+
         var ctx = canvas.getContext("2d");
         if (!ctx) return;
 

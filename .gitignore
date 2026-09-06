@@ -5,3 +5,12 @@ node_modules/
 .env.*
 !.env.example
 .DS_Store
+
+# Local agent / editor config (do not commit)
+.agents/
+.cursor/
+.vscode/
+*.log
+
+# Keep wrangler config committed only when it has NO real IDs (use placeholders)
+# If you need real IDs locally, copy to wrangler.local.jsonc (gitignored)

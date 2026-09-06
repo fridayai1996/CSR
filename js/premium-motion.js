@@ -11,27 +11,12 @@
         }
     }
 
-    if (!window.gsap) {
-        if (document.readyState === "loading") {
-            document.addEventListener("DOMContentLoaded", hardenExternalLinks);
-        } else {
-            hardenExternalLinks();
-        }
-        return;
-    }
-
-    var gsap = window.gsap;
-    var ScrollTrigger = window.ScrollTrigger;
-    if (ScrollTrigger) gsap.registerPlugin(ScrollTrigger);
-
-    var magnetBound = typeof WeakSet !== "undefined" ? new WeakSet() : null;
+    var reduce = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
     var glowBound = typeof WeakSet !== "undefined" ? new WeakSet() : null;
-    var tiltBound = typeof WeakSet !== "undefined" ? new WeakSet() : null;
-    var cursorReady = false;
     var staged = false;
 
     function bindGlow(el) {
-        if (!el || (glowBound && glowBound.has(el))) return;
+        if (!el || reduce || (glowBound && glowBound.has(el))) return;
         if (glowBound) glowBound.add(el);
         el.classList.add("ui21-glow");
         el.addEventListener("mousemove", function (e) {
@@ -41,119 +26,30 @@
         });
     }
 
-    function bindTilt(el) {
-        if (!el || (tiltBound && tiltBound.has(el))) return;
-        if (tiltBound) tiltBound.add(el);
-        el.classList.add("ui21-tilt");
-        var rxTo = gsap.quickTo(el, "rotateX", { duration: 0.35, ease: "power2.out" });
-        var ryTo = gsap.quickTo(el, "rotateY", { duration: 0.35, ease: "power2.out" });
-
-        el.addEventListener("mousemove", function (e) {
-            var box = el.getBoundingClientRect();
-            var cx = box.left + box.width / 2;
-            var cy = box.top + box.height / 2;
-            var dx = (e.clientX - cx) / (box.width / 2);
-            var dy = (e.clientY - cy) / (box.height / 2);
-            rxTo(-dy * 6);
-            ryTo(dx * 6);
-        });
-
-        el.addEventListener("mouseleave", function () {
-            rxTo(0);
-            ryTo(0);
-        });
-    }
-
-    function bindMagnetic(el) {
-        if (!el || (magnetBound && magnetBound.has(el))) return;
-        if (magnetBound) magnetBound.add(el);
-        el.classList.add("ui21-magnetic");
-        var xTo = gsap.quickTo(el, "x", { duration: 0.35, ease: "power3.out" });
-        var yTo = gsap.quickTo(el, "y", { duration: 0.35, ease: "power3.out" });
-        el.addEventListener("mousemove", function (e) {
-            var box = el.getBoundingClientRect();
-            xTo((e.clientX - (box.left + box.width / 2)) / 10);
-            yTo((e.clientY - (box.top + box.height / 2)) / 10);
-        });
-        el.addEventListener("mouseleave", function () {
-            xTo(0);
-            yTo(0);
-        });
-    }
-
-    function setupCursor() {
-        var fine = window.matchMedia("(hover: hover) and (pointer: fine)").matches;
-        if (!fine || cursorReady) return;
-        cursorReady = true;
-        var ring = document.createElement("div");
-        var dot = document.createElement("div");
-        ring.className = "ui21-cursor";
-        dot.className = "ui21-cursor-dot";
-        ring.setAttribute("aria-hidden", "true");
-        dot.setAttribute("aria-hidden", "true");
-        document.body.appendChild(ring);
-        document.body.appendChild(dot);
-        document.body.classList.add("ui21-has-cursor");
-        gsap.set([ring, dot], { xPercent: -50, yPercent: -50 });
-        var xTo = gsap.quickTo(ring, "x", { duration: 0.45, ease: "power3.out" });
-        var yTo = gsap.quickTo(ring, "y", { duration: 0.45, ease: "power3.out" });
-        var dxTo = gsap.quickTo(dot, "x", { duration: 0.12, ease: "power2.out" });
-        var dyTo = gsap.quickTo(dot, "y", { duration: 0.12, ease: "power2.out" });
-
-        window.addEventListener(
-            "mousemove",
-            function (e) {
-                xTo(e.clientX);
-                yTo(e.clientY);
-                dxTo(e.clientX);
-                dyTo(e.clientY);
-            },
-            { passive: true }
-        );
-
-        document.addEventListener("mouseover", function (e) {
-            var grab = e.target.closest("a, button, .btn, .project-card, .partner-card-item, .collab-card, .sector-box-item");
-            ring.classList.toggle("is-grab", !!grab);
-        });
-    }
-
-    function setupHeroRail() {
-        var thumb = document.getElementById("hero-scroll-thumb");
-        var rail = thumb && thumb.parentElement;
-        if (!thumb || !rail || !ScrollTrigger) return;
-
-        gsap.set(thumb, { x: 0 });
-        ScrollTrigger.create({
-            trigger: document.documentElement,
-            start: "top top",
-            end: "bottom bottom",
-            scrub: 0.35,
-            onUpdate: function (self) {
-                var span = Math.max(0, rail.offsetWidth - thumb.offsetWidth);
-                gsap.set(thumb, { x: span * self.progress });
-            }
-        });
-    }
-
     function choreograph() {
+        if (!window.gsap || reduce) return;
+        var gsap = window.gsap;
+        var ScrollTrigger = window.ScrollTrigger;
+        if (ScrollTrigger) gsap.registerPlugin(ScrollTrigger);
+
         var heroBits = document.querySelectorAll(
-            ".hero-banner .badge, .hero-banner h1, .hero-banner .fs-5, .hero-banner .btn-portal"
+            ".hero-banner .hero-kicker, .hero-banner h1, .hero-banner .hero-lede, .hero-banner .btn-portal"
         );
         if (heroBits.length) {
             gsap.from(heroBits, {
-                y: 28,
+                y: 18,
                 autoAlpha: 0,
-                duration: 0.55,
-                stagger: 0.09,
+                duration: 0.45,
+                stagger: 0.07,
                 ease: "power2.out"
             });
         }
 
         var batchTargets = document.querySelectorAll(
-            ".sector-box-item, .project-card, .collab-card, .partner-card, .partner-card-item, .district-mandate-box, .auth-card, .sitemap-group, .fund-stat-card, .leader-card-box"
+            ".sector-box-item, .project-card, .partner-card, .partner-card-item, .district-mandate-box, .auth-card, .sitemap-group, .fund-stat-card, .leader-card-box"
         );
         if (ScrollTrigger && batchTargets.length) {
-            gsap.set(batchTargets, { y: 28, autoAlpha: 0 });
+            gsap.set(batchTargets, { y: 18, autoAlpha: 0 });
             ScrollTrigger.batch(batchTargets, {
                 start: "top 90%",
                 once: true,
@@ -161,8 +57,8 @@
                     gsap.to(elements, {
                         y: 0,
                         autoAlpha: 1,
-                        duration: 0.45,
-                        stagger: 0.06,
+                        duration: 0.4,
+                        stagger: 0.05,
                         ease: "power2.out",
                         overwrite: "auto"
                     });
@@ -170,21 +66,10 @@
             });
         }
 
-        var magnets = document.querySelectorAll(
-            ".btn-portal, .btn-read-profile, .btn-shine, .header-partner-btn, #topbar-login-btn, .btn-primary.rounded-pill"
+        var cards = document.querySelectorAll(
+            ".sector-box-item, .project-card, .partner-card, .district-mandate-box, .leader-card-box, .auth-card"
         );
-        for (var i = 0; i < magnets.length; i++) bindMagnetic(magnets[i]);
-
-        var cardsToEnhance = document.querySelectorAll(
-            ".sector-box-item, .project-card, .partner-card-item, .partner-card, .collab-card, .fund-stat-card, .auth-card, .district-mandate-box, .sitemap-group, .leader-card-box"
-        );
-        for (var g = 0; g < cardsToEnhance.length; g++) {
-            bindGlow(cardsToEnhance[g]);
-            bindTilt(cardsToEnhance[g]);
-        }
-
-        setupCursor();
-        setupHeroRail();
+        for (var g = 0; g < cards.length; g++) bindGlow(cards[g]);
     }
 
     function boot() {
@@ -193,7 +78,7 @@
             staged = true;
             choreograph();
         }
-        if (ScrollTrigger) ScrollTrigger.refresh();
+        if (window.ScrollTrigger) window.ScrollTrigger.refresh();
     }
 
     window.ui21Enhance = boot;
@@ -205,9 +90,6 @@
     }
 
     document.addEventListener("header:loaded", function () {
-        if (ScrollTrigger) ScrollTrigger.refresh();
-        setupCursor();
-        var magnets = document.querySelectorAll(".header-partner-btn, #topbar-login-btn");
-        for (var i = 0; i < magnets.length; i++) bindMagnetic(magnets[i]);
+        if (window.ScrollTrigger) window.ScrollTrigger.refresh();
     });
 })();
