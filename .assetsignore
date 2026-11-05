@@ -18,3 +18,5 @@ AGENTS.md
 .DS_Store
 Thumbs.db
 tmp-eoi.json
+migrations/
+src/

@@ -359,6 +359,12 @@ export default {
     }
 
     // Static Asset Handling with Cloudflare Security Headers
+    // Guard against hidden or sensitive config/source access
+    const lowerPath = url.pathname.toLowerCase();
+    if (lowerPath.startsWith("/.") || lowerPath.startsWith("/src/") || lowerPath.startsWith("/migrations/") || lowerPath.endsWith(".env") || lowerPath.endsWith(".jsonc") || lowerPath.endsWith(".sql")) {
+      return error("Forbidden", 403);
+    }
+
     if (url.pathname === "/" || url.pathname === "") {
       const indexRes = await env.ASSETS.fetch(new Request(new URL("/index.html", request.url), request));
       return applySecurity(indexRes);
