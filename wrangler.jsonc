@@ -1,7 +1,5 @@
 {
   "name": "sss-csr-portal",
-  "// SECURITY": "Do NOT commit real account_id or database_id. Use wrangler login + wrangler d1 commands or .dev.vars for secrets.",
-  "account_id": "YOUR_CLOUDFLARE_ACCOUNT_ID",
   "main": "src/index.js",
   "compatibility_date": "2026-08-29",
   "compatibility_flags": ["nodejs_compat"],

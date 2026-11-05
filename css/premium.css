@@ -597,3 +597,53 @@ h2.mb-0 {
         color: #e6eef6 !important;
     }
 }
+
+
+/* Modern Form & Status Enhancements */
+.form-control, .form-select {
+    border-radius: 10px;
+    border: 1.5px solid #d7e2ee;
+    padding: 0.7rem 1rem;
+    font-size: 0.95rem;
+    transition: all 0.2s ease-in-out;
+}
+
+.form-control:focus, .form-select:focus {
+    border-color: #06a3da;
+    box-shadow: 0 0 0 3.5px rgba(6, 163, 218, 0.18);
+    outline: none;
+}
+
+.eoi-form-status {
+    padding: 0.85rem 1.15rem;
+    border-radius: 10px;
+    font-weight: 500;
+    line-height: 1.5;
+    margin-top: 1rem !important;
+}
+
+.eoi-form-status--success {
+    background-color: #ecfdf5;
+    color: #065f46;
+    border: 1px solid #a7f3d0;
+}
+
+.eoi-form-status--error {
+    background-color: #fef2f2;
+    color: #991b1b;
+    border: 1px solid #fecaca;
+}
+
+.eoi-form-status--info {
+    background-color: #eff6ff;
+    color: #1e40af;
+    border: 1px solid #bfdbfe;
+}
+
+.partner-card {
+    background: #ffffff;
+    border-radius: 18px;
+    border: 1px solid #e2e8f0;
+    padding: 2.25rem;
+    box-shadow: 0 12px 36px rgba(0, 40, 88, 0.06);
+}

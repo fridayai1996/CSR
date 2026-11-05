@@ -34,11 +34,6 @@
             return false;
         }
 
-        if (!window.csrApi || typeof window.csrApi.submitProposal !== "function") {
-            setStatus(statusEl, "Form scripts failed to load. Please refresh the page and try again.", "error");
-            return false;
-        }
-
         const company_name = readField("eoi-company");
         const contact_person = readField("eoi-person");
         const email = readField("eoi-email");
@@ -64,17 +59,38 @@
         setStatus(statusEl, "Sending your proposal to the District CSR Cell…", "info");
 
         try {
-            const result = await window.csrApi.submitProposal({
-                company_name: company_name,
-                contact_person: contact_person,
-                email: email,
-                phone: phone,
-                sector: sector,
-                outlay_amount: outlay_amount,
-                location: "Sri Sathya Sai District",
-                details: details,
-                consent_given: true
-            });
+            let result;
+            if (window.csrApi && typeof window.csrApi.submitProposal === "function") {
+                result = await window.csrApi.submitProposal({
+                    company_name: company_name,
+                    contact_person: contact_person,
+                    email: email,
+                    phone: phone,
+                    sector: sector,
+                    outlay_amount: outlay_amount,
+                    location: "Sri Sathya Sai District",
+                    details: details,
+                    consent_given: true
+                });
+            } else {
+                const res = await fetch("/api/proposals", {
+                    method: "POST",
+                    headers: { "content-type": "application/json" },
+                    body: JSON.stringify({
+                        company_name: company_name,
+                        contact_person: contact_person,
+                        email: email,
+                        phone: phone,
+                        sector: sector,
+                        outlay_amount: outlay_amount,
+                        location: "Sri Sathya Sai District",
+                        details: details,
+                        consent_given: true
+                    })
+                });
+                result = await res.json();
+            }
+
             form.reset();
             if (consent) consent.checked = false;
             if (honeypot) honeypot.value = "";
@@ -102,29 +118,37 @@
 
     window.handlePublicEoISubmit = handlePublicEoISubmit;
 
-    function prefillSector(sectorValue) {
+    function prefillSector(sectorValue, projectTitle) {
         const select = document.getElementById("eoi-sector");
-        if (!select) return;
-        // Try exact match first
-        let matched = false;
-        for (let i = 0; i < select.options.length; i++) {
-            if (select.options[i].text.includes(sectorValue) || select.options[i].value.includes(sectorValue)) {
-                select.selectedIndex = i;
-                matched = true;
-                break;
+        if (select) {
+            let matched = false;
+            for (let i = 0; i < select.options.length; i++) {
+                if (select.options[i].text.includes(sectorValue) || select.options[i].value.includes(sectorValue)) {
+                    select.selectedIndex = i;
+                    matched = true;
+                    break;
+                }
+            }
+            if (!matched && select.options.length > 1) {
+                select.selectedIndex = 1;
             }
         }
-        if (!matched && select.options.length > 1) {
-            // fallback to first sensible
-            select.selectedIndex = 1;
+
+        if (projectTitle) {
+            const detailsEl = document.getElementById("eoi-details");
+            if (detailsEl && !detailsEl.value) {
+                detailsEl.value = "Proposal regarding Project: " + projectTitle;
+            }
         }
-        // scroll to form
+
         const formEl = document.getElementById("partner-form");
         if (formEl) {
             formEl.scrollIntoView({ behavior: "smooth", block: "start" });
-            setTimeout(() => select.focus(), 650);
+            if (select) setTimeout(() => select.focus(), 650);
         }
     }
+
+    window.prefillSector = prefillSector;
 
     document.addEventListener("DOMContentLoaded", function () {
         const form = document.getElementById("public-eoi-form");
@@ -139,12 +163,23 @@
             honeypot.setAttribute("tabindex", "-1");
         }
 
+        // Check URL parameters for prefill: ?sector=...&project=...
+        try {
+            const params = new URLSearchParams(window.location.search);
+            const sectorParam = params.get("sector");
+            const projectParam = params.get("project");
+            if (sectorParam || projectParam) {
+                setTimeout(function () {
+                    prefillSector(sectorParam || "", projectParam || "");
+                }, 300);
+            }
+        } catch (_e) {}
+
         // Wire project "Propose to Sponsor" buttons for prefill
         document.querySelectorAll(".propose-btn").forEach(function (btn) {
-            btn.addEventListener("click", function (e) {
+            btn.addEventListener("click", function () {
                 const sector = btn.getAttribute("data-sector") || "";
                 if (sector) {
-                    // allow default hash scroll but prefill after
                     setTimeout(function () {
                         prefillSector(sector);
                     }, 120);

@@ -14,3 +14,6 @@ node_modules/
 
 # Keep wrangler config committed only when it has NO real IDs (use placeholders)
 # If you need real IDs locally, copy to wrangler.local.jsonc (gitignored)
+.claude/
+agent/
+data/skills/

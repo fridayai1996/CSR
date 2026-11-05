@@ -1,6 +1,12 @@
 {
   "version": 1,
   "skills": {
+    "UI/UX Design Review": {
+      "source": "rknall/claude-skills",
+      "sourceType": "github",
+      "skillPath": "ui-design-review/SKILL.md",
+      "computedHash": "0e99710cb1ade56e7db5a2f6b6b4e111adb2bbce08182f17c6a760549803d252"
+    },
     "agent-browser": {
       "source": "andrelandgraf/fullstackrecipes",
       "sourceType": "github",
@@ -71,7 +77,7 @@
       "source": "obra/superpowers",
       "sourceType": "github",
       "skillPath": "skills/brainstorming/SKILL.md",
-      "computedHash": "79fec75eb8cb46ec4d5e119a08d5366dfe2f1b56d876b2ea5633fa80f8aa1f7c"
+      "computedHash": "749e6b37996cb97f756fff55da436530a11eb01897aca133fa7befe57b009707"
     },
     "brand-guidelines": {
       "source": "anthropics/skills",
@@ -83,7 +89,7 @@
       "source": "browser-use/browser-use",
       "sourceType": "github",
       "skillPath": "skills/browser-use/SKILL.md",
-      "computedHash": "92fdf854b31e0587a56005873e025a5502576e08898f749197d961dc7feada04"
+      "computedHash": "6a1bfb5049a851c4c4dae9fc6b586d9801865c79d87595d8bddbec21c41c8b5d"
     },
     "canvas-design": {
       "source": "anthropics/skills",
@@ -95,13 +101,19 @@
       "source": "anthropics/skills",
       "sourceType": "github",
       "skillPath": "skills/claude-api/SKILL.md",
-      "computedHash": "af3981031f9a240d66f9e44383f13fa94600ca238ee1d0db009b6a4ecbdf78b9"
+      "computedHash": "148a06f190cb71885f74eb401aa732d1eb7bc56b0d94517d526380e043298f8b"
     },
     "cloud": {
       "source": "browser-use/browser-use",
       "sourceType": "github",
       "skillPath": "skills/cloud/SKILL.md",
-      "computedHash": "38db3140921f861755ea085292ee4708a029142882a0f615b33eab3be745dcf4"
+      "computedHash": "b341b2a42146e6761d252326cd7eb4d79cc62bfbf4fd23b41154d346a41399e8"
+    },
+    "design-taste-frontend": {
+      "source": "leonxlnx/taste-skill",
+      "sourceType": "github",
+      "skillPath": "skills/taste-skill/SKILL.md",
+      "computedHash": "53590ee9325bee34d7888bf0d81bd3941a108b1e7850df46802d93104e3f2b90"
     },
     "dispatching-parallel-agents": {
       "source": "obra/superpowers",
@@ -125,7 +137,7 @@
       "source": "sushegaad/claude-skills-governance-risk-and-compliance",
       "sourceType": "github",
       "skillPath": "plugins/dpdpa/skills/dpdpa/SKILL.md",
-      "computedHash": "1e018612e4b6024655e5d111863af51673cd8ccf8a3f1e0c4dee11feda0a95a8"
+      "computedHash": "f847884612f835b664d38b66cca1ee26058c6c3859861a1881b394a9f2438c31"
     },
     "drizzle-queries": {
       "source": "andrelandgraf/fullstackrecipes",
@@ -133,29 +145,41 @@
       "skillPath": "skills/drizzle-queries/SKILL.md",
       "computedHash": "260cf3038265af98b263b37a9c1c022106dd6c0c76bc53ec9a2ee37aa48c6a62"
     },
+    "emil-design-eng": {
+      "source": "emilkowalski/skills",
+      "sourceType": "github",
+      "skillPath": "skills/emil-design-eng/SKILL.md",
+      "computedHash": "74e0ede3a72c476a4c293e1e34d75fa1713f83bdc5c6c1cd76f1002fc564ecc6"
+    },
     "executing-plans": {
       "source": "obra/superpowers",
       "sourceType": "github",
       "skillPath": "skills/executing-plans/SKILL.md",
-      "computedHash": "78a07800ee99a5861ae10be59d79fad085fdca10444e8aaeb2691597e357cff8"
+      "computedHash": "dcb31fb9f9b3748f5f4ac2c7d2f2c95c74558383f9dad3695df32f1ad0eca376"
     },
     "find-skills": {
       "source": "vercel-labs/skills",
       "sourceType": "github",
       "skillPath": "skills/find-skills/SKILL.md",
-      "computedHash": "b146008599c31057cef1c145774cea5d5afb30e8f43fa802e47a4b461419aaaf"
+      "computedHash": "913b9d37d0d54047dd65222bb8c67b2bf04e3cb87dcad1729068d7a8b2c8c396"
     },
     "finishing-a-development-branch": {
       "source": "obra/superpowers",
       "sourceType": "github",
       "skillPath": "skills/finishing-a-development-branch/SKILL.md",
-      "computedHash": "a2afe045ea677114a89854f296ae57f8d34eb84864daa7b08ea9434acded724d"
+      "computedHash": "4f571e7befb8b0946d9d7770232c818812412e9ab1dfb811f847edfba1fc6275"
     },
     "frontend-design": {
       "source": "anthropics/skills",
       "sourceType": "github",
       "skillPath": "skills/frontend-design/SKILL.md",
-      "computedHash": "93f53fd1c0352d3d7ec17b8f73d7351bf76f4821e55d123c9d2abc2c53ba48e4"
+      "computedHash": "106acf230014cbb43ca34e6410371321b56ca742f9ee0442e8ec05bf02eb0384"
+    },
+    "impeccable": {
+      "source": "pbakaus/impeccable",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/impeccable/SKILL.md",
+      "computedHash": "eef936aef13445db0b0580af1aca1bea7c3ac562ce88d456d41b9ed03550d5ad"
     },
     "internal-comms": {
       "source": "anthropics/skills",
@@ -173,7 +197,7 @@
       "source": "anthropics/skills",
       "sourceType": "github",
       "skillPath": "skills/mcp-builder/SKILL.md",
-      "computedHash": "6498a736a8dc5c645047c8a875b8ea7417e2ad97146f005200e50d20a9337ada"
+      "computedHash": "2e3a22ac4f37f654f7aeed55c72776b06c5c2d0e39489f72109f66211d997648"
     },
     "og-image-generation": {
       "source": "andrelandgraf/fullstackrecipes",
@@ -185,7 +209,7 @@
       "source": "browser-use/browser-use",
       "sourceType": "github",
       "skillPath": "skills/open-source/SKILL.md",
-      "computedHash": "085fb8db3f592f447c59339188a7a5c03f4873249e82b33b7296f0a90b80352a"
+      "computedHash": "ac6b271e9e0be31157d7d19815ba055494cad6aa074b3b4d7be1b90a84aa42ad"
     },
     "pdf": {
       "source": "anthropics/skills",
@@ -233,7 +257,7 @@
       "source": "subsy/ralph-tui",
       "sourceType": "github",
       "skillPath": "skills/ralph-tui-prd/SKILL.md",
-      "computedHash": "4fcfdc2a8ec3c15b60ac73891e90667debf35fa520c691720cbb424cc45dd608"
+      "computedHash": "29b4fe8d3cce2abce4eee7f6a3101095430d4d3a825c82663db479ee2a7a46d7"
     },
     "ralph-wiggum": {
       "source": "fstandhartinger/ralph-wiggum",
@@ -251,13 +275,13 @@
       "source": "browser-use/browser-use",
       "sourceType": "github",
       "skillPath": "skills/remote-browser/SKILL.md",
-      "computedHash": "bc43d88a7cd3f130d4edb6f8da4d6f5f2724e45545226ae116fa52a9aa2e6b37"
+      "computedHash": "61654ce8c238da96c0db1dda1e7517d1038bf69d0b2f8749d09af32ae110137c"
     },
     "requesting-code-review": {
       "source": "obra/superpowers",
       "sourceType": "github",
       "skillPath": "skills/requesting-code-review/SKILL.md",
-      "computedHash": "2304d2073c62eab163e04de40fe775e3d87c69c0df40cd4dc953fdb8e3205b81"
+      "computedHash": "b095ac8c980339436b41de9989328f3f288f2e2a70452df28452bbeb6531d604"
     },
     "sentry-best-practices": {
       "source": "andrelandgraf/fullstackrecipes",
@@ -287,13 +311,13 @@
       "source": "obra/superpowers",
       "sourceType": "github",
       "skillPath": "skills/subagent-driven-development/SKILL.md",
-      "computedHash": "3cd0e609ff5e4347326b6201ea398b9204850e164475d49d96bced1f8cba8974"
+      "computedHash": "d04b3e0b04640f8a5cd8cd94ad1d1c5c062f8257ea2dd0cf67f23062bb835760"
     },
     "supabase": {
       "source": "supabase/agent-skills",
       "sourceType": "github",
       "skillPath": "skills/supabase/SKILL.md",
-      "computedHash": "a6260582f48df8ba53380bb9b9e870ed2ae5fe147799e90ed783b8aa25167d50"
+      "computedHash": "af1844ade632808fc0c15cf2db87daf3b2431c5262dc8a0c3ea7d70880fadf91"
     },
     "supabase-postgres-best-practices": {
       "source": "supabase/agent-skills",
@@ -305,7 +329,7 @@
       "source": "obra/superpowers",
       "sourceType": "github",
       "skillPath": "skills/systematic-debugging/SKILL.md",
-      "computedHash": "a2750dfbaed1690da73b120254892c4f926b4576cb82eb16fc877783941fe39b"
+      "computedHash": "b7b6e98c3bffe371893bdb69845ec61124a65b6a96313dc8d6a2bce4437b13eb"
     },
     "template-skill": {
       "source": "anthropics/skills",
@@ -317,7 +341,7 @@
       "source": "obra/superpowers",
       "sourceType": "github",
       "skillPath": "skills/test-driven-development/SKILL.md",
-      "computedHash": "a4126a9c5f17be3c228aa9e5755898ade283448b86099f56f40852e8c14532be"
+      "computedHash": "3cfe4ebb6fa7288f668d87880d279c8e48f7a92b63415e296857060f5ce22e05"
     },
     "testing-best-practices": {
       "source": "andrelandgraf/fullstackrecipes",
@@ -353,7 +377,7 @@
       "source": "obra/superpowers",
       "sourceType": "github",
       "skillPath": "skills/using-superpowers/SKILL.md",
-      "computedHash": "a77a803b7fc1a19c87605cf7a5ef318c5adc233de10b9ebeecb2ee2609f5454e"
+      "computedHash": "ef8670c2a2d8e2f6ed52d6f3219759903300ca13afc5ec2e25826a735112562b"
     },
     "vercel-react-best-practices": {
       "source": "andrelandgraf/fullstackrecipes",
@@ -389,13 +413,13 @@
       "source": "obra/superpowers",
       "sourceType": "github",
       "skillPath": "skills/writing-plans/SKILL.md",
-      "computedHash": "a8a8b0d07b744173079b25d26c6a189a0b5e7ddd80444ce92055b974dab7352b"
+      "computedHash": "c2647b5bf067be353a893e5a39a632cbbeb7ad81e61fa5ae227ece5490029073"
     },
     "writing-skills": {
       "source": "obra/superpowers",
       "sourceType": "github",
       "skillPath": "skills/writing-skills/SKILL.md",
-      "computedHash": "53029c15e0ffbd39d93e9f3b1b20ee7ffd2cde7f0bbdf96a7b547f4c399688a9"
+      "computedHash": "7fe2d3c93865d88b5ee1ae0e20637bce31f4d9a43822ed26c7064628bed792ec"
     },
     "x402": {
       "source": "browser-use/browser-use",

@@ -11,72 +11,13 @@
     };
     spinner();
 
-    // Global Header Logout Handler
-    window.handleHeaderLogout = async function () {
-        if (window.csrSupabase && window.csrSupabase.signOut) {
-            await window.csrSupabase.signOut();
-        } else {
-            sessionStorage.clear();
-        }
-        if (window.location.pathname.indexOf("dashboard.html") !== -1) {
-            window.location.href = "index.html";
-        } else {
-            window.location.reload();
-        }
-    };
-
-    async function updateHeaderAuthState() {
-        var user = null;
-        if (window.csrSupabase && window.csrSupabase.getCurrentUser) {
-            try {
-                user = await window.csrSupabase.getCurrentUser();
-            } catch (e) {
-                user = null;
-            }
-        }
-        if (!user || !user.role) return;
-
-        // 1. Desktop Topbar Auth Container Update (Dashboard & Logout buttons only)
-        var authContainer = document.getElementById("header-auth-container");
-        if (authContainer) {
-            authContainer.replaceChildren();
-            var dashA = document.createElement("a");
-            dashA.href = "dashboard.html";
-            dashA.className = "btn btn-sm btn-primary text-white py-1 px-3 rounded-pill fw-bold btn-shine";
-            dashA.innerHTML = '<i class="bi bi-speedometer2 me-1"></i> <span data-i18n="nav_dashboard">Dashboard</span>';
-            var outBtn = document.createElement("button");
-            outBtn.type = "button";
-            outBtn.className = "btn btn-sm btn-danger text-white py-1 px-3 rounded-pill fw-bold border-0";
-            outBtn.title = "Log Out of Portal";
-            outBtn.innerHTML = '<i class="bi bi-box-arrow-right me-1"></i> <span data-i18n="nav_logout">Logout</span>';
-            outBtn.addEventListener("click", function () { window.handleHeaderLogout(); });
-            authContainer.appendChild(dashA);
-            authContainer.appendChild(outBtn);
-        }
-
-        // 2. Mobile Auth Container Update (Next to hamburger menu)
-        var mobileAuthContainer = document.getElementById("mobile-auth-container");
-        if (mobileAuthContainer) {
-            mobileAuthContainer.replaceChildren();
-            var mDash = document.createElement("a");
-            mDash.href = "dashboard.html";
-            mDash.className = "btn btn-primary text-white btn-sm rounded-pill fw-bold px-2 py-1 btn-shine";
-            mDash.style.fontSize = "12px";
-            mDash.innerHTML = '<i class="bi bi-speedometer2 me-1"></i> Dash';
-            var mOut = document.createElement("button");
-            mOut.type = "button";
-            mOut.className = "btn btn-danger text-white btn-sm rounded-pill fw-bold px-2 py-1";
-            mOut.style.fontSize = "12px";
-            mOut.innerHTML = '<i class="bi bi-box-arrow-right me-1"></i> Logout';
-            mOut.addEventListener("click", function () { window.handleHeaderLogout(); });
-            mobileAuthContainer.appendChild(mDash);
-            mobileAuthContainer.appendChild(mOut);
-        }
-    }
+    // Logins removed - public portal
+    window.handleHeaderLogout = function () {};
+    function updateHeaderAuthState() {}
 
     // Load centralized header component into #site-header
     if ($('#site-header').length > 0) {
-        $('#site-header').load('header.html?v=20260906a', function () {
+        $('#site-header').load('header.html?v=20261104', function () {
             // Highlight active navigation link
             const currentPath = window.location.pathname.split('/').pop() || 'index.html';
             $('#main-nav-links a').each(function () {
@@ -88,8 +29,6 @@
                 }
             });
 
-            updateHeaderAuthState();
-
             if (window.i18nEngine && typeof window.i18nEngine.setLanguage === 'function') {
                 window.i18nEngine.setLanguage(window.i18nEngine.getCurrentLang());
             }
@@ -99,7 +38,7 @@
 
     // Load centralized footer component into #site-footer
     if ($('#site-footer').length > 0) {
-        $('#site-footer').load('footer.html?v=20260906a', function () {
+        $('#site-footer').load('footer.html?v=20261104', function () {
             if (window.i18nEngine && typeof window.i18nEngine.setLanguage === 'function') {
                 window.i18nEngine.setLanguage(window.i18nEngine.getCurrentLang());
             }
@@ -111,8 +50,6 @@
         new WOW().init();
     }
 
-    // Sticky nav is CSS (.site-nav-bar). No scroll listener.
-    
     // Dropdown on mouse hover
     const $dropdown = $(".dropdown");
     const $dropdownToggle = $(".dropdown-toggle");

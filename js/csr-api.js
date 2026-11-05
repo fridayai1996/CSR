@@ -5,7 +5,8 @@
         if (/^https?:\/\//i.test(path)) return path;
         const origin = window.location && window.location.origin ? window.location.origin : "";
         if (!origin || origin === "null" || origin.indexOf("file:") === 0) {
-            throw new Error("Open this portal from the live website URL (not a local file) to submit forms.");
+            // For local file testing, attempt relative path
+            return path;
         }
         return origin.replace(/\/$/, "") + (path.charAt(0) === "/" ? path : "/" + path);
     }
@@ -26,7 +27,7 @@
         let payload = null;
         try {
             payload = await res.json();
-        } catch (err) {
+        } catch (_err) {
             payload = null;
         }
         if (!res.ok) {
@@ -39,29 +40,8 @@
         return api("/api/proposals", { method: "POST", body: payload });
     }
 
-    async function listProposals() {
-        const payload = await api("/api/proposals");
-        return payload.data || [];
-    }
-
-    async function updateProposalStage(id, fields) {
-        await api("/api/proposals/" + encodeURIComponent(id), {
-            method: "PATCH",
-            body: {
-                nodal_status: fields.nodal_status,
-                sponsor_status: fields.sponsor_status,
-                nodal_notes: fields.nodal_notes
-            }
-        });
-    }
-
-    async function listSponsors() {
-        const payload = await api("/api/sponsors");
-        return payload.data || [];
-    }
-
-    async function createSponsor(fields) {
-        return api("/api/sponsors", { method: "POST", body: fields });
+    async function submitContact(payload) {
+        return api("/api/contact", { method: "POST", body: payload });
     }
 
     async function listProjects() {
@@ -71,10 +51,7 @@
 
     window.csrApi = {
         submitProposal: submitProposal,
-        listProposals: listProposals,
-        updateProposalStage: updateProposalStage,
-        listSponsors: listSponsors,
-        createSponsor: createSponsor,
+        submitContact: submitContact,
         listProjects: listProjects
     };
 })();

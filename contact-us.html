@@ -3,11 +3,11 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Contact Us | Sri Sathya Sai District CSR Portal</title>
+    <title>Contact Us &amp; CSR Helpdesk | Sri Sathya Sai District, Govt of AP</title>
 
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta
-        content="Contact Us, Sri Sathya Sai District CSR Facilitation Cell, Web Information Manager, District Collectorate"
+        content="Contact Us, Sri Sathya Sai District CSR Facilitation Cell, Web Information Manager, District Collectorate, Puttaparthi, Andhra Pradesh"
         name="description">
 
     <!-- Favicon -->
@@ -54,18 +54,6 @@
             font-family: 'Bai Jamjuree', sans-serif;
         }
 
-        .topbar {
-            background-color: #001838;
-            color: #CBD5E1;
-            font-size: 13.5px;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-        }
-
-        .topbar a {
-            color: #E2E8F0;
-            text-decoration: none;
-        }
-
         .bg-contact-header {
             background:
                 radial-gradient(circle at 15% 20%, rgba(6, 163, 218, 0.35), transparent 45%),
@@ -77,7 +65,7 @@
 
         .contact-card {
             background: #FFFFFF;
-            border-radius: 12px;
+            border-radius: 16px;
             border: 1px solid #E2E8F0;
             padding: 35px;
             box-shadow: 0 4px 20px rgba(0, 40, 88, 0.04);
@@ -85,8 +73,8 @@
         }
 
         .contact-icon-box {
-            width: 54px;
-            height: 54px;
+            width: 52px;
+            height: 52px;
             border-radius: 12px;
             background: rgba(6, 163, 218, 0.1);
             color: #06A3DA;
@@ -95,6 +83,23 @@
             justify-content: center;
             font-size: 24px;
             margin-bottom: 20px;
+        }
+
+        .contact-form-card {
+            background: #FFFFFF;
+            border-radius: 16px;
+            border: 1px solid #E2E8F0;
+            padding: 35px;
+            box-shadow: 0 10px 30px rgba(0, 40, 88, 0.06);
+        }
+
+        .eoi-honeypot {
+            position: absolute;
+            left: -9999px;
+            top: auto;
+            width: 1px;
+            height: 1px;
+            overflow: hidden;
         }
     </style>
 </head>
@@ -115,11 +120,10 @@
     <div id="main-content" class="container-fluid bg-contact-header text-center">
         <div class="container py-4">
             <span class="badge bg-primary px-3 py-2 rounded-pill fs-6 mb-3"><i class="bi bi-telephone-fill me-1"></i>
-                Official Helpdesk & Information Manager</span>
-            <h1 class="display-5 text-white fw-bold mb-3">Contact Us</h1>
+                Official Single Window Helpdesk</span>
+            <h1 class="display-5 text-white fw-bold mb-3">Contact Us &amp; Support</h1>
             <p class="lead text-light mb-0 mx-auto" style="max-width: 800px;">
-                Official contact channels for Sri Sathya Sai District CSR Portal, District Collectorate, and National
-                Informatics Centre (NIC).
+                Connect directly with the Sri Sathya Sai District CSR Facilitation Cell, District Collectorate, and Nodal Officers for collaboration and assistance.
             </p>
         </div>
     </div>
@@ -127,78 +131,142 @@
 
     <!-- Main Content Start -->
     <div class="container py-5">
-
         <div class="row g-4 mb-5">
-            <!-- Web Information Manager Card -->
-            <div class="col-lg-6">
-                <div class="contact-card">
-                    <div class="contact-icon-box">
-                        <i class="bi bi-person-workspace"></i>
+            <!-- Left: Interactive Contact Form -->
+            <div class="col-lg-7">
+                <div class="contact-form-card">
+                    <div class="d-flex align-items-center gap-3 mb-4">
+                        <div class="contact-icon-box mb-0">
+                            <i class="bi bi-envelope-paper-fill"></i>
+                        </div>
+                        <div>
+                            <h4 class="fw-bold text-dark mb-1">Send a Message to CSR Cell</h4>
+                            <p class="text-muted small mb-0">Inquiries regarding CSR proposals, tax exemptions (80G), or project partnerships.</p>
+                        </div>
                     </div>
-                    <h4 class="fw-bold text-dark mb-3">Web Information Manager</h4>
-                    <p class="text-secondary mb-3">
-                        In case you have any query regarding this website, you may write to the Web Information Manager
-                        at:
-                    </p>
-                    <div class="p-3 bg-light rounded-3 border mb-3">
-                        <small class="text-uppercase text-muted fw-bold d-block mb-1">Official Email Address</small>
-                        <a href="mailto:apapr@nic.in" class="fs-5 fw-bold text-primary text-decoration-none"><i
-                                class="bi bi-envelope-check me-2"></i>apapr@nic.in</a>
-                    </div>
-                    <p class="small text-muted mb-0">
-                        Any feedback related to content, design, or technology may be submitted at the <a
-                            href="https://srisathyasai.ap.gov.in/feedback/" target="_blank"
-                            class="fw-bold text-primary text-decoration-none">Feedback section</a>.
-                    </p>
+
+                    <form id="public-contact-form" novalidate>
+                        <div class="row g-3">
+                            <div class="col-md-6">
+                                <label class="form-label small fw-semibold" for="contact-name">Your Full Name *</label>
+                                <input type="text" id="contact-name" name="name" class="form-control" placeholder="e.g. Ramesh Kumar" required maxlength="120">
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label small fw-semibold" for="contact-email">Official / Personal Email *</label>
+                                <input type="email" id="contact-email" name="email" class="form-control" placeholder="name@domain.com" required maxlength="120">
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label small fw-semibold" for="contact-phone">Phone Number</label>
+                                <input type="tel" id="contact-phone" name="phone" class="form-control" placeholder="+91 98765 43210" maxlength="40">
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label small fw-semibold" for="contact-subject">Inquiry Category *</label>
+                                <select id="contact-subject" name="subject" class="form-select" required>
+                                    <option value="CSR Project Proposal Query">CSR Project Proposal Query</option>
+                                    <option value="Expression of Interest (EoI) Follow-up">Expression of Interest (EoI) Follow-up</option>
+                                    <option value="Section 80G / 35AC Tax Certificate">Section 80G / 35AC Tax Certificate</option>
+                                    <option value="Mandal / Village Site Visit Request">Mandal / Village Site Visit Request</option>
+                                    <option value="General Information / Other">General Information / Other</option>
+                                </select>
+                            </div>
+                            <div class="col-12">
+                                <label class="form-label small fw-semibold" for="contact-message">Your Message / Query *</label>
+                                <textarea id="contact-message" name="message" class="form-control" rows="4" placeholder="Please provide details of your organization, proposal or question..." required></textarea>
+                            </div>
+
+                            <div class="col-12">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="contact-dpdp-check" name="consent" required>
+                                    <label class="form-check-label small text-muted" for="contact-dpdp-check">
+                                        I consent under the <strong>Digital Personal Data Protection Act, 2023</strong> to the Sri Sathya Sai District CSR Cell processing this information to respond to my query. *
+                                    </label>
+                                </div>
+
+                                <!-- Honeypot for bot protection -->
+                                <div class="eoi-honeypot" aria-hidden="true">
+                                    <label for="contact-website-hp">Leave blank</label>
+                                    <input type="text" id="contact-website-hp" name="company_website" value="" tabindex="-1" autocomplete="off">
+                                </div>
+                            </div>
+
+                            <div class="col-12">
+                                <button type="submit" class="btn btn-primary py-3 px-5 rounded-pill w-100 fw-bold btn-shine">
+                                    <i class="bi bi-send-fill me-2"></i> Submit Inquiry to Helpdesk
+                                </button>
+                                <p id="contact-form-status" class="small mt-3 mb-0 eoi-form-status" role="status" aria-live="polite"></p>
+                            </div>
+                        </div>
+                    </form>
                 </div>
             </div>
 
-            <!-- Postal Address Card -->
-            <div class="col-lg-6">
-                <div class="contact-card">
-                    <div class="contact-icon-box" style="background: rgba(52, 173, 84, 0.1); color: #34AD54;">
-                        <i class="bi bi-geo-alt-fill"></i>
+            <!-- Right: Official Directory & Postal Address -->
+            <div class="col-lg-5">
+                <div class="d-flex flex-column gap-4 h-100">
+                    <!-- Postal Address Card -->
+                    <div class="contact-card">
+                        <div class="contact-icon-box" style="background: rgba(52, 173, 84, 0.1); color: #34AD54;">
+                            <i class="bi bi-geo-alt-fill"></i>
+                        </div>
+                        <h4 class="fw-bold text-dark mb-2">District Collectorate</h4>
+                        <p class="text-secondary small mb-3">Administrative headquarters of Sri Sathya Sai District:</p>
+                        <div class="p-3 bg-light rounded-3 border">
+                            <h6 class="fw-bold text-dark mb-1"><i class="bi bi-building me-2 text-success"></i>Collectorate Complex</h6>
+                            <p class="mb-1 text-secondary small">Main Administrative Block,</p>
+                            <p class="fw-bold text-dark mb-0 small">Puttaparthi, Sri Sathya Sai District - 515134, Andhra Pradesh</p>
+                        </div>
                     </div>
-                    <h4 class="fw-bold text-dark mb-3">Postal & Physical Address</h4>
-                    <p class="text-secondary mb-3">
-                        You can also contact us at the following official administrative address:
-                    </p>
-                    <div class="p-4 bg-light rounded-3 border">
-                        <h6 class="fw-bold text-dark mb-2"><i class="bi bi-building me-2 text-success"></i>District
-                            Collectorate</h6>
-                        <p class="mb-1 text-secondary">Collectorate Complex,</p>
-                        <p class="fw-bold text-dark mb-0">Sri Sathya Sai District - 515134, Andhra Pradesh</p>
+
+                    <!-- Web Information Manager Card -->
+                    <div class="contact-card">
+                        <div class="contact-icon-box">
+                            <i class="bi bi-person-workspace"></i>
+                        </div>
+                        <h4 class="fw-bold text-dark mb-2">Web Information Manager</h4>
+                        <p class="text-secondary small mb-3">For technical or content queries regarding the portal:</p>
+                        <div class="p-3 bg-light rounded-3 border mb-2">
+                            <small class="text-uppercase text-muted fw-bold d-block" style="font-size: 11px;">Official Email</small>
+                            <a href="mailto:apapr@nic.in" class="fw-bold text-primary text-decoration-none">
+                                <i class="bi bi-envelope-check me-1"></i> apapr@nic.in
+                            </a>
+                        </div>
+                        <p class="small text-muted mb-0" style="font-size: 12px;">
+                            National Informatics Centre (NIC) • AP State Center
+                        </p>
                     </div>
                 </div>
             </div>
         </div>
 
-        <!-- Additional Facilitation Cell Contacts -->
-        <div class="bg-white rounded-3 border p-4 shadow-sm">
-            <h4 class="fw-bold text-dark mb-4 border-bottom pb-3"><i
-                    class="bi bi-shield-check text-primary me-2"></i>CSR Facilitation Cell Officers</h4>
+        <!-- CSR Facilitation Cell Officers -->
+        <div class="bg-white rounded-4 border p-4 shadow-sm">
+            <h4 class="fw-bold text-dark mb-4 border-bottom pb-3">
+                <i class="bi bi-shield-check text-primary me-2"></i>CSR Facilitation Cell Officers
+            </h4>
             <div class="row g-4">
                 <div class="col-md-6">
-                    <div class="d-flex align-items-center gap-3 p-3 rounded bg-light border">
-                        <div class="rounded-circle bg-primary text-white d-flex align-items-center justify-content-center fw-bold"
-                            style="width: 48px; height: 48px;">DC</div>
+                    <div class="d-flex align-items-center gap-3 p-3 rounded-3 bg-light border">
+                        <div class="rounded-circle bg-primary text-white d-flex align-items-center justify-content-center fw-bold fs-5"
+                            style="width: 52px; height: 52px; flex-shrink: 0;">DC</div>
                         <div>
                             <h6 class="fw-bold text-dark mb-1">Sri A. Shyam Prasad, I.A.S</h6>
                             <small class="text-muted d-block">District Collector &amp; District Magistrate</small>
-                            <small class="text-primary fw-semibold"><i
-                                    class="bi bi-envelope me-1"></i>collector-sssai@ap.gov.in</small>
+                            <a href="mailto:collector-sssai@ap.gov.in" class="text-primary fw-semibold small text-decoration-none">
+                                <i class="bi bi-envelope-fill me-1"></i>collector-sssai@ap.gov.in
+                            </a>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-6">
-                    <div class="d-flex align-items-center gap-3 p-3 rounded bg-light border">
-                        <div class="rounded-circle bg-success text-white d-flex align-items-center justify-content-center fw-bold"
-                            style="width: 48px; height: 48px;">JC</div>
+                    <div class="d-flex align-items-center gap-3 p-3 rounded-3 bg-light border">
+                        <div class="rounded-circle bg-success text-white d-flex align-items-center justify-content-center fw-bold fs-5"
+                            style="width: 52px; height: 52px; flex-shrink: 0;">JC</div>
                         <div>
-                            <h6 class="fw-bold text-dark mb-1">Sri M. Ramanaiah, I.A.S</h6>
+                            <h6 class="fw-bold text-dark mb-1">Sri Mantri Mourya Bharadwaj, I.A.S</h6>
                             <small class="text-muted d-block">Joint Collector &amp; CSR Nodal Officer</small>
-                            <small class="text-success fw-semibold"><i
-                                    class="bi bi-envelope me-1"></i>jc-sssai@ap.gov.in</small>
+                            <a href="mailto:csr.sssdistrict@gmail.com" class="text-success fw-semibold small text-decoration-none">
+                                <i class="bi bi-envelope-fill me-1"></i>csr.sssdistrict@gmail.com
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -225,6 +293,8 @@
     <!-- Custom Portal Modules -->
     <script src="js/i18n.js"></script>
     <script src="js/csr-client.js"></script>
+    <script src="js/csr-api.js"></script>
+    <script src="js/contact-form.js"></script>
     <script src="main.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>

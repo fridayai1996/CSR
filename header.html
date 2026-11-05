@@ -2,9 +2,13 @@
 <!-- Topbar Start -->
 <div class="topbar py-1 d-block">
     <div class="container">
-        <div class="d-flex align-items-center justify-content-between gap-1.5 flex-nowrap">
-            <!-- Left Side: Social Handles & Language Switcher -->
-            <div class="d-flex align-items-center gap-1.5 text-nowrap">
+        <div class="d-flex align-items-center justify-content-between gap-2 flex-nowrap">
+            <!-- Left Side: Official Portal Links & Social Handles -->
+            <div class="d-flex align-items-center gap-2 text-nowrap">
+                <a href="https://srisathyasai.ap.gov.in/" target="_blank" rel="noopener noreferrer" class="badge bg-primary bg-opacity-25 text-white border border-primary border-opacity-50 px-2 py-1 text-decoration-none d-none d-md-inline-flex align-items-center gap-1" style="font-size: 11px;">
+                    <i class="bi bi-bank2"></i> srisathyasai.ap.gov.in
+                </a>
+
                 <!-- Social Media Handles -->
                 <div class="d-inline-flex align-items-center gap-1 header-social-handles">
                     <a class="btn btn-sm btn-outline-light rounded-circle p-0 d-inline-flex align-items-center justify-content-center"
@@ -18,7 +22,7 @@
                         target="_blank" rel="noopener noreferrer" title="Instagram"><i class="fab fa-instagram" style="font-size: 10px;"></i></a>
                 </div>
 
-                <!-- Language Selection (Shown on Tablet & Desktop, hidden on mobile <= 575px) -->
+                <!-- Language Selection -->
                 <div class="d-none d-sm-inline-flex align-items-center gap-1 header-lang-switcher ms-1">
                     <button id="lang-btn-en" class="btn btn-sm btn-primary py-0 px-2 fw-bold" style="font-size: 11px;"
                         onclick="i18nEngine.setLanguage('en')">EN</button>
@@ -27,16 +31,13 @@
                 </div>
             </div>
 
-            <!-- Right Side: Partner With Us + Dashboard / Logout / Login -->
-            <div class="d-inline-flex align-items-center gap-1.5 text-nowrap ms-auto">
-                <a href="index.html#partner-form" class="btn btn-sm btn-info text-white py-1 px-2.5 rounded-pill fw-bold header-partner-btn btn-shine" style="font-size: 11.5px;"
+            <!-- Right Side: Contact Helpline + Partner With Us (No Login) -->
+            <div class="d-inline-flex align-items-center gap-2 text-nowrap ms-auto">
+                <a href="contact-us.html" class="text-light small text-decoration-none d-none d-sm-inline-flex align-items-center gap-1 me-1" style="font-size: 11.5px;">
+                    <i class="bi bi-headset text-info"></i> Helpdesk: collector-sssai@ap.gov.in
+                </a>
+                <a href="index.html#partner-form" class="btn btn-sm btn-info text-white py-1 px-3 rounded-pill fw-bold header-partner-btn btn-shine" style="font-size: 11.5px;"
                     data-i18n="btn_submit_eoi"><i class="bi bi-heart-fill me-1"></i> Partner With Us</a>
-                
-                <!-- Login / User Auth Container -->
-                <div id="header-auth-container" class="d-inline-flex align-items-center gap-1">
-                    <a href="login.html" id="topbar-login-btn" class="btn btn-sm btn-warning text-dark py-1 px-2.5 rounded-pill fw-bold btn-shine" style="font-size: 11.5px;"><i
-                            class="bi bi-box-arrow-in-right me-1"></i> <span data-i18n="nav_login">Login</span></a>
-                </div>
             </div>
         </div>
     </div>
@@ -58,7 +59,7 @@
                 </a>
             </div>
 
-            <!-- Officer Badges remain in mid header -->
+            <!-- Officer Badges in mid header -->
             <div class="d-flex align-items-center justify-content-center justify-content-lg-end gap-1.5 flex-wrap flex-sm-nowrap header-officer-badges mx-auto mx-lg-0">
                 <!-- CM Profile -->
                 <div class="officer-badge">
@@ -97,7 +98,7 @@
     <div class="container">
         <nav class="navbar navbar-expand-lg navbar-dark bottom-header-navbar px-0 py-1 py-lg-0"
             style="background-color: #002858 !important;">
-            <!-- Brand Section moved to bottom header on mobile/tablet (< 992px) -->
+            <!-- Brand Section for mobile/tablet (< 992px) -->
             <a href="index.html" class="navbar-brand p-0 d-lg-none d-flex align-items-center gap-2 text-decoration-none py-1 me-auto" style="max-width: calc(100% - 50px);">
                 <img src="img/csr_logo.png" alt="Sri Sathya Sai District Logo" style="height: 32px; width: 32px; object-fit: contain;">
                 <div class="text-truncate">
