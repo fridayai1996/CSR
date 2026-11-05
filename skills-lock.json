@@ -175,6 +175,12 @@
       "skillPath": "skills/frontend-design/SKILL.md",
       "computedHash": "106acf230014cbb43ca34e6410371321b56ca742f9ee0442e8ec05bf02eb0384"
     },
+    "hallmark": {
+      "source": "Nutlope/hallmark",
+      "sourceType": "github",
+      "skillPath": "skills/hallmark/SKILL.md",
+      "computedHash": "1f994d2e992745bd8e7828a1d577070582036d5d8df6f8aacbe8015e9398e2ce"
+    },
     "impeccable": {
       "source": "pbakaus/impeccable",
       "sourceType": "github",
