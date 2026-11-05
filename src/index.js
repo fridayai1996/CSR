@@ -106,67 +106,135 @@ function sanitizeText(str, maxLen = 500) {
   return str.trim().slice(0, maxLen);
 }
 
-// Fallback project list when D1 is not populated
+// Fallback project list aligned with Official Concept Note (PDF) - Zero private company names
 const STATIC_PROJECTS = [
   {
     id: 1,
-    title: "Safe RO Water Hubs & Child Nutrition Program",
-    mandal: "Kadiri",
-    sector: "Healthcare & Sanitation",
-    budget: "₹1.50 Crores",
-    sponsor: "KIA Motors India Foundation",
-    status: "In Progress",
-    progress_pct: 75
+    title: "Digital Learning Infrastructure for Government High Schools",
+    mandal: "District-wide",
+    sector: "Education & Digital Learning",
+    budget: "₹25.00 Lakhs",
+    sponsor: "Open for Corporate Adoption",
+    status: "Proposed",
+    progress_pct: 0,
+    milestones: "Site survey & school list finalised; ready for procurement",
+    beneficiaries: "1,000 students across 10 high schools",
+    priority: "High Priority",
+    components: "Computer lab setup, interactive digital smartboards, teacher ICT orientation, 3-year warranty and maintenance",
+    outcomes: "Measurable improvement in STEM learning outcomes and 100% digital literacy for secondary grades",
+    dpr_code: "DPR-EDU-2026-01"
   },
   {
     id: 2,
-    title: "EV Technician Vocational Skill Center & Smart Schools",
-    mandal: "Penukonda",
-    sector: "Smart Education & Skills",
-    budget: "₹2.00 Crores",
-    sponsor: "Tata Trusts Foundation",
-    status: "In Progress",
-    progress_pct: 70
+    title: "Primary Health Centre (PHC) Diagnostic & Mobile Screening Equipment",
+    mandal: "Puttaparthi & Penukonda",
+    sector: "Healthcare & Diagnostics",
+    budget: "₹45.00 Lakhs",
+    sponsor: "Open for Corporate Adoption",
+    status: "Proposed",
+    progress_pct: 0,
+    milestones: "Clinical equipment specifications locked by District Medical Officer",
+    beneficiaries: "12,000 rural residents & expectant mothers",
+    priority: "High Priority",
+    components: "Fully equipped Mobile Health Screening Unit, digital X-ray, automated hematology analyzers, ultrasound diagnostic kit",
+    outcomes: "Early detection of non-communicable diseases, routine maternal screenings, reduced referral transit times",
+    dpr_code: "DPR-HLT-2026-02"
   },
   {
     id: 3,
-    title: "Working Women Hostels & Senior Citizen Daycare Homes",
-    mandal: "Dharmavaram",
-    sector: "Gender Equality & Women Care",
-    budget: "₹1.20 Crores",
-    sponsor: "L&T Construction CSR",
-    status: "Under Review",
-    progress_pct: 25
+    title: "SC & BC Welfare Hostels Modernization & Sanitation Overhaul",
+    mandal: "District-wide (42 Hostels)",
+    sector: "Social Welfare & Hostels",
+    budget: "₹65.00 Lakhs",
+    sponsor: "District CSR Facilitation Stream",
+    status: "In Progress",
+    progress_pct: 40,
+    milestones: "Phase-1 civil works underway across 18 hostels in Kadiri & Dharmavaram",
+    beneficiaries: "3,200 residential students",
+    priority: "High Priority",
+    components: "High-capacity RO drinking water plants, solar hot water geysers, hygienic modern dining halls, tiled sanitation blocks",
+    outcomes: "Safe residential living conditions, zero water-borne infections, dignified stay for marginalized students",
+    dpr_code: "DPR-WLF-2026-03"
   },
   {
     id: 4,
-    title: "Soil/Water Conservation & Solar Micro-Grid Network",
-    mandal: "NP Kunta",
-    sector: "Environmental Sustainability",
-    budget: "₹1.80 Crores",
-    sponsor: "BHEL Corporate CSR",
-    status: "Under Review",
-    progress_pct: 15
+    title: "Model Anganwadi Child-Friendly Centers & Toddler Nutrition Upgrades",
+    mandal: "Dharmavaram & Madakasira",
+    sector: "Anganwadi & Child Development",
+    budget: "₹30.00 Lakhs",
+    sponsor: "Open for Corporate Adoption",
+    status: "Proposed",
+    progress_pct: 0,
+    milestones: "Site inspection complete across 25 rural Anganwadi buildings",
+    beneficiaries: "850 infants, toddlers & nursing mothers",
+    priority: "High Priority",
+    components: "Child-safe learning spaces, educational toys & play equipment, clean drinking water systems, fortified food prep counters",
+    outcomes: "Drastic reduction in severe acute malnutrition (SAM) and improved pre-school cognitive readiness",
+    dpr_code: "DPR-ICDS-2026-04"
   },
   {
     id: 5,
-    title: "Lepakshi Heritage Restoration & E-Library Network",
-    mandal: "Lepakshi",
-    sector: "Heritage & Culture",
-    budget: "₹85 Lakhs",
-    sponsor: "JSW Foundation",
+    title: "Rural Women Self-Help Group (SHG) Sericulture & Weaving Enterprises",
+    mandal: "Dharmavaram & Lepakshi",
+    sector: "Livelihoods & Women's Empowerment",
+    budget: "₹50.00 Lakhs",
+    sponsor: "Open for Corporate Adoption",
     status: "Proposed",
-    progress_pct: 0
+    progress_pct: 0,
+    milestones: "SHG federation mobilization and market-linkage study complete",
+    beneficiaries: "450 women artisans & silk weavers",
+    priority: "Medium Priority",
+    components: "Modern motorized silk reeling machines, computerized jacquard design workstations, common processing center, market linkages",
+    outcomes: "Direct monthly income increase of ₹6,500+ per artisan household and revival of traditional Lepakshi craft motifs",
+    dpr_code: "DPR-LIV-2026-05"
   },
   {
     id: 6,
-    title: "AgTech Incubator & IIT/CSIR SDG Research Center",
-    mandal: "Puttaparthi",
-    sector: "Incubators, R&D & SDGs",
-    budget: "₹2.50 Crores",
-    sponsor: "Open for Adoption",
+    title: "Youth Vocational Technical Skill Development & EV Training Hub",
+    mandal: "Penukonda Industrial Corridor",
+    sector: "Skill Development & Employment",
+    budget: "₹80.00 Lakhs",
+    sponsor: "District CSR Facilitation Stream",
+    status: "In Progress",
+    progress_pct: 55,
+    milestones: "Facility lease secured; lab equipment procurement initiated",
+    beneficiaries: "600 rural youths per annum",
+    priority: "High Priority",
+    components: "Electric Vehicle (EV) assembly & battery diagnostics lab, CNC mechatronics tools, industry certification curriculum",
+    outcomes: "Guaranteed 85%+ formal sector placements in Penukonda automobile manufacturing hub",
+    dpr_code: "DPR-SKL-2026-06"
+  },
+  {
+    id: 7,
+    title: "Rural Habitations Solar-Powered Safe Drinking Water RO Network",
+    mandal: "Kadiri & NP Kunta",
+    sector: "Drinking Water & Sanitation",
+    budget: "₹40.00 Lakhs",
+    sponsor: "Open for Corporate Adoption",
     status: "Proposed",
-    progress_pct: 0
+    progress_pct: 0,
+    milestones: "Water quality fluorosis mapping verified by rural water supply engineers",
+    beneficiaries: "8,500 villagers across 8 fluorosis-affected habitations",
+    priority: "High Priority",
+    components: "2,000 LPH RO water treatment plants powered by dedicated solar PV rooftop arrays and automated smart water-card dispensing",
+    outcomes: "Complete elimination of fluoride-induced ailments and assured potable water security",
+    dpr_code: "DPR-WTR-2026-07"
+  },
+  {
+    id: 8,
+    title: "Solar Micro-Grid & Energy Self-Sufficiency for Government High Schools",
+    mandal: "NP Kunta & Puttaparthi",
+    sector: "Environmental Sustainability",
+    budget: "₹35.00 Lakhs",
+    sponsor: "Open for Corporate Adoption",
+    status: "Proposed",
+    progress_pct: 0,
+    milestones: "Roof structural audit completed across 15 identified secondary schools",
+    beneficiaries: "4,500 students & administrative facilities",
+    priority: "Medium Priority",
+    components: "5 kW to 10 kW hybrid solar rooftop installations with lithium-ion battery banks, net-metering synchronization, energy monitors",
+    outcomes: "Zero power disruption for digital smart classes and offset of 65 metric tons of CO2 annually",
+    dpr_code: "DPR-ENV-2026-08"
   }
 ];
 
@@ -314,21 +382,49 @@ async function handleApi(request, env) {
     }
   }
 
-  // 4. Public Projects Directory
+  // 4. Public Projects Directory (CSR Project Bank)
   if (path === "/api/projects" && method === "GET") {
+    const sectorFilter = url.searchParams.get("sector");
+    const priorityFilter = url.searchParams.get("priority");
+    const mandalFilter = url.searchParams.get("mandal");
+
     if (env && env.DB) {
       try {
-        const rows = await env.DB.prepare(
-          "SELECT id, title, mandal, sector, budget, sponsor, status, progress_pct, milestones FROM projects ORDER BY id ASC"
-        ).all();
-        if (rows && rows.results && rows.results.length > 0) {
-          return json({ ok: true, data: rows.results });
+        let query = "SELECT id, title, mandal, sector, budget, sponsor, status, progress_pct, milestones, beneficiaries, priority, components, outcomes, dpr_code FROM projects WHERE 1=1";
+        const params = [];
+
+        if (sectorFilter && sectorFilter !== "all") {
+          query += " AND (sector LIKE ? OR sector = ?)";
+          params.push(`%${sectorFilter}%`, sectorFilter);
+        }
+        if (priorityFilter && priorityFilter !== "all") {
+          query += " AND priority = ?";
+          params.push(priorityFilter);
+        }
+        if (mandalFilter && mandalFilter !== "all") {
+          query += " AND (mandal LIKE ? OR mandal = ?)";
+          params.push(`%${mandalFilter}%`, mandalFilter);
+        }
+        query += " ORDER BY id ASC";
+
+        const stmt = params.length > 0 ? env.DB.prepare(query).bind(...params) : env.DB.prepare(query);
+        const rows = await stmt.all();
+        if (rows && rows.results) {
+          return json({ ok: true, data: rows.results, count: rows.results.length });
         }
       } catch (_e) {
         // Fall back to static
       }
     }
-    return json({ ok: true, data: STATIC_PROJECTS });
+
+    let staticFiltered = STATIC_PROJECTS;
+    if (sectorFilter && sectorFilter !== "all") {
+      staticFiltered = staticFiltered.filter(p => p.sector.toLowerCase().includes(sectorFilter.toLowerCase()));
+    }
+    if (priorityFilter && priorityFilter !== "all") {
+      staticFiltered = staticFiltered.filter(p => p.priority === priorityFilter);
+    }
+    return json({ ok: true, data: staticFiltered, count: staticFiltered.length });
   }
 
   // 5. Deprecated Auth Endpoints

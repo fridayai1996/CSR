@@ -3,9 +3,9 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Priority CSR Projects Directory | Sri Sathya Sai District, Govt of AP</title>
+    <title>CSR Project Bank | Sri Sathya Sai CSR Connect | Govt of Andhra Pradesh</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <meta content="Sri Sathya Sai District Priority Projects Directory, CSR Investment Opportunities, Andhra Pradesh, Penukonda, Puttaparthi" name="description">
+    <meta content="Sri Sathya Sai District CSR Project Bank , Searchable repository of verified department-wise proposals in education, healthcare, hostels, and rural infrastructure." name="description">
 
     <!-- Favicon -->
     <link href="img/csr_logo.png" rel="icon" type="image/png">
@@ -17,7 +17,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
     <!-- Icon Font Stylesheet -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
 
     <!-- Vendor CSS via CDN -->
@@ -27,9 +26,9 @@
     <!-- Bespoke Design Tokens & Stylesheets -->
     <link href="css/tokens.css" rel="stylesheet">
     <link href="css/base.css" rel="stylesheet">
-    <link href="style.css" rel="stylesheet">
-    <link href="css/premium.css" rel="stylesheet">
-    <link href="css/ui21.css?v=20260901d" rel="stylesheet">
+    <link href="style.css?v=20261105b" rel="stylesheet">
+    <link href="css/premium.css?v=20261105b" rel="stylesheet">
+    <link href="css/ui21.css?v=20261105b" rel="stylesheet">
 </head>
 
 <body>
@@ -40,84 +39,130 @@
     <div id="site-header"></div>
     <!-- Header Component End -->
 
-    <!-- Hero Title Header -->
+    <!-- Hero Title Header (Page 1 & 3 of Concept Note PDF) -->
     <header id="main-content" class="hero-banner text-center" role="banner">
-        <div class="container">
-            <h1 class="display-4 mx-auto fw-bold" data-i18n="nav_projects">Priority Projects Directory</h1>
-            <p class="hero-lede mx-auto">Pre-cleared civic and rural development projects open for corporate adoption.</p>
-            <div class="d-flex justify-content-center align-items-center gap-3 flex-wrap">
-                <a href="#directory" class="btn btn-primary rounded-pill px-4 py-2 fw-bold btn-shine text-nowrap">
-                    Explore Sectors
+        <div class="container position-relative" style="z-index: 2;">
+            <div class="d-inline-flex align-items-center gap-2 px-3 py-1.5 rounded-pill mb-3" class="border border-white border-opacity-25 bg-white bg-opacity-10">
+                <span class="badge bg-primary text-white" style="font-size: 0.72rem; letter-spacing: 0.05em;">CORE REPOSITORY</span>
+                <span class="text-white small fw-semibold" style="font-size: 0.8rem;">District Administration • Section 135 &amp; Schedule VII Permissible</span>
+            </div>
+            <h1 class="display-4 mx-auto fw-bold mb-3 text-white">CSR Project Bank</h1>
+            <p class="hero-lede mx-auto text-white-50" style="max-width: 760px; font-size: 1.15rem;">
+                A searchable repository of verified, department-wise development proposals with detailed cost estimates, beneficiary targets, implementation readiness, and measurable outcomes.
+            </p>
+            <div class="d-flex justify-content-center align-items-center gap-3 flex-wrap pt-2">
+                <a href="#repository" class="btn btn-primary rounded-pill px-4 py-2.5 fw-bold btn-shine text-nowrap">
+                    <i class="bi bi-filter-circle me-1.5"></i> Filter Proposals
                 </a>
-                <a href="index.html#partner-form" class="btn btn-outline-light rounded-pill px-4 py-2 fw-bold text-nowrap">
-                    Submit General EOI
+                <a href="index.html#partner-form" class="btn btn-outline-light rounded-pill px-4 py-2.5 fw-bold text-nowrap">
+                    Submit General EoI
                 </a>
             </div>
         </div>
     </header>
 
-    <!-- Main Directory Content -->
-    <main id="directory" class="container py-5" role="main">
-        <!-- Interactive Filter Toolbar -->
-        <section class="partner-card mb-5" aria-label="Filter Priority Projects">
+    <!-- Main Repository Content -->
+    <main id="repository" class="container py-4 py-lg-5" role="main">
+        <!-- Interactive Multi-Filter Toolbar -->
+        <section class="bg-white p-3.5 p-lg-4 rounded-4 border shadow-sm mb-4" aria-label="Filter CSR Project Bank">
             <div class="d-flex justify-content-between align-items-center flex-wrap gap-2 mb-3">
                 <div class="d-flex align-items-center gap-2">
-                    <span class="text-primary fs-5" aria-hidden="true"><i class="bi bi-sliders"></i></span>
-                    <h2 class="h5 fw-bold mb-0 text-dark">Filter Pre-Cleared Projects</h2>
+                    <span class="text-primary fs-5" aria-hidden="true"><i class="bi bi-sliders2"></i></span>
+                    <h2 class="h5 fw-bold mb-0 text-dark">Filter Verified Department Proposals</h2>
                 </div>
                 <span id="results-count" class="badge bg-light text-dark border px-3 py-2 fw-semibold">
-                    Showing 12 Projects
+                    Loading Verified Proposals…
                 </span>
             </div>
 
             <div class="row g-3">
-                <div class="col-lg-4 col-md-6">
-                    <label for="search-input" class="form-label small">Search Keywords</label>
-                    <input type="text" id="search-input" class="form-control" placeholder="Search title, mandal, keywords..." aria-label="Search projects by keyword">
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <label for="sector-filter" class="form-label small">Schedule VII Sector</label>
-                    <select id="sector-filter" class="form-select" aria-label="Filter by Schedule VII focus sector">
-                        <option value="All">All 12 Schedule VII Sectors</option>
-                        <option value="Healthcare & Sanitation">Healthcare &amp; Sanitation (Item i)</option>
-                        <option value="Smart Education & Skills">Smart Education &amp; Skills (Item ii)</option>
-                        <option value="Gender Equality & Women Care">Gender Equality &amp; Women Care (Item iii)</option>
-                        <option value="Environmental Sustainability">Environmental Sustainability (Item iv)</option>
-                        <option value="Heritage & Culture">Heritage &amp; Culture (Item v)</option>
-                        <option value="Armed Forces & Veteran Welfare">Armed Forces &amp; Veteran Welfare (Item vi)</option>
-                        <option value="Rural & Olympic Sports">Rural &amp; Olympic Sports (Item vii)</option>
-                        <option value="Socio-Economic Welfare Funds">Socio-Economic Welfare Funds (Item viii)</option>
-                        <option value="Incubators, R&D & SDGs">Incubators, R&amp;D &amp; SDGs (Item ix)</option>
-                        <option value="Rural Development Projects">Rural Development Projects (Item x)</option>
-                        <option value="Slum Area Development">Slum Area Development (Item xi)</option>
-                        <option value="Disaster Management">Disaster Management (Item xii)</option>
-                    </select>
-                </div>
+                <!-- Search by keyword -->
                 <div class="col-lg-3 col-md-6">
-                    <label for="mandal-filter" class="form-label small">Mandal / Division</label>
-                    <select id="mandal-filter" class="form-select" aria-label="Filter by Mandal or Revenue Division">
-                        <option value="All">All 32 Mandals</option>
-                        <option value="Penukonda">Penukonda Division</option>
-                        <option value="Puttaparthi">Puttaparthi Division</option>
-                        <option value="Hindupur">Hindupur Division</option>
-                        <option value="Dharmavaram">Dharmavaram Division</option>
-                        <option value="Kadiri">Kadiri Division</option>
-                        <option value="Madakasira">Madakasira Division</option>
+                    <label for="search-input" class="form-label small fw-semibold text-muted">Keyword Search</label>
+                    <input type="text" id="search-input" class="form-control form-control-sm" placeholder="e.g. Smart classrooms, RO water, PHC…" aria-label="Search proposals by keyword">
+                </div>
+
+                <!-- Priority Sector -->
+                <div class="col-lg-3 col-md-6">
+                    <label for="sector-filter" class="form-label small fw-semibold text-muted">Priority Sector</label>
+                    <select id="sector-filter" class="form-select form-select-sm" aria-label="Filter by priority sector">
+                        <option value="All">All Priority Sectors</option>
+                        <option value="Education & Digital Learning">Education &amp; Digital Learning</option>
+                        <option value="Healthcare & Diagnostics">Healthcare &amp; Diagnostics</option>
+                        <option value="Social Welfare & Hostels">Social Welfare &amp; Hostels</option>
+                        <option value="Anganwadi & Child Development">Anganwadi &amp; Child Development</option>
+                        <option value="Livelihoods & Women’s Empowerment">Livelihoods &amp; Women’s Empowerment</option>
+                        <option value="Skill Development & Employment">Skill Development &amp; Employment</option>
+                        <option value="Drinking Water & Sanitation">Drinking Water &amp; Sanitation</option>
+                        <option value="Environmental Sustainability">Environmental Sustainability</option>
                     </select>
                 </div>
-                <div class="col-lg-1 col-md-6 d-flex align-items-end">
-                    <button class="btn btn-outline-secondary w-100 fw-bold py-2" onclick="resetFilters()" title="Reset All Filters">
-                        <i class="bi bi-arrow-counterclockwise" aria-hidden="true"></i><span class="visually-hidden">Reset</span>
+
+                <!-- Outlay Range -->
+                <div class="col-lg-2 col-md-4">
+                    <label for="budget-filter" class="form-label small fw-semibold text-muted">Budget Outlay</label>
+                    <select id="budget-filter" class="form-select form-select-sm" aria-label="Filter by budget outlay">
+                        <option value="All">All Budget Outlays</option>
+                        <option value="tier1">&lt; ₹25 Lakhs</option>
+                        <option value="tier2">₹25 Lakhs to ₹50 Lakhs</option>
+                        <option value="tier3">₹50 Lakhs to ₹1.00 Crore</option>
+                        <option value="tier4">&gt; ₹1.00 Crore</option>
+                    </select>
+                </div>
+
+                <!-- Priority Filter -->
+                <div class="col-lg-2 col-md-4">
+                    <label for="priority-filter" class="form-label small fw-semibold text-muted">Priority Level</label>
+                    <select id="priority-filter" class="form-select form-select-sm" aria-label="Filter by priority level">
+                        <option value="All">All Priorities</option>
+                        <option value="High Priority">High Priority</option>
+                        <option value="Medium Priority">Medium Priority</option>
+                    </select>
+                </div>
+
+                <!-- Reset button -->
+                <div class="col-lg-2 col-md-4 d-flex align-items-end">
+                    <button class="btn btn-outline-secondary btn-sm w-100 fw-bold py-1.5" onclick="resetProjectFilters()" title="Reset All Filters">
+                        <i class="bi bi-arrow-counterclockwise me-1"></i> Reset Filters
                     </button>
                 </div>
             </div>
         </section>
 
-        <!-- Project Cards Grid -->
-        <div class="row g-4" id="project-grid-container" aria-live="polite">
-            <!-- Dynamic project cards rendered via renderProjectCards -->
+        <!-- Dynamic Project Cards Grid (Page 3 of Concept Note PDF) -->
+        <div class="row g-4" id="project-bank-grid" aria-live="polite">
+            <!-- Populated via renderProjectCards -->
         </div>
     </main>
+
+    <!-- Concept Note / DPR Detail Modal -->
+    <div class="modal fade" id="dprModal" tabindex="-1" aria-labelledby="dprModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content border-0 shadow-lg rounded-4">
+                <div class="modal-header border-bottom px-4 py-3 bg-light">
+                    <div>
+                        <h3 class="modal-title h5 fw-bold text-dark mb-1" id="dprModalLabel">Project Concept Note</h3>
+                        <span id="modalDprCode" class="badge bg-primary text-white" style="font-size: 0.72rem;">DPR-CODE</span>
+                    </div>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body p-4" id="dprModalContent">
+                    <!-- Populated dynamically -->
+                </div>
+                <div class="modal-footer border-top px-4 py-3 bg-light d-flex justify-content-between">
+                    <button type="button" class="btn btn-sm btn-outline-secondary rounded-pill px-3 py-1.5 fw-bold" data-bs-dismiss="modal">Close</button>
+                    <div class="d-flex gap-2">
+                        <button type="button" id="modalDownloadPdfBtn" class="btn btn-sm btn-outline-primary rounded-pill px-3 py-1.5 fw-bold">
+                            <i class="bi bi-file-earmark-pdf me-1"></i> Download PDF Brief
+                        </button>
+                        <a href="index.html#partner-form" id="modalAdoptBtn" class="btn btn-sm btn-primary rounded-pill px-4 py-1.5 fw-bold text-nowrap">
+                            <i class="bi bi-handshake me-1"></i> Adopt This Project
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!-- Footer Start -->
     <div id="site-footer"></div>
@@ -137,237 +182,379 @@
     <script src="js/csr-client.js"></script>
     <script src="js/csr-api.js"></script>
     <script src="main.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
-    <script src="js/premium-motion.js?v=20260901d"></script>
 
     <script>
-        const sampleProjects = [
+        let allProjects = [];
+
+        // Fallback verified proposals adhering to the Concept Note PDF (Zero company names)
+        const DEFAULT_PROPOSALS = [
             {
-                id: "proj-701",
-                title: "Safe RO Water Hubs & Child Nutrition Program",
-                mandal: "Kadiri",
-                sector: "Healthcare & Sanitation",
-                budget: "₹1.50 Crores",
-                sponsor: "KIA Motors India Foundation",
+                id: 1,
+                title: "Digital Learning Infrastructure for Government High Schools",
+                mandal: "District-wide",
+                sector: "Education & Digital Learning",
+                budget: "₹25.00 Lakhs",
+                sponsor: "Open for Corporate Adoption",
+                status: "Proposed",
+                beneficiaries: "1,000 students across 10 high schools",
+                priority: "High Priority",
+                components: "Computer lab setup, interactive digital smartboards, teacher ICT orientation, 3-year warranty and maintenance",
+                outcomes: "Measurable improvement in STEM learning outcomes and 100% digital literacy for secondary grades",
+                dpr_code: "DPR-EDU-2026-01"
+            },
+            {
+                id: 2,
+                title: "Primary Health Centre (PHC) Diagnostic & Mobile Screening Equipment",
+                mandal: "Puttaparthi & Penukonda",
+                sector: "Healthcare & Diagnostics",
+                budget: "₹45.00 Lakhs",
+                sponsor: "Open for Corporate Adoption",
+                status: "Proposed",
+                beneficiaries: "12,000 rural residents & expectant mothers",
+                priority: "High Priority",
+                components: "Fully equipped Mobile Health Screening Unit, digital X-ray, automated hematology analyzers, ultrasound diagnostic kit",
+                outcomes: "Early detection of non-communicable diseases, routine maternal screenings, reduced referral transit times",
+                dpr_code: "DPR-HLT-2026-02"
+            },
+            {
+                id: 3,
+                title: "SC & BC Welfare Hostels Modernization & Sanitation Overhaul",
+                mandal: "District-wide (42 Hostels)",
+                sector: "Social Welfare & Hostels",
+                budget: "₹65.00 Lakhs",
+                sponsor: "District CSR Facilitation Stream",
                 status: "In Progress",
-                progressPct: 75,
-                description: "Schedule VII (i): Eradicating hunger & malnutrition, establishing 15 community RO water purification plants in fluorosis habitations."
+                beneficiaries: "3,200 residential students",
+                priority: "High Priority",
+                components: "High-capacity RO drinking water plants, solar hot water geysers, hygienic modern dining halls, tiled sanitation blocks",
+                outcomes: "Safe residential living conditions, zero water-borne infections, dignified stay for marginalized students",
+                dpr_code: "DPR-WLF-2026-03"
             },
             {
-                id: "proj-702",
-                title: "EV Technician Vocational Skill Center & Smart Schools",
-                mandal: "Penukonda",
-                sector: "Smart Education & Skills",
-                budget: "₹2.00 Crores",
-                sponsor: "Tata Trusts Foundation",
+                id: 4,
+                title: "Model Anganwadi Child-Friendly Centers & Toddler Nutrition Upgrades",
+                mandal: "Dharmavaram & Madakasira",
+                sector: "Anganwadi & Child Development",
+                budget: "₹30.00 Lakhs",
+                sponsor: "Open for Corporate Adoption",
+                status: "Proposed",
+                beneficiaries: "850 infants, toddlers & nursing mothers",
+                priority: "High Priority",
+                components: "Child-safe learning spaces, educational toys & play equipment, clean drinking water systems, fortified food prep counters",
+                outcomes: "Drastic reduction in severe acute malnutrition (SAM) and improved pre-school cognitive readiness",
+                dpr_code: "DPR-ICDS-2026-04"
+            },
+            {
+                id: 5,
+                title: "Rural Women Self-Help Group (SHG) Sericulture & Weaving Enterprises",
+                mandal: "Dharmavaram & Lepakshi",
+                sector: "Livelihoods & Women’s Empowerment",
+                budget: "₹50.00 Lakhs",
+                sponsor: "Open for Corporate Adoption",
+                status: "Proposed",
+                beneficiaries: "450 women artisans & silk weavers",
+                priority: "Medium Priority",
+                components: "Modern motorized silk reeling machines, computerized jacquard design workstations, common processing center, market linkages",
+                outcomes: "Direct monthly income increase of ₹6,500+ per artisan household and revival of traditional Lepakshi craft motifs",
+                dpr_code: "DPR-LIV-2026-05"
+            },
+            {
+                id: 6,
+                title: "Youth Vocational Technical Skill Development & EV Training Hub",
+                mandal: "Penukonda Industrial Corridor",
+                sector: "Skill Development & Employment",
+                budget: "₹80.00 Lakhs",
+                sponsor: "District CSR Facilitation Stream",
                 status: "In Progress",
-                progressPct: 70,
-                description: "Schedule VII (ii): Vocational skill enhancement for EV technicians, special education, and digital interactive classrooms across ZP schools."
+                beneficiaries: "600 rural youths per annum",
+                priority: "High Priority",
+                components: "Electric Vehicle (EV) assembly & battery diagnostics lab, CNC mechatronics tools, industry certification curriculum",
+                outcomes: "Guaranteed 85%+ formal sector placements in Penukonda automobile manufacturing hub",
+                dpr_code: "DPR-SKL-2026-06"
             },
             {
-                id: "proj-703",
-                title: "Working Women Hostels & Senior Citizen Daycare Homes",
-                mandal: "Dharmavaram",
-                sector: "Gender Equality & Women Care",
-                budget: "₹1.20 Crores",
-                sponsor: "L&T Construction CSR",
-                status: "Under Review",
-                progressPct: 25,
-                description: "Schedule VII (iii): Safe residential hostels for women weavers, senior citizen daycare centers, and reducing socio-economic inequalities."
+                id: 7,
+                title: "Rural Habitations Solar-Powered Safe Drinking Water RO Network",
+                mandal: "Kadiri & NP Kunta",
+                sector: "Drinking Water & Sanitation",
+                budget: "₹40.00 Lakhs",
+                sponsor: "Open for Corporate Adoption",
+                status: "Proposed",
+                beneficiaries: "8,500 villagers across 8 fluorosis-affected habitations",
+                priority: "High Priority",
+                components: "2,000 LPH RO water treatment plants powered by dedicated solar PV rooftop arrays and automated smart water-card dispensing",
+                outcomes: "Complete elimination of fluoride-induced ailments and assured potable water security",
+                dpr_code: "DPR-WTR-2026-07"
             },
             {
-                id: "proj-704",
-                title: "Soil/Water Conservation & Solar Micro-Grid Network",
-                mandal: "NP Kunta",
+                id: 8,
+                title: "Solar Micro-Grid & Energy Self-Sufficiency for Government High Schools",
+                mandal: "NP Kunta & Puttaparthi",
                 sector: "Environmental Sustainability",
-                budget: "₹1.80 Crores",
-                sponsor: "BHEL Corporate CSR",
-                status: "Under Review",
-                progressPct: 15,
-                description: "Schedule VII (iv): Agroforestry, soil & water conservation, animal welfare, and solar micro-grids for PHCs and Gram Panchayats."
-            },
-            {
-                id: "proj-705",
-                title: "Lepakshi Heritage Restoration & E-Library Network",
-                mandal: "Lepakshi",
-                sector: "Heritage & Culture",
-                budget: "₹85 Lakhs",
+                budget: "₹35.00 Lakhs",
                 sponsor: "Open for Corporate Adoption",
                 status: "Proposed",
-                progressPct: 0,
-                description: "Schedule VII (v): Restoration of historical sites at Penukonda & Lepakshi, public e-libraries, and traditional handicraft artisan support."
-            },
-            {
-                id: "proj-706",
-                title: "Armed Forces Veterans & War Widows Welfare Cell",
-                mandal: "Puttaparthi",
-                sector: "Armed Forces & Veteran Welfare",
-                budget: "₹50 Lakhs",
-                sponsor: "Open for Corporate Adoption",
-                status: "Proposed",
-                progressPct: 0,
-                description: "Schedule VII (vi): Healthcare, vocational retraining, and education scholarships for CAPF/CPMF veterans, ex-servicemen, and war widows."
-            },
-            {
-                id: "proj-707",
-                title: "Rural Sports Training Complex & Paralympic Coaching",
-                mandal: "Dharmavaram",
-                sector: "Rural & Olympic Sports",
-                budget: "₹75 Lakhs",
-                sponsor: "Open for Corporate Adoption",
-                status: "Proposed",
-                progressPct: 0,
-                description: "Schedule VII (vii): Multi-purpose sports grounds, paralympic coaching camps, and equipment for nationally recognized rural sports."
-            },
-            {
-                id: "proj-708",
-                title: "SC/ST & Vulnerable Communities Welfare Infrastructure",
-                mandal: "Madakasira",
-                sector: "Socio-Economic Welfare Funds",
-                budget: "₹1.10 Crores",
-                sponsor: "Open for Corporate Adoption",
-                status: "Proposed",
-                progressPct: 0,
-                description: "Schedule VII (viii): Targeted socio-economic development, community halls, and welfare amenities for Scheduled Castes, STs, and OBC habitations."
-            },
-            {
-                id: "proj-709",
-                title: "AgTech Incubator & IIT/CSIR SDG Research Center",
-                mandal: "Puttaparthi",
-                sector: "Incubators, R&D & SDGs",
-                budget: "₹2.50 Crores",
-                sponsor: "Open for Corporate Adoption",
-                status: "Proposed",
-                progressPct: 0,
-                description: "Schedule VII (ix): Technology incubators and research grants for Sustainable Development Goals (SDGs) in partnership with IITs and CSIR labs."
-            },
-            {
-                id: "proj-710",
-                title: "All-Weather Mandal Connectivity & Solar Street Lights",
-                mandal: "Hindupur",
-                sector: "Rural Development Projects",
-                budget: "₹3.00 Crores",
-                sponsor: "Open for Corporate Adoption",
-                status: "Proposed",
-                progressPct: 0,
-                description: "Schedule VII (x): All-weather rural roads, drainage networks, solar street lighting, and Gram Panchayat civic infrastructure."
-            },
-            {
-                id: "proj-711",
-                title: "Municipal Slum Area Housing & Underground Drainage",
-                mandal: "Kadiri",
-                sector: "Slum Area Development",
-                budget: "₹1.40 Crores",
-                sponsor: "Open for Corporate Adoption",
-                status: "Proposed",
-                progressPct: 0,
-                description: "Schedule VII (xi): Upgrading sanitation, drinking water pipelines, underground drainage, and civic facilities in declared urban slums."
-            },
-            {
-                id: "proj-712",
-                title: "Drought Resilience Check-Dams & Cyclone Shelter Network",
-                mandal: "Bukkapatnam",
-                sector: "Disaster Management",
-                budget: "₹1.60 Crores",
-                sponsor: "Open for Corporate Adoption",
-                status: "Proposed",
-                progressPct: 0,
-                description: "Schedule VII (xii): Rainwater check-dams, cyclone shelters, emergency response kits, and post-disaster reconstruction infrastructure."
+                beneficiaries: "4,500 students & administrative facilities",
+                priority: "Medium Priority",
+                components: "5 kW to 10 kW hybrid solar rooftop installations with lithium-ion battery banks, net-metering synchronization, energy monitors",
+                outcomes: "Zero power disruption for digital smart classes and offset of 65 metric tons of CO2 annually",
+                dpr_code: "DPR-ENV-2026-08"
             }
         ];
 
-        function renderProjectCards(list) {
-            const container = document.getElementById("project-grid-container");
-            const countBadge = document.getElementById("results-count");
-            if (!container) return;
-
-            if (countBadge) {
-                countBadge.textContent = `Showing ${list.length} of ${sampleProjects.length} Projects`;
+        async function initProjectBank() {
+            try {
+                const res = await fetch('/api/projects');
+                const data = await res.json();
+                if (data.ok && Array.isArray(data.data) && data.data.length > 0) {
+                    allProjects = data.data;
+                } else {
+                    allProjects = DEFAULT_PROPOSALS;
+                }
+            } catch (e) {
+                allProjects = DEFAULT_PROPOSALS;
             }
 
-            if (list.length === 0) {
+            // Read URL params if passed from Opportunity Matcher
+            const params = new URLSearchParams(window.location.search);
+            const initialSector = params.get('sector');
+            const initialBudget = params.get('budget');
+
+            if (initialSector && initialSector !== 'all') {
+                const sectorSelect = document.getElementById('sector-filter');
+                if (sectorSelect) {
+                    for (let opt of sectorSelect.options) {
+                        if (opt.value.toLowerCase().includes(initialSector.toLowerCase())) {
+                            sectorSelect.value = opt.value;
+                            break;
+                        }
+                    }
+                }
+            }
+            if (initialBudget && initialBudget !== 'all') {
+                const budgetSelect = document.getElementById('budget-filter');
+                if (budgetSelect) budgetSelect.value = initialBudget;
+            }
+
+            applyFilters();
+        }
+
+        function applyFilters() {
+            const query = (document.getElementById('search-input')?.value || '').toLowerCase().trim();
+            const sector = document.getElementById('sector-filter')?.value || 'All';
+            const budgetTier = document.getElementById('budget-filter')?.value || 'All';
+            const priority = document.getElementById('priority-filter')?.value || 'All';
+
+            const filtered = allProjects.filter(p => {
+                const matchesQuery = !query ||
+                    p.title.toLowerCase().includes(query) ||
+                    p.mandal.toLowerCase().includes(query) ||
+                    p.sector.toLowerCase().includes(query) ||
+                    (p.components && p.components.toLowerCase().includes(query));
+
+                const matchesSector = sector === 'All' || p.sector.toLowerCase().includes(sector.toLowerCase().split('&')[0].trim());
+                const matchesPriority = priority === 'All' || p.priority === priority;
+
+                let matchesBudget = true;
+                if (budgetTier !== 'All') {
+                    const budgetStr = p.budget.replace(/[^0-9.]/g, '');
+                    const num = parseFloat(budgetStr) || 0;
+                    const isCrores = p.budget.toLowerCase().includes('crore');
+                    const valInLakhs = isCrores ? num * 100 : num;
+
+                    if (budgetTier === 'tier1') matchesBudget = valInLakhs < 25;
+                    else if (budgetTier === 'tier2') matchesBudget = valInLakhs >= 25 && valInLakhs <= 50;
+                    else if (budgetTier === 'tier3') matchesBudget = valInLakhs > 50 && valInLakhs <= 100;
+                    else if (budgetTier === 'tier4') matchesBudget = valInLakhs > 100;
+                }
+
+                return matchesQuery && matchesSector && matchesPriority && matchesBudget;
+            });
+
+            renderProjects(filtered);
+        }
+
+        function renderProjects(projects) {
+            const container = document.getElementById('project-bank-grid');
+            const countLabel = document.getElementById('results-count');
+
+            if (countLabel) {
+                countLabel.textContent = `Showing ${projects.length} Verified ${projects.length === 1 ? 'Proposal' : 'Proposals'}`;
+            }
+
+            if (!container) return;
+
+            if (projects.length === 0) {
                 container.innerHTML = `
                     <div class="col-12 text-center py-5">
-                        <i class="bi bi-search display-4 text-muted mb-3 d-block" aria-hidden="true"></i>
-                        <h3 class="h5 fw-bold">No projects found matching your criteria</h3>
-                        <p class="text-muted">Try adjusting your keyword search or sector filters.</p>
-                        <button class="btn btn-outline-primary rounded-pill mt-3 px-4" onclick="resetFilters()">Reset All Filters</button>
-                    </div>
-                `;
+                        <i class="bi bi-folder-x display-4 text-muted mb-3 d-block"></i>
+                        <h3 class="h5 fw-bold text-dark">No Matching Proposals Found</h3>
+                        <p class="text-muted small">Try adjusting your filters or search keywords to view other verified proposals.</p>
+                        <button class="btn btn-sm btn-outline-primary rounded-pill px-4" onclick="resetProjectFilters()">Reset Filters</button>
+                    </div>`;
                 return;
             }
 
-            container.innerHTML = list.map(p => `
-                <div class="col-xl-4 col-lg-6 col-md-6 col-12">
-                    <article class="project-card p-4 h-100 d-flex flex-column" aria-labelledby="title-${p.id}">
-                        <div class="d-flex justify-content-between align-items-center mb-2">
-                            <span class="badge bg-light text-primary border">${p.sector}</span>
-                            <span class="badge bg-light text-dark border"><i class="bi bi-geo-alt-fill text-primary me-1" aria-hidden="true"></i>${p.mandal}</span>
+            container.innerHTML = projects.map(p => {
+                const isHigh = p.priority === 'High Priority';
+                return `
+                <div class="col-lg-6">
+                    <div class="pdf-project-card">
+                        <span class="priority-badge ${isHigh ? 'priority-high' : 'priority-medium'}">${p.priority || 'High Priority'}</span>
+                        <h3 class="project-title">${p.title}</h3>
+                        <div class="project-meta">
+                            <span class="text-primary fw-semibold"><i class="bi bi-tag-fill me-1"></i>${p.sector}</span>
+                            <span class="mx-2">•</span>
+                            <span><i class="bi bi-geo-alt-fill me-1"></i>${p.mandal}</span>
                         </div>
-                        <h3 id="title-${p.id}" class="h5 fw-bold text-dark mt-2 mb-2">${p.title}</h3>
-                        <p class="text-muted small mb-3 flex-grow-1">${p.description}</p>
-                        
-                        <div class="p-3 bg-light rounded-3 mb-3 border">
-                            <div class="d-flex justify-content-between mb-1">
-                                <span class="small text-muted fw-semibold">Target Outlay:</span>
-                                <span class="fw-bold text-success num">${p.budget}</span>
+                        <div class="pdf-metric-grid">
+                            <div>
+                                <span class="pdf-metric-lbl">Indicative Project Cost</span>
+                                <span class="pdf-metric-val">${p.budget}</span>
                             </div>
-                            <div class="d-flex justify-content-between">
-                                <span class="small text-muted fw-semibold">Status:</span>
-                                <span class="small fw-bold text-dark">${p.sponsor}</span>
+                            <div>
+                                <span class="pdf-metric-lbl">Indicative Beneficiaries</span>
+                                <span class="pdf-metric-val">${p.beneficiaries || 'Community Wide'}</span>
                             </div>
-                            ${p.progressPct > 0 ? `
-                                <div class="progress mt-2" style="height: 6px;">
-                                    <div class="progress-bar bg-success" role="progressbar" style="width: ${p.progressPct}%;" aria-valuenow="${p.progressPct}" aria-valuemin="0" aria-valuemax="100"></div>
-                                </div>
-                            ` : ''}
                         </div>
+                        <div class="pdf-project-specs">
+                            <p class="mb-2"><strong>Components:</strong> ${p.components || 'Equipment & infrastructure upgrades.'}</p>
+                            <p class="mb-0"><strong>Expected Outcomes:</strong> ${p.outcomes || 'Measurable social & community impact.'}</p>
+                        </div>
+                        <div class="d-flex justify-content-between align-items-center pt-3 border-top mt-auto">
+                            <span class="badge bg-light text-dark border" style="font-size: 0.7rem;">
+                                ${p.sponsor || 'Open for Corporate Adoption'}
+                            </span>
+                            <div class="d-flex gap-2">
+                                <button type="button" class="btn btn-sm btn-outline-secondary rounded-pill px-3 py-1.5 fw-bold text-nowrap" onclick="openDprModal(${p.id})">
+                                    <i class="bi bi-file-text me-1"></i> Concept Note
+                                </button>
+                                <a href="index.html#partner-form" class="btn btn-sm btn-primary rounded-pill px-3 py-1.5 fw-bold text-nowrap" onclick="setAdoptProject('${p.title.replace(/'/g, "\\'")}', '${p.sector}')">
+                                    <i class="bi bi-handshake me-1"></i> Adopt Project
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>`;
+            }).join('');
+        }
 
-                        <div class="d-flex gap-2 mt-auto">
-                            <button class="btn btn-sm btn-outline-primary w-50 fw-bold rounded-pill" data-project-id="${p.id}" onclick="downloadProjectPDF(sampleProjects.find(x=>x.id==='${p.id}'))">
-                                <i class="bi bi-file-earmark-pdf me-1" aria-hidden="true"></i> PDF Brief
-                            </button>
-                            <a href="index.html?sector=${encodeURIComponent(p.sector)}&project=${encodeURIComponent(p.title)}#partner-form" class="btn btn-sm btn-primary w-50 fw-bold rounded-pill btn-shine">
-                                <i class="bi bi-heart-fill me-1" aria-hidden="true"></i> Adopt
-                            </a>
-                        </div>
-                    </article>
+        let selectedProjectForModal = null;
+
+        function openDprModal(id) {
+            const p = allProjects.find(item => item.id == id);
+            if (!p) return;
+            selectedProjectForModal = p;
+
+            document.getElementById('modalDprCode').textContent = p.dpr_code || `DPR-SSS-${p.id}`;
+            document.getElementById('dprModalLabel').textContent = p.title;
+
+            document.getElementById('dprModalContent').innerHTML = `
+                <div class="mb-3 pb-3 border-bottom">
+                    <span class="badge bg-light text-primary border me-2">${p.sector}</span>
+                    <span class="badge bg-light text-dark border me-2"><i class="bi bi-geo-alt-fill me-1"></i>${p.mandal}</span>
+                    <span class="badge ${p.priority === 'High Priority' ? 'bg-danger text-white' : 'bg-warning text-dark'}">${p.priority}</span>
                 </div>
-            `).join('');
+                <div class="row g-3 mb-4">
+                    <div class="col-6">
+                        <div class="p-3 bg-light rounded-3">
+                            <small class="text-muted d-block">Estimated Budget Outlay</small>
+                            <strong class="fs-5 text-navy">${p.budget}</strong>
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="p-3 bg-light rounded-3">
+                            <small class="text-muted d-block">Target Beneficiaries</small>
+                            <strong class="fs-5 text-navy">${p.beneficiaries || 'Community'}</strong>
+                        </div>
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <h4 class="h6 fw-bold text-dark">Proposed Scope &amp; Components</h4>
+                    <p class="small text-muted mb-0">${p.components || 'Detailed project DPR with cost estimates available.'}</p>
+                </div>
+                <div class="mb-3">
+                    <h4 class="h6 fw-bold text-dark">Measurable Development Outcomes</h4>
+                    <p class="small text-muted mb-0">${p.outcomes || 'Measurable social impact monitored by District Administration.'}</p>
+                </div>
+                <div class="p-3 bg-light rounded-3 border">
+                    <small class="text-muted d-block mb-1">Implementation Department</small>
+                    <strong class="text-dark">Sri Sathya Sai District CSR Cell &bull; Facilitated under District Collectorate</strong>
+                </div>
+            `;
+
+            document.getElementById('modalAdoptBtn').onclick = () => {
+                setAdoptProject(p.title, p.sector);
+            };
+
+            const modal = new bootstrap.Modal(document.getElementById('dprModal'));
+            modal.show();
         }
 
-        function filterProjects() {
-            const query = (document.getElementById("search-input").value || "").toLowerCase().trim();
-            const sector = document.getElementById("sector-filter").value;
-            const mandal = document.getElementById("mandal-filter").value;
-
-            const filtered = sampleProjects.filter(p => {
-                const matchQuery = !query || p.title.toLowerCase().includes(query) || p.description.toLowerCase().includes(query) || p.mandal.toLowerCase().includes(query);
-                const matchSector = (sector === "All") || (p.sector === sector);
-                const matchMandal = (mandal === "All") || (p.mandal === mandal);
-                return matchQuery && matchSector && matchMandal;
-            });
-
-            renderProjectCards(filtered);
-            if (typeof window.ui21Enhance === "function") window.ui21Enhance();
+        function setAdoptProject(title, sector) {
+            try {
+                localStorage.setItem('eoi_prefill_project', JSON.stringify({ title, sector }));
+            } catch (e) {}
+            window.location.href = 'index.html#partner-form';
         }
 
-        function resetFilters() {
-            document.getElementById("search-input").value = "";
-            document.getElementById("sector-filter").value = "All";
-            document.getElementById("mandal-filter").value = "All";
-            renderProjectCards(sampleProjects);
-            if (typeof window.ui21Enhance === "function") window.ui21Enhance();
+        function resetProjectFilters() {
+            document.getElementById('search-input').value = '';
+            document.getElementById('sector-filter').value = 'All';
+            document.getElementById('budget-filter').value = 'All';
+            document.getElementById('priority-filter').value = 'All';
+            applyFilters();
         }
 
-        document.addEventListener("DOMContentLoaded", () => {
-            renderProjectCards(sampleProjects);
-            if (typeof window.ui21Enhance === "function") window.ui21Enhance();
-            document.getElementById("search-input").addEventListener("input", filterProjects);
-            document.getElementById("sector-filter").addEventListener("change", filterProjects);
-            document.getElementById("mandal-filter").addEventListener("change", filterProjects);
+        // Attach event listeners
+        document.getElementById('search-input')?.addEventListener('input', applyFilters);
+        document.getElementById('sector-filter')?.addEventListener('change', applyFilters);
+        document.getElementById('budget-filter')?.addEventListener('change', applyFilters);
+        document.getElementById('priority-filter')?.addEventListener('change', applyFilters);
+
+        document.getElementById('modalDownloadPdfBtn')?.addEventListener('click', function () {
+            if (!selectedProjectForModal) return;
+            const p = selectedProjectForModal;
+            const { jsPDF } = window.jspdf;
+            const doc = new jsPDF();
+
+            doc.setFontSize(18);
+            doc.text("Sri Sathya Sai District CSR Connect", 15, 20);
+            doc.setFontSize(11);
+            doc.text("Official District Administration Development Proposal", 15, 28);
+            doc.setLineWidth(0.5);
+            doc.line(15, 32, 195, 32);
+
+            doc.setFontSize(14);
+            doc.text(p.title, 15, 42);
+            doc.setFontSize(10);
+            doc.text(`Project Code: ${p.dpr_code || 'DPR-SSS-' + p.id} | Priority: ${p.priority}`, 15, 50);
+            doc.text(`Sector: ${p.sector} | Location: ${p.mandal}`, 15, 56);
+            doc.text(`Indicative Outlay: ${p.budget} | Target Beneficiaries: ${p.beneficiaries}`, 15, 62);
+
+            doc.setFontSize(11);
+            doc.text("Project Components:", 15, 74);
+            doc.setFontSize(9);
+            const compLines = doc.splitTextToSize(p.components || 'Standard equipment specification', 170);
+            doc.text(compLines, 15, 80);
+
+            doc.setFontSize(11);
+            doc.text("Expected Measurable Outcomes:", 15, 100);
+            doc.setFontSize(9);
+            const outcomeLines = doc.splitTextToSize(p.outcomes || 'Verified community outcomes', 170);
+            doc.text(outcomeLines, 15, 106);
+
+            doc.setLineWidth(0.3);
+            doc.line(15, 130, 195, 130);
+            doc.setFontSize(8);
+            doc.text("Sri Sathya Sai District Administration • Single-Window CSR Partnership Desk", 15, 136);
+            doc.text("Contact: collector-sssai@ap.gov.in | Collectorate, Puttaparthi, AP", 15, 141);
+
+            doc.save(`${p.dpr_code || 'CSR-Proposal'}.pdf`);
         });
+
+        // Initialize on DOM ready
+        document.addEventListener('DOMContentLoaded', initProjectBank);
     </script>
 </body>
 

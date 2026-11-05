@@ -9,7 +9,7 @@
     const translations = {
         en: {
             // Header & Navigation
-            "portal_title": "Sri Sathya Sai District CSR Portal",
+            "portal_title": "Sri Sathya Sai CSR Connect",
             "nav_home": "Home",
             "nav_about": "About District",
             "nav_projects": "Priority Projects",
@@ -57,8 +57,8 @@
             // Partners & Scroller
             "partner_title": "Corporate Social Responsibility Partners",
             "partner_subtitle": "Featuring Major Industrial Contributors in Sri Sathya Sai District",
-            "partner_kia": "KIA Motors India",
-            "partner_kia_sub": "Penukonda Plant, SSS District",
+            "partner_stream_dmf": "District Mineral Foundation (DMF)",
+            "partner_stream_csr": "District CSR Facilitation Stream",
             "partner_onboarding": "Onboarding Open",
             "partner_join_title": "Your Company Logo",
             "partner_join_sub": "Join as Founding CSR Partner",
@@ -93,7 +93,7 @@
         },
         te: {
             // Header & Navigation
-            "portal_title": "శ్రీ సత్యసాయి జిల్లా సి.ఎస్.ఆర్ పోర్టల్",
+            "portal_title": "శ్రీ సత్యసాయి సి.ఎస్.ఆర్ కనెక్ట్",
             "nav_home": "ముఖ్యాంశాలు",
             "nav_about": "జిల్లా సమాచారం",
             "nav_projects": "ప్రాధాన్యతా ప్రాజెక్టులు",
@@ -141,8 +141,8 @@
             // Partners & Scroller
             "partner_title": "కార్పొరేట్ భాగస్వామ్య సంస్థలు",
             "partner_subtitle": "శ్రీ సత్యసాయి జిల్లాలోని ప్రధాన పారిశ్రామిక భాగస్వాములు",
-            "partner_kia": "కియా మోటార్స్ ఇండియా",
-            "partner_kia_sub": "పెనుకొండ ప్లాంట్, శ్రీ సత్యసాయి జిల్లా",
+            "partner_stream_dmf": "డిస్ట్రిక్ట్ మినరల్ ఫౌండేషన్ (DMF)",
+            "partner_stream_csr": "జిల్లా సి.ఎస్.ఆర్ ఫెసిలిటేషన్ విభాగం",
             "partner_onboarding": "భాగస్వామ్య అవకాశం ఉంది",
             "partner_join_title": "మీ కంపెనీ లోగో",
             "partner_join_sub": "సి.ఎస్.ఆర్ భాగస్వామిగా చేరండి",

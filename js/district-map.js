@@ -16,7 +16,7 @@
             lng: 77.5898,
             sector: "Education",
             budget: "₹1.20 Crores",
-            sponsor: "KIA Motors India",
+            sponsor: "Open for Corporate Adoption",
             status: "In Progress",
             description: "Advanced EV automotive skills lab and youth training facility adjacent to Penukonda Industrial Hub."
         },
@@ -52,7 +52,7 @@
             lng: 77.7180,
             sector: "Education",
             budget: "₹45 Lakhs",
-            sponsor: "Tata Trusts (Under Review)",
+            sponsor: "District CSR Facilitation Stream",
             status: "Under Review",
             description: "Digital classrooms, computer labs, and solar roof systems across 8 government schools in Dharmavaram."
         },
@@ -152,4 +152,12 @@
             marker.bindPopup(popupContent);
         });
     };
+
+    if (document.readyState === "loading") {
+        document.addEventListener("DOMContentLoaded", function () {
+            window.initDistrictMap("district-leaflet-map");
+        });
+    } else {
+        window.initDistrictMap("district-leaflet-map");
+    }
 })();

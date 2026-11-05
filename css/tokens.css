@@ -64,6 +64,12 @@
   --color-navy-glow: rgba(0, 40, 88, 0.1);
   --color-card-border: #e2e8f0;
 
+  --color-gold: #c2410c;
+  --color-amber-gold: #d97706;
+  --color-terracotta: #b45309;
+  --color-terracotta-bg: #fffbeb;
+  --color-terracotta-border: #fde68a;
+
   --color-accent: #005a87;
   --color-accent-bright: #0689b8;
   --color-accent-ink: #fbfdff;
