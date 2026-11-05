@@ -3,10 +3,9 @@
 
 <head>
     <meta charset="utf-8">
-    <title>About District Profile | CSR Portal - Sri Sathya Sai District</title>
-
+    <title>About Sri Sathya Sai District | Official Profile &amp; Demographics</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <meta content="About Sri Sathya Sai District, Mandals, Economy, Geography, Culture, Administration, srisathyasai.ap.gov.in" name="description">
+    <meta content="About Sri Sathya Sai District, 32 Mandals, 5 Revenue Divisions, Economy, Geography, Kia Penukonda, Andhra Pradesh Administration" name="description">
 
     <!-- Favicon -->
     <link href="img/csr_logo.png" rel="icon" type="image/png">
@@ -21,335 +20,260 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
 
-    <!-- Libraries Stylesheet -->
-    <link href="owl.carousel.min.css" rel="stylesheet">
-    <link href="animate.min.css" rel="stylesheet">
+    <!-- Vendor CSS via CDN -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet">
 
-    <!-- Bootstrap Stylesheet -->
-    <link href="bootstrap.min.css" rel="stylesheet">
-
-    <!-- Template Stylesheet -->
+    <!-- Bespoke Tokens & Stylesheets -->
+    <link href="css/tokens.css" rel="stylesheet">
+    <link href="css/base.css" rel="stylesheet">
     <link href="style.css" rel="stylesheet">
     <link href="css/premium.css" rel="stylesheet">
     <link href="css/ui21.css?v=20260901d" rel="stylesheet">
-
-    <style>
-        :root {
-            --primary: #06A3DA;
-            --secondary: #34AD54;
-            --dark-navy: #002858;
-        }
-
-        body {
-            font-family: 'Inter', sans-serif;
-            color: #334455;
-            background-color: #F8FAFC;
-        }
-
-        h1, h2, h3, h4, h5, h6 {
-            font-family: 'Bai Jamjuree', sans-serif;
-        }
-
-        .topbar {
-            background-color: #001838;
-            color: #CBD5E1;
-            font-size: 13.5px;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-        }
-
-        .topbar a {
-            color: #E2E8F0;
-            text-decoration: none;
-        }
-
-        .header-brand-container {
-            background: #FFFFFF;
-            padding: 14px 0;
-            box-shadow: 0 4px 20px rgba(0, 40, 88, 0.06);
-        }
-
-        .mandal-badge {
-            background: #FFFFFF;
-            border: 1px solid #E2E8F0;
-            border-radius: 8px;
-            padding: 12px 16px;
-            font-weight: 600;
-            color: var(--dark-navy);
-            transition: all 0.2s ease;
-        }
-        .mandal-badge:hover {
-            border-color: var(--primary);
-            color: var(--primary);
-            transform: translateX(4px);
-        }
-
-        .bg-district-header {
-            background:
-                radial-gradient(circle at 15% 20%, rgba(6, 163, 218, 0.35), transparent 45%),
-                radial-gradient(circle at 85% 75%, rgba(52, 173, 84, 0.30), transparent 50%),
-                linear-gradient(135deg, #001838, #002858 55%, #003a6b);
-            padding: 80px 0;
-            color: #FFFFFF;
-        }
-    </style>
 </head>
 
 <body>
-    <!-- Spinner Start -->
-    <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
-        <div class="spinner"></div>
-    </div>
-    <!-- Spinner End -->
+    <!-- Skip to main content -->
+    <a class="skip-link" href="#main-content">Skip to main content</a>
 
     <!-- Header Component Start -->
     <div id="site-header"></div>
     <!-- Header Component End -->
 
-        <div id="main-content" class="bg-district-header text-center">
-            <div class="container">
-                <h1 class="display-4 text-white fw-bold mb-2">About Sri Sathya Sai District</h1>
-                <p class="fs-5 text-info mb-0">Demographics, Geography, Economy & Administrative Structure</p>
+    <!-- Hero Header -->
+    <header id="main-content" class="hero-banner text-center" role="banner">
+        <div class="container">
+            <h1 class="display-4 mx-auto fw-bold" data-i18n="nav_about">About Sri Sathya Sai District</h1>
+            <p class="hero-lede mx-auto">Official administrative profile, demographics, geography, and industrial development landscape.</p>
+            <div class="d-flex justify-content-center align-items-center gap-3 flex-wrap">
+                <a href="#demographics" class="btn btn-primary rounded-pill px-4 py-2 fw-bold btn-shine text-nowrap">
+                    Key Demographics
+                </a>
+                <a href="#mandals" class="btn btn-outline-light rounded-pill px-4 py-2 fw-bold text-nowrap">
+                    Directory of 32 Mandals
+                </a>
             </div>
         </div>
-    </div>
-    <!-- Navbar End -->
+    </header>
 
-    <!-- About District Main Content Start -->
-    <div class="container-fluid py-5">
-        <div class="container py-4">
-            <div class="row g-5">
-                <div class="col-lg-12">
-                    <div class="section-title position-relative pb-3 mb-4">
-                        <h5 class="fw-bold text-primary text-uppercase">Official Profile</h5>
-                        <h2 class="mb-0">District Overview & Administrative Demographics</h2>
+    <!-- Main Content -->
+    <main class="container py-5" role="main">
+        <!-- Demographics Section -->
+        <section id="demographics" class="mb-5" aria-labelledby="heading-overview">
+            <div class="mb-4">
+                <h2 id="heading-overview" class="h3 fw-bold text-dark mb-2">District Overview &amp; Administration</h2>
+                <p class="lead text-muted">Formed on 4 April 2022 from the Rayalaseema region, centered around Puttaparthi and Penukonda.</p>
+            </div>
+
+            <p class="mb-4 text-dark" style="max-width: 75ch; line-height: 1.7;">
+                Sri Sathya Sai district is located in the southern Rayalaseema region of Andhra Pradesh, India. Named after Bhagawan Sri Sathya Sai Baba, the district is celebrated for pioneering institutions that brought specialized free healthcare, advanced drinking water networks, and higher education universities to rural Rayalaseema. The administrative headquarters is at Puttaparthi.
+            </p>
+
+            <!-- 4 Statutory Key Metrics -->
+            <div class="row g-4 my-2">
+                <div class="col-lg-3 col-6">
+                    <div class="partner-card text-center p-4 h-100">
+                        <span class="d-block display-5 fw-bold text-primary num mb-1">5</span>
+                        <span class="text-muted small fw-semibold">Revenue Divisions</span>
                     </div>
-
-                    <p class="lead text-dark" style="text-align: justify;">
-                        Sri Sathya Sai district is located in the Rayalaseema region of Andhra Pradesh, India. Formed on 4 April 2022 from the Dharmavaram, Penukonda, Kadiri, Madakasira, and Puttaparthi revenue divisions, it is named after Bhagawan Sri Sathya Sai Baba, whose globally renowned institutions brought schools, a university, free super-speciality healthcare, and drinking water projects to the region.
-                    </p>
-
-                    <div class="row g-4 my-4">
-                        <div class="col-md-3 col-6">
-                            <div class="p-3 bg-white border rounded-3 text-center shadow-sm">
-                                <h3 class="fw-bold text-primary mb-1">5</h3>
-                                <small class="text-muted fw-semibold">Revenue Divisions</small>
-                            </div>
-                        </div>
-                        <div class="col-md-3 col-6">
-                            <div class="p-3 bg-white border rounded-3 text-center shadow-sm">
-                                <h3 class="fw-bold text-success mb-1">32</h3>
-                                <small class="text-muted fw-semibold">Administrative Mandals</small>
-                            </div>
-                        </div>
-                        <div class="col-md-3 col-6">
-                            <div class="p-3 bg-white border rounded-3 text-center shadow-sm">
-                                <h3 class="fw-bold text-warning mb-1">467</h3>
-                                <small class="text-muted fw-semibold">Gram Panchayats / Villages</small>
-                            </div>
-                        </div>
-                        <div class="col-md-3 col-6">
-                            <div class="p-3 bg-white border rounded-3 text-center shadow-sm">
-                                <h3 class="fw-bold text-info mb-1">18.4 Lakhs</h3>
-                                <small class="text-muted fw-semibold">Population (2011 Census)</small>
-                            </div>
-                        </div>
+                </div>
+                <div class="col-lg-3 col-6">
+                    <div class="partner-card text-center p-4 h-100">
+                        <span class="d-block display-5 fw-bold text-success num mb-1">32</span>
+                        <span class="text-muted small fw-semibold">Administrative Mandals</span>
                     </div>
-
-                    <h5 class="fw-bold text-primary text-uppercase mt-5 mb-3"><i class="bi bi-map-fill me-2"></i>District Map</h5>
-                    <figure class="mb-4">
-                        <a href="img/district-map.jpg" target="_blank" rel="noopener">
-                            <img src="img/district-map.jpg" alt="Government of Andhra Pradesh - Sri Sathya Sai District constituency-wise map" class="img-fluid rounded-3 border shadow-sm w-100">
-                        </a>
-                        <figcaption class="text-muted small mt-2 text-center">Official constituency-wise map of Sri Sathya Sai District, Govt of Andhra Pradesh. Click to view full resolution.</figcaption>
-                    </figure>
-
-                    <h5 class="fw-bold text-primary text-uppercase mt-5 mb-3"><i class="bi bi-geo-alt-fill me-2"></i>Geography & Climate</h5>
-                    <p style="text-align: justify;">
-                        The district lies in the Rayalaseema region, bounded by Anantapur district to the north, Annamayya and Kadapa districts to the east, and by Chitradurga, Tumakuru and Chikkaballapura districts of Karnataka to the west and south-west. The Pennar, Chitravathi, Jayamangala, Maddileru, and Papagni rivers flow through the district. Predominant soil types are red soils, with mineral reserves of gold, quartz, granite, and pyrophyllite.
-                    </p>
-
-                    <h5 class="fw-bold text-primary text-uppercase mt-5 mb-3"><i class="bi bi-graph-up-arrow me-2"></i>Industrial & Agricultural Economy</h5>
-                    <p style="text-align: justify;">
-                        Agriculture is centered around groundnut, silk rearing, and horticulture. The district has emerged as a major industrial hub anchored by:
-                    </p>
-                    <ul class="list-group list-group-flush mb-4">
-                        <li class="list-group-item bg-transparent"><i class="bi bi-check-circle-fill text-success me-2"></i><strong>Kia India Automobile Plant:</strong> 536-acre facility at Yerramanchi village, Penukonda mandal (Annual capacity: 3.5 Lakh units).</li>
-                        <li class="list-group-item bg-transparent"><i class="bi bi-check-circle-fill text-success me-2"></i><strong>Berger Paints India:</strong> Advanced chemical manufacturing facility at Hindupur.</li>
-                        <li class="list-group-item bg-transparent"><i class="bi bi-check-circle-fill text-success me-2"></i><strong>Texport Industries:</strong> Apparel and textile manufacturing hub at Gollapuram, Hindupur.</li>
-                    </ul>
-
-                    <h5 class="fw-bold text-primary text-uppercase mt-5 mb-3"><i class="bi bi-building-check me-2"></i>List of 32 Mandals in Sri Sathya Sai District</h5>
-                    <p class="text-muted small">Grouped across the 5 Revenue Divisions (Puttaparthi, Penukonda, Kadiri, Dharmavaram, Madakasira):</p>
-
-                    <div class="row g-3">
-                        <div class="col-md-4 col-sm-6"><div class="mandal-badge"><i class="bi bi-geo-fill text-primary me-2"></i>1. Agali</div></div>
-                        <div class="col-md-4 col-sm-6"><div class="mandal-badge"><i class="bi bi-geo-fill text-primary me-2"></i>2. Amadagur</div></div>
-                        <div class="col-md-4 col-sm-6"><div class="mandal-badge"><i class="bi bi-geo-fill text-primary me-2"></i>3. Amarapuram</div></div>
-                        <div class="col-md-4 col-sm-6"><div class="mandal-badge"><i class="bi bi-geo-fill text-primary me-2"></i>4. Bathalapalli</div></div>
-                        <div class="col-md-4 col-sm-6"><div class="mandal-badge"><i class="bi bi-geo-fill text-primary me-2"></i>5. Bukkapatnam</div></div>
-                        <div class="col-md-4 col-sm-6"><div class="mandal-badge"><i class="bi bi-geo-fill text-primary me-2"></i>6. Chennekothapalli</div></div>
-                        <div class="col-md-4 col-sm-6"><div class="mandal-badge"><i class="bi bi-geo-fill text-primary me-2"></i>7. Chilamathur</div></div>
-                        <div class="col-md-4 col-sm-6"><div class="mandal-badge"><i class="bi bi-geo-fill text-primary me-2"></i>8. Dharmavaram</div></div>
-                        <div class="col-md-4 col-sm-6"><div class="mandal-badge"><i class="bi bi-geo-fill text-primary me-2"></i>9. Gandlapenta</div></div>
-                        <div class="col-md-4 col-sm-6"><div class="mandal-badge"><i class="bi bi-geo-fill text-primary me-2"></i>10. Gorantla</div></div>
-                        <div class="col-md-4 col-sm-6"><div class="mandal-badge"><i class="bi bi-geo-fill text-primary me-2"></i>11. Gudibanda</div></div>
-                        <div class="col-md-4 col-sm-6"><div class="mandal-badge"><i class="bi bi-geo-fill text-primary me-2"></i>12. Hindupur</div></div>
-                        <div class="col-md-4 col-sm-6"><div class="mandal-badge"><i class="bi bi-geo-fill text-primary me-2"></i>13. Kadiri</div></div>
-                        <div class="col-md-4 col-sm-6"><div class="mandal-badge"><i class="bi bi-geo-fill text-primary me-2"></i>14. Kanaganapalli</div></div>
-                        <div class="col-md-4 col-sm-6"><div class="mandal-badge"><i class="bi bi-geo-fill text-primary me-2"></i>15. Kothacheruvu</div></div>
-                        <div class="col-md-4 col-sm-6"><div class="mandal-badge"><i class="bi bi-geo-fill text-primary me-2"></i>16. Lepakshi</div></div>
-                        <div class="col-md-4 col-sm-6"><div class="mandal-badge"><i class="bi bi-geo-fill text-primary me-2"></i>17. Madakasira</div></div>
-                        <div class="col-md-4 col-sm-6"><div class="mandal-badge"><i class="bi bi-geo-fill text-primary me-2"></i>18. Mudigubba</div></div>
-                        <div class="col-md-4 col-sm-6"><div class="mandal-badge"><i class="bi bi-geo-fill text-primary me-2"></i>19. Nallacheruvu</div></div>
-                        <div class="col-md-4 col-sm-6"><div class="mandal-badge"><i class="bi bi-geo-fill text-primary me-2"></i>20. Nallamada</div></div>
-                        <div class="col-md-4 col-sm-6"><div class="mandal-badge"><i class="bi bi-geo-fill text-primary me-2"></i>21. N.P. Kunta</div></div>
-                        <div class="col-md-4 col-sm-6"><div class="mandal-badge"><i class="bi bi-geo-fill text-primary me-2"></i>22. Obuladevaracheruvu</div></div>
-                        <div class="col-md-4 col-sm-6"><div class="mandal-badge"><i class="bi bi-geo-fill text-primary me-2"></i>23. Parigi</div></div>
-                        <div class="col-md-4 col-sm-6"><div class="mandal-badge"><i class="bi bi-geo-fill text-primary me-2"></i>24. Penukonda</div></div>
-                        <div class="col-md-4 col-sm-6"><div class="mandal-badge"><i class="bi bi-geo-fill text-primary me-2"></i>25. Puttaparthi</div></div>
-                        <div class="col-md-4 col-sm-6"><div class="mandal-badge"><i class="bi bi-geo-fill text-primary me-2"></i>26. Ramagiri</div></div>
-                        <div class="col-md-4 col-sm-6"><div class="mandal-badge"><i class="bi bi-geo-fill text-primary me-2"></i>27. Rolla</div></div>
-                        <div class="col-md-4 col-sm-6"><div class="mandal-badge"><i class="bi bi-geo-fill text-primary me-2"></i>28. Roddam</div></div>
-                        <div class="col-md-4 col-sm-6"><div class="mandal-badge"><i class="bi bi-geo-fill text-primary me-2"></i>29. Somandepalli</div></div>
-                        <div class="col-md-4 col-sm-6"><div class="mandal-badge"><i class="bi bi-geo-fill text-primary me-2"></i>30. Tadimarri</div></div>
-                        <div class="col-md-4 col-sm-6"><div class="mandal-badge"><i class="bi bi-geo-fill text-primary me-2"></i>31. Talupula</div></div>
-                        <div class="col-md-4 col-sm-6"><div class="mandal-badge"><i class="bi bi-geo-fill text-primary me-2"></i>32. Tanakallu</div></div>
+                </div>
+                <div class="col-lg-3 col-6">
+                    <div class="partner-card text-center p-4 h-100">
+                        <span class="d-block display-5 fw-bold text-warning num mb-1">467</span>
+                        <span class="text-muted small fw-semibold">Gram Panchayats</span>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-6">
+                    <div class="partner-card text-center p-4 h-100">
+                        <span class="d-block display-5 fw-bold text-info num mb-1">18.4L</span>
+                        <span class="text-muted small fw-semibold">District Population</span>
                     </div>
                 </div>
             </div>
-        </div>
-    </div>
-    <!-- About Main Content End -->
+        </section>
 
-    <!-- Partners CTA Start -->
-    <div class="container-fluid py-5 bg-white border-top">
-        <div class="container text-center">
-            <div class="section-title text-center position-relative pb-3 mb-4 mx-auto" style="max-width: 600px;">
-                <h5 class="fw-bold text-primary text-uppercase">Our Collaborators & Industrial Partners</h5>
-                <h2 class="mb-0">Corporate Social Responsibility Partners</h2>
+        <!-- District Map Section -->
+        <section class="mb-5" aria-labelledby="heading-map">
+            <div class="mb-3">
+                <h2 id="heading-map" class="h3 fw-bold text-dark mb-2">Constituency &amp; Revenue Map</h2>
+                <p class="text-muted">Verified geographical boundary map issued by the District Collectorate, Puttaparthi.</p>
             </div>
-            
-            <!-- Partner Infinite Continuous Scroller -->
-            <div class="partner-scroller-container mb-4 text-start">
-                <div class="partner-scroller-track">
-                    <!-- Partner 1: KIA Motors India -->
-                    <div class="partner-card-item">
-                        <img src="img/kia_logo.png" alt="KIA Motors India" class="partner-logo-img">
-                        <div>
-                            <span class="badge bg-primary text-white mb-1" style="font-size: 10px;">Industrial CSR Partner</span>
-                            <h6 class="mb-0 fw-bold text-dark" style="font-size: 14px;">KIA Motors India</h6>
-                            <small class="text-muted d-block" style="font-size: 11px;">Penukonda Plant, SSS District</small>
+            <figure class="partner-card p-3 mb-4 text-center">
+                <a href="img/district-map.jpg" target="_blank" rel="noopener noreferrer" title="View Full High-Resolution Map">
+                    <img src="img/district-map.jpg" alt="Government of Andhra Pradesh official constituency-wise map of Sri Sathya Sai District" class="img-fluid rounded border w-100" style="max-height: 600px; object-fit: contain;">
+                </a>
+                <figcaption class="text-muted small mt-2">
+                    Official Sri Sathya Sai District boundary and assembly constituency map. Click image to expand high resolution.
+                </figcaption>
+            </figure>
+        </section>
+
+        <!-- Geography & Climate Section -->
+        <section class="mb-5" aria-labelledby="heading-geography">
+            <div class="mb-3">
+                <h2 id="heading-geography" class="h3 fw-bold text-dark mb-2">Geography, Rivers &amp; Mineral Reserves</h2>
+            </div>
+            <div class="partner-card p-4">
+                <p class="mb-3 text-dark" style="max-width: 75ch; line-height: 1.7;">
+                    The district is bounded by Anantapur district to the north, Annamayya and YSR Kadapa districts to the east, and by Chitradurga, Tumakuru, and Chikkaballapura districts of Karnataka to the west and south-west. Five perennial and seasonal river basins traverse the terrain:
+                </p>
+                <div class="row g-3 mb-3">
+                    <div class="col-md-4 col-sm-6">
+                        <div class="p-3 bg-light rounded border text-dark fw-semibold">
+                            <span class="text-primary me-2">•</span>Pennar River Basin
                         </div>
                     </div>
-
-                    <!-- Partner 2: Slot for Future Partner -->
-                    <div class="partner-card-item">
-                        <div class="partner-placeholder-icon">
-                            <i class="bi bi-building-add"></i>
-                        </div>
-                        <div>
-                            <span class="badge bg-warning text-dark mb-1" style="font-size: 10px;">Onboarding Open</span>
-                            <h6 class="mb-0 fw-bold text-dark" style="font-size: 14px;">Your Company Logo</h6>
-                            <small class="text-muted d-block" style="font-size: 11px;">Join as Founding CSR Partner</small>
+                    <div class="col-md-4 col-sm-6">
+                        <div class="p-3 bg-light rounded border text-dark fw-semibold">
+                            <span class="text-primary me-2">•</span>Chitravathi River Basin
                         </div>
                     </div>
-
-                    <!-- Partner 3: Slot for Future Partner -->
-                    <div class="partner-card-item">
-                        <div class="partner-placeholder-icon">
-                            <i class="bi bi-patch-check-fill text-success"></i>
-                        </div>
-                        <div>
-                            <span class="badge bg-success text-white mb-1" style="font-size: 10px;">Priority Contributor</span>
-                            <h6 class="mb-0 fw-bold text-dark" style="font-size: 14px;">Corporate Foundation</h6>
-                            <small class="text-muted d-block" style="font-size: 11px;">Sri Sathya Sai District Projects</small>
+                    <div class="col-md-4 col-sm-6">
+                        <div class="p-3 bg-light rounded border text-dark fw-semibold">
+                            <span class="text-primary me-2">•</span>Jayamangala River Basin
                         </div>
                     </div>
-
-                    <!-- Partner 4: Slot for Future Partner -->
-                    <div class="partner-card-item">
-                        <div class="partner-placeholder-icon">
-                            <i class="bi bi-heart-pulse-fill text-danger"></i>
-                        </div>
-                        <div>
-                            <span class="badge bg-info text-white mb-1" style="font-size: 10px;">CSR Ally</span>
-                            <h6 class="mb-0 fw-bold text-dark" style="font-size: 14px;">Industry Contributor</h6>
-                            <small class="text-muted d-block" style="font-size: 11px;">Community Development</small>
+                    <div class="col-md-4 col-sm-6">
+                        <div class="p-3 bg-light rounded border text-dark fw-semibold">
+                            <span class="text-primary me-2">•</span>Papagni River Basin
                         </div>
                     </div>
-
-                    <!-- Duplicate items for seamless continuous looping -->
-                    <div class="partner-card-item">
-                        <img src="img/kia_logo.png" alt="KIA Motors India" class="partner-logo-img">
-                        <div>
-                            <span class="badge bg-primary text-white mb-1" style="font-size: 10px;">Industrial CSR Partner</span>
-                            <h6 class="mb-0 fw-bold text-dark" style="font-size: 14px;">KIA Motors India</h6>
-                            <small class="text-muted d-block" style="font-size: 11px;">Penukonda Plant, SSS District</small>
+                    <div class="col-md-4 col-sm-6">
+                        <div class="p-3 bg-light rounded border text-dark fw-semibold">
+                            <span class="text-primary me-2">•</span>Maddileru River Basin
                         </div>
                     </div>
-
-                    <div class="partner-card-item">
-                        <div class="partner-placeholder-icon">
-                            <i class="bi bi-building-add"></i>
-                        </div>
-                        <div>
-                            <span class="badge bg-warning text-dark mb-1" style="font-size: 10px;">Onboarding Open</span>
-                            <h6 class="mb-0 fw-bold text-dark" style="font-size: 14px;">Your Company Logo</h6>
-                            <small class="text-muted d-block" style="font-size: 11px;">Join as Founding CSR Partner</small>
-                        </div>
-                    </div>
-
-                    <div class="partner-card-item">
-                        <div class="partner-placeholder-icon">
-                            <i class="bi bi-patch-check-fill text-success"></i>
-                        </div>
-                        <div>
-                            <span class="badge bg-success text-white mb-1" style="font-size: 10px;">Priority Contributor</span>
-                            <h6 class="mb-0 fw-bold text-dark" style="font-size: 14px;">Corporate Foundation</h6>
-                            <small class="text-muted d-block" style="font-size: 11px;">Sri Sathya Sai District Projects</small>
-                        </div>
-                    </div>
-
-                    <div class="partner-card-item">
-                        <div class="partner-placeholder-icon">
-                            <i class="bi bi-heart-pulse-fill text-danger"></i>
-                        </div>
-                        <div>
-                            <span class="badge bg-info text-white mb-1" style="font-size: 10px;">CSR Ally</span>
-                            <h6 class="mb-0 fw-bold text-dark" style="font-size: 14px;">Industry Contributor</h6>
-                            <small class="text-muted d-block" style="font-size: 11px;">Community Development</small>
+                    <div class="col-md-4 col-sm-6">
+                        <div class="p-3 bg-light rounded border text-dark fw-semibold">
+                            <span class="text-primary me-2">•</span>Red &amp; Black Soil Belts
                         </div>
                     </div>
                 </div>
+                <p class="text-muted small mb-0">Mineral deposits include high-grade quartz, commercial granite, pyrophyllite, and gold reserves in Ramagiri mandal.</p>
+            </div>
+        </section>
+
+        <!-- Industrial & CSR Economy Section -->
+        <section class="mb-5" aria-labelledby="heading-economy">
+            <div class="mb-3">
+                <h2 id="heading-economy" class="h3 fw-bold text-dark mb-2">Industrial Corridors &amp; Manufacturing Anchors</h2>
+                <p class="text-muted">Strategically positioned along the Bengaluru-Hyderabad NH-44 Industrial Corridor.</p>
             </div>
 
-            <p class="text-muted mb-3">Featuring <strong>KIA Motors India (Penukonda Hub)</strong>. Onboarding additional corporate partners for Sri Sathya Sai District.</p>
-            <a href="index.html#partner-form" class="btn btn-primary rounded-pill px-4 py-2 fw-bold btn-shine"><i class="bi bi-heart-fill me-2"></i>Register Your Interest</a>
-        </div>
-    </div>
-    <!-- Partners CTA End -->
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6">
+                    <div class="partner-card p-4 h-100">
+                        <div class="d-flex align-items-center gap-2 mb-3">
+                            <span class="badge bg-primary text-white">Automotive Hub</span>
+                            <span class="small text-muted">Penukonda</span>
+                        </div>
+                        <h3 class="h5 fw-bold text-dark">Kia India Automobile Plant</h3>
+                        <p class="text-muted small mb-0">State-of-the-art 536-acre facility at Yerramanchi village with 3.5 Lakh annual vehicle production capacity, supporting over 40 tier-1 supplier ancillaries.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="partner-card p-4 h-100">
+                        <div class="d-flex align-items-center gap-2 mb-3">
+                            <span class="badge bg-success text-white">Specialty Chemicals</span>
+                            <span class="small text-muted">Hindupur</span>
+                        </div>
+                        <h3 class="h5 fw-bold text-dark">Berger Paints India</h3>
+                        <p class="text-muted small mb-0">Large-scale automated paints and industrial coatings manufacturing complex generating direct local employment and industrial skilling.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="partner-card p-4 h-100">
+                        <div class="d-flex align-items-center gap-2 mb-3">
+                            <span class="badge bg-info text-white">Textile &amp; Apparel</span>
+                            <span class="small text-muted">Gollapuram</span>
+                        </div>
+                        <h3 class="h5 fw-bold text-dark">Texport Industries Hub</h3>
+                        <p class="text-muted small mb-0">Premier textile manufacturing cluster employing over 5,000 rural women weavers and operators across Hindupur and Somandepalli mandals.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Directory of 32 Mandals Section -->
+        <section id="mandals" class="mb-5" aria-labelledby="heading-mandals">
+            <div class="mb-4">
+                <h2 id="heading-mandals" class="h3 fw-bold text-dark mb-2">Directory of 32 Mandals</h2>
+                <p class="text-muted">Grouped across the 5 Revenue Divisions: Puttaparthi, Penukonda, Kadiri, Dharmavaram, and Madakasira.</p>
+            </div>
+
+            <div class="row g-3">
+                <div class="col-lg-3 col-md-4 col-sm-6"><div class="p-3 bg-light rounded border fw-semibold text-dark"><span class="text-primary me-2">1.</span>Agali</div></div>
+                <div class="col-lg-3 col-md-4 col-sm-6"><div class="p-3 bg-light rounded border fw-semibold text-dark"><span class="text-primary me-2">2.</span>Amadagur</div></div>
+                <div class="col-lg-3 col-md-4 col-sm-6"><div class="p-3 bg-light rounded border fw-semibold text-dark"><span class="text-primary me-2">3.</span>Amarapuram</div></div>
+                <div class="col-lg-3 col-md-4 col-sm-6"><div class="p-3 bg-light rounded border fw-semibold text-dark"><span class="text-primary me-2">4.</span>Bathalapalli</div></div>
+                <div class="col-lg-3 col-md-4 col-sm-6"><div class="p-3 bg-light rounded border fw-semibold text-dark"><span class="text-primary me-2">5.</span>Bukkapatnam</div></div>
+                <div class="col-lg-3 col-md-4 col-sm-6"><div class="p-3 bg-light rounded border fw-semibold text-dark"><span class="text-primary me-2">6.</span>Chennekothapalli</div></div>
+                <div class="col-lg-3 col-md-4 col-sm-6"><div class="p-3 bg-light rounded border fw-semibold text-dark"><span class="text-primary me-2">7.</span>Chilamathur</div></div>
+                <div class="col-lg-3 col-md-4 col-sm-6"><div class="p-3 bg-light rounded border fw-semibold text-dark"><span class="text-primary me-2">8.</span>Dharmavaram</div></div>
+                <div class="col-lg-3 col-md-4 col-sm-6"><div class="p-3 bg-light rounded border fw-semibold text-dark"><span class="text-primary me-2">9.</span>Gandlapenta</div></div>
+                <div class="col-lg-3 col-md-4 col-sm-6"><div class="p-3 bg-light rounded border fw-semibold text-dark"><span class="text-primary me-2">10.</span>Gorantla</div></div>
+                <div class="col-lg-3 col-md-4 col-sm-6"><div class="p-3 bg-light rounded border fw-semibold text-dark"><span class="text-primary me-2">11.</span>Gudibanda</div></div>
+                <div class="col-lg-3 col-md-4 col-sm-6"><div class="p-3 bg-light rounded border fw-semibold text-dark"><span class="text-primary me-2">12.</span>Hindupur</div></div>
+                <div class="col-lg-3 col-md-4 col-sm-6"><div class="p-3 bg-light rounded border fw-semibold text-dark"><span class="text-primary me-2">13.</span>Kadiri</div></div>
+                <div class="col-lg-3 col-md-4 col-sm-6"><div class="p-3 bg-light rounded border fw-semibold text-dark"><span class="text-primary me-2">14.</span>Kanaganapalli</div></div>
+                <div class="col-lg-3 col-md-4 col-sm-6"><div class="p-3 bg-light rounded border fw-semibold text-dark"><span class="text-primary me-2">15.</span>Kothacheruvu</div></div>
+                <div class="col-lg-3 col-md-4 col-sm-6"><div class="p-3 bg-light rounded border fw-semibold text-dark"><span class="text-primary me-2">16.</span>Lepakshi</div></div>
+                <div class="col-lg-3 col-md-4 col-sm-6"><div class="p-3 bg-light rounded border fw-semibold text-dark"><span class="text-primary me-2">17.</span>Madakasira</div></div>
+                <div class="col-lg-3 col-md-4 col-sm-6"><div class="p-3 bg-light rounded border fw-semibold text-dark"><span class="text-primary me-2">18.</span>Mudigubba</div></div>
+                <div class="col-lg-3 col-md-4 col-sm-6"><div class="p-3 bg-light rounded border fw-semibold text-dark"><span class="text-primary me-2">19.</span>Nallacheruvu</div></div>
+                <div class="col-lg-3 col-md-4 col-sm-6"><div class="p-3 bg-light rounded border fw-semibold text-dark"><span class="text-primary me-2">20.</span>Nallamada</div></div>
+                <div class="col-lg-3 col-md-4 col-sm-6"><div class="p-3 bg-light rounded border fw-semibold text-dark"><span class="text-primary me-2">21.</span>N.P. Kunta</div></div>
+                <div class="col-lg-3 col-md-4 col-sm-6"><div class="p-3 bg-light rounded border fw-semibold text-dark"><span class="text-primary me-2">22.</span>Obuladevaracheruvu</div></div>
+                <div class="col-lg-3 col-md-4 col-sm-6"><div class="p-3 bg-light rounded border fw-semibold text-dark"><span class="text-primary me-2">23.</span>Parigi</div></div>
+                <div class="col-lg-3 col-md-4 col-sm-6"><div class="p-3 bg-light rounded border fw-semibold text-dark"><span class="text-primary me-2">24.</span>Penukonda</div></div>
+                <div class="col-lg-3 col-md-4 col-sm-6"><div class="p-3 bg-light rounded border fw-semibold text-dark"><span class="text-primary me-2">25.</span>Puttaparthi</div></div>
+                <div class="col-lg-3 col-md-4 col-sm-6"><div class="p-3 bg-light rounded border fw-semibold text-dark"><span class="text-primary me-2">26.</span>Ramagiri</div></div>
+                <div class="col-lg-3 col-md-4 col-sm-6"><div class="p-3 bg-light rounded border fw-semibold text-dark"><span class="text-primary me-2">27.</span>Rolla</div></div>
+                <div class="col-lg-3 col-md-4 col-sm-6"><div class="p-3 bg-light rounded border fw-semibold text-dark"><span class="text-primary me-2">28.</span>Roddam</div></div>
+                <div class="col-lg-3 col-md-4 col-sm-6"><div class="p-3 bg-light rounded border fw-semibold text-dark"><span class="text-primary me-2">29.</span>Somandepalli</div></div>
+                <div class="col-lg-3 col-md-4 col-sm-6"><div class="p-3 bg-light rounded border fw-semibold text-dark"><span class="text-primary me-2">30.</span>Tadimarri</div></div>
+                <div class="col-lg-3 col-md-4 col-sm-6"><div class="p-3 bg-light rounded border fw-semibold text-dark"><span class="text-primary me-2">31.</span>Talupula</div></div>
+                <div class="col-lg-3 col-md-4 col-sm-6"><div class="p-3 bg-light rounded border fw-semibold text-dark"><span class="text-primary me-2">32.</span>Tanakallu</div></div>
+            </div>
+        </section>
+
+        <!-- Partner Engagement CTA -->
+        <section class="partner-card text-center p-5 mb-4" aria-labelledby="heading-adopt">
+            <h2 id="heading-adopt" class="h3 fw-bold text-dark mb-3">Partner With the District Administration</h2>
+            <p class="text-muted mx-auto mb-4" style="max-width: 60ch;">
+                Corporations, philanthropic trusts, and industry associations can directly partner with the District Collectorate through fast-tracked Single Window clearances.
+            </p>
+            <div class="d-flex justify-content-center align-items-center gap-3 flex-wrap">
+                <a href="projects.html" class="btn btn-outline-primary rounded-pill px-4 py-2 fw-bold text-nowrap">
+                    Browse Projects
+                </a>
+                <a href="index.html#partner-form" class="btn btn-primary rounded-pill px-4 py-2 fw-bold btn-shine text-nowrap">
+                    Submit EOI
+                </a>
+            </div>
+        </section>
+    </main>
 
     <!-- Footer Start -->
     <div id="site-footer"></div>
     <!-- Footer End -->
 
-    <!-- Back to Top -->
-    <a href="#" class="btn btn-lg btn-primary btn-lg-square rounded-circle back-to-top"><i class="bi bi-arrow-up"></i></a>
+    <!-- Back to top button -->
+    <a href="#main-content" class="btn btn-primary rounded-circle btn-lg-square back-to-top" aria-label="Back to top">
+        <i class="bi bi-arrow-up" aria-hidden="true"></i>
+    </a>
 
     <!-- JavaScript Libraries -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="wow.min.js"></script>
-    <script src="easing.min.js"></script>
-    <script src="waypoints.min.js"></script>
-    <script src="counterup.min.js"></script>
-    <script src="owl.carousel.min.js"></script>
-
-    <!-- Custom Portal Modules -->
     <script src="js/i18n.js"></script>
     <script src="js/csr-client.js"></script>
-
-    <!-- Template Javascript -->
     <script src="main.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>

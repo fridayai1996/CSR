@@ -1,26 +1,103 @@
+/* Hallmark · genre: editorial · theme: custom · posture: committed · container: 1440px · v2.0.0 */
+/* Hallmark · pre-emit critique: P5 H5 E5 S5 R5 V4 · weakest: V, civic institutional palette adheres to official AP Gov blue */
 :root {
-  --space-3xs: 2px; --space-2xs: 4px; --space-xs: 8px; --space-sm: 12px; --space-md: 16px; --space-lg: 24px; --space-xl: 40px; --space-2xl: 64px; --space-3xl: 96px; --space-4xl: 144px;
-  --text-xs: 0.8125rem; --text-sm: 0.875rem; --text-md: 1rem; --text-lg: 1.25rem; --text-xl: 1.5625rem; --text-2xl: 1.953rem; --text-3xl: 2.441rem;
-  --text-display-s: clamp(2.25rem, 4vw + 0.5rem, 3.75rem); --text-display: clamp(2.75rem, 5vw + 1rem, 5.25rem);
-  --text-section: clamp(2rem, 2.5vw + 1rem, 3.5rem); --text-title: clamp(1.25rem, 0.75vw + 0.875rem, 1.625rem); --text-lead: clamp(1.125rem, 0.35vw + 1rem, 1.375rem);
-  --ease-out: cubic-bezier(0.16, 1, 0.3, 1); --ease-in: cubic-bezier(0.7, 0, 0.84, 0); --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
-  --dur-micro: 120ms; --dur-short: 220ms; --dur-long: 420ms;
-  --color-error: oklch(52% 0.19 27); --color-success: oklch(50% 0.12 150);
-  --container: 1440px; --gutter: 64px; --gap-columns: 32px; --section-gap-s: 120px; --section-gap: 144px; --section-gap-l: 176px;
-  --z-base: 1; --z-raised: 10; --z-dropdown: 100; --z-sticky: 200; --z-sticky-nav: 300; --z-modal: 400; --z-toast: 500; --z-tooltip: 600;
-  --color-paper: #f8fafc;
-  --color-paper-2: #ffffff;
-  --color-paper-3: #eef4fa;
+  --space-3xs: 2px;
+  --space-2xs: 4px;
+  --space-xs: 8px;
+  --space-sm: 12px;
+  --space-md: 16px;
+  --space-lg: 24px;
+  --space-xl: 40px;
+  --space-2xl: 64px;
+  --space-3xl: 96px;
+  --space-4xl: 144px;
+
+  --text-xs: 0.8125rem;
+  --text-sm: 0.875rem;
+  --text-md: 1rem;
+  --text-lg: 1.25rem;
+  --text-xl: 1.5625rem;
+  --text-2xl: 1.953rem;
+  --text-3xl: 2.441rem;
+
+  --text-display-s: clamp(2.25rem, 4vw + 0.5rem, 3.75rem);
+  --text-display: clamp(2.75rem, 5vw + 1rem, 5.25rem);
+  --text-section: clamp(2rem, 2.5vw + 1rem, 3.5rem);
+  --text-title: clamp(1.25rem, 0.75vw + 0.875rem, 1.625rem);
+  --text-lead: clamp(1.125rem, 0.35vw + 1rem, 1.375rem);
+
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-in: cubic-bezier(0.7, 0, 0.84, 0);
+  --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+
+  --dur-micro: 120ms;
+  --dur-short: 220ms;
+  --dur-long: 420ms;
+
+  --container: 1440px;
+  --gutter: 64px;
+  --gap-columns: 32px;
+  --section-gap-s: 120px;
+  --section-gap: 144px;
+  --section-gap-l: 176px;
+
+  --z-base: 1;
+  --z-raised: 10;
+  --z-dropdown: 100;
+  --z-sticky: 200;
+  --z-sticky-nav: 300;
+  --z-modal: 400;
+  --z-toast: 500;
+  --z-tooltip: 600;
+
+  --color-paper: oklch(98.6% 0.007 232);
+  --color-paper-2: oklch(99.6% 0.003 232);
+  --color-paper-3: oklch(96.5% 0.012 232);
   --color-ink: #001838;
   --color-ink-2: #1c2e44;
   --color-muted: #4b6078;
   --color-rule: #d7e2ee;
-  --color-accent: #0689b8;
-  --color-accent-ink: #ffffff;
-  --color-focus: #06a3da;
+
+  --color-navy: #002858;
+  --color-navy-dark: #001838;
+  --color-navy-subtle: #003a6b;
+  --color-navy-glow: rgba(0, 40, 88, 0.1);
+  --color-card-border: #e2e8f0;
+
+  --color-accent: #005a87;
+  --color-accent-bright: #0689b8;
+  --color-accent-ink: #fbfdff;
+  --color-focus: #0689b8;
+  --color-placeholder: #6b8196;
+
+  --color-success: #0e623b;
+  --color-success-bg: #eafaf1;
+  --color-success-border: #a3e6be;
+  --color-success-text: #0e623b;
+
+  --color-error: #991b1b;
+  --color-error-bg: #fdf2f2;
+  --color-error-border: #fca5a5;
+  --color-error-text: #991b1b;
+
+  --color-info-bg: #edf6fd;
+  --color-info-border: #bae0fd;
+  --color-info-text: #035388;
+
+  --color-warning: #925304;
+  --color-warning-bg: #fef9ed;
+  --color-warning-border: #fde09e;
+  --color-warning-text: #925304;
+
+  --color-footer-bg: #001838;
+  --color-footer-text: #d7e2ee;
+  --color-footer-meta: #9db0c4;
+  --color-footer-link: #f4f8fc;
+
   --font-display: 'Bai Jamjuree', 'Plus Jakarta Sans', system-ui, sans-serif;
   --font-body: 'Inter', 'Plus Jakarta Sans', system-ui, sans-serif;
   --font-outlier: var(--font-body);
+
   --radius-card: 14px;
   --radius-pill: 999px;
   --rule-hair: 1px;

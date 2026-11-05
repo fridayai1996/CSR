@@ -35,166 +35,18 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
 
-    <!-- Libraries Stylesheet -->
-    <link href="animate.min.css" rel="stylesheet">
-    <link href="owl.carousel.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <!-- Vendor CSS via CDN -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet">
 
-    <!-- Customized Bootstrap Stylesheet -->
-    <link href="bootstrap.min.css" rel="stylesheet">
-
-    <!-- Template Stylesheet -->
-    <link href="style.css?v=20260902e" rel="stylesheet">
-    <link href="css/premium.css?v=20260902e" rel="stylesheet">
-    <link href="css/ui21.css?v=20260902e" rel="stylesheet">
-
-    <style>
-        /* Modern Design System Extensions */
-        :root {
-            --primary: #06A3DA;
-            --secondary: #34AD54;
-            --dark-navy: #002858;
-            --accent-orange: #FF9900;
-        }
-
-        body {
-            font-family: 'Inter', sans-serif;
-            color: #334455;
-            background-color: #F8FAFC;
-        }
-
-        h1,
-        h2,
-        h3,
-        h4,
-        h5,
-        h6 {
-            font-family: 'Bai Jamjuree', sans-serif;
-        }
-
-        .topbar {
-            background-color: #001838;
-            color: #CBD5E1;
-            font-size: 13.5px;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-        }
-
-        .topbar a {
-            color: #E2E8F0;
-            text-decoration: none;
-            transition: color 0.3s ease;
-        }
-
-        .topbar a:hover {
-            color: var(--primary);
-        }
-
-        .header-brand-container {
-            background: #FFFFFF;
-            padding: 14px 0;
-            box-shadow: 0 4px 20px rgba(0, 40, 88, 0.06);
-        }
-
-        .officer-badge {
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            padding: 4px 12px 4px 5px;
-            border-radius: 40px;
-            background: #F8FAFC;
-            border: 1px solid #E2E8F0;
-            white-space: nowrap;
-        }
-
-        .officer-img {
-            width: 44px;
-            height: 44px;
-            object-fit: cover;
-            object-position: top center;
-            border-radius: 50%;
-            border: 2px solid var(--primary);
-            flex-shrink: 0;
-        }
-
-        /* Sector Grid Box Enhancements */
-        .sector-box-item {
-            background-color: #FFFFFF;
-            border-radius: 12px;
-            padding: 24px 15px;
-            text-align: center;
-            box-shadow: 0 8px 25px rgba(0, 40, 88, 0.06);
-            border: 1px solid #E2E8F0;
-            transition: all 0.35s ease;
-            cursor: pointer;
-            position: relative;
-            overflow: hidden;
-            height: 140px;
-            display: flex;
-            flex-direction: column;
-            justify-content: flex-end;
-            align-items: center;
-        }
-
-        .sector-box-item:hover {
-            transform: translateY(-6px);
-            box-shadow: 0 15px 35px rgba(0, 66, 147, 0.2);
-            border-color: #004293;
-        }
-
-        .sector-box-item .box_text {
-            margin-top: 0;
-            font-size: 16px;
-            font-weight: 700;
-            font-family: 'Bai Jamjuree', sans-serif;
-            letter-spacing: 0.3px;
-        }
-
-        /* Custom Project Cards */
-        .project-card {
-            background: #FFFFFF;
-            border-radius: 14px;
-            overflow: hidden;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
-            border: 1px solid #E2E8F0;
-            transition: all 0.3s ease;
-            height: 100%;
-        }
-
-        .project-card:hover {
-            transform: translateY(-6px);
-            box-shadow: 0 20px 40px rgba(0, 40, 88, 0.12);
-        }
-
-        .progress-bar-custom {
-            height: 8px;
-            border-radius: 4px;
-            background-color: #E2EBF4;
-            overflow: hidden;
-        }
-
-        .progress-fill {
-            height: 100%;
-            background: linear-gradient(90deg, var(--primary), var(--secondary));
-            border-radius: 4px;
-        }
-
-        .hero-banner {
-            background:
-                radial-gradient(circle at 15% 20%, rgba(6, 163, 218, 0.35), transparent 45%),
-                radial-gradient(circle at 85% 75%, rgba(52, 173, 84, 0.30), transparent 50%),
-                linear-gradient(135deg, #001838, #002858 55%, #003a6b);
-            padding: 100px 0 90px;
-            color: #FFFFFF;
-        }
-
-        .partner-card {
-            background: #FFFFFF;
-            border-radius: 16px;
-            padding: 40px;
-            box-shadow: 0 15px 45px rgba(0, 40, 88, 0.08);
-            border: 1px solid #E2E8F0;
-        }
-    </style>
+    <!-- Bespoke Tokens & Stylesheets -->
+    <link href="css/tokens.css" rel="stylesheet">
+    <link href="css/base.css" rel="stylesheet">
+    <link href="style.css?v=20260902f" rel="stylesheet">
+    <link href="css/premium.css?v=20260902f" rel="stylesheet">
+    <link href="css/ui21.css?v=20260902f" rel="stylesheet">
 </head>
 
 <body>
@@ -210,36 +62,32 @@
     <!-- Header Component End -->
 
     <!-- Hero Banner Start -->
-    <div id="main-content" class="hero-banner">
+    <header id="main-content" class="hero-banner" role="banner">
         <canvas id="hero-canvas" class="hero-canvas" aria-hidden="true"></canvas>
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-lg-8 text-center text-lg-start">
-                    <span class="badge bg-info text-dark py-2 px-3 rounded-pill fw-bold mb-3"><i
-                            class="bi bi-star-fill me-1"></i> Single Window CSR Facilitation Desk • Govt of
-                        AP</span>
                     <h1 class="display-4 text-white fw-bold mb-4">
-                        Building Sustainable Infrastructure in <span class="text-info">Sri Sathya Sai
-                            District</span>
+                        Sri Sathya Sai District CSR Facilitation
                     </h1>
-                    <p class="fs-5 text-light mb-4">
-                        Directing CSR funds to high-impact rural infrastructure, education, water, healthcare and clean energy across Puttaparthi, Penukonda, Kadiri, Dharmavaram and Madakasira.
+                    <p class="hero-lede mb-4">
+                        Directing corporate CSR investments to high-impact rural and community infrastructure.
                     </p>
                     <div class="d-flex flex-wrap gap-3 justify-content-center justify-content-lg-start">
-                        <a href="projects.html" class="btn btn-primary py-3 px-4 rounded-pill fw-bold btn-portal btn-shine"><i
-                                class="bi bi-folder2-open me-2"></i> Browse Priority Projects</a>
-                        <a href="#partner-form" class="btn btn-info text-white py-3 px-4 rounded-pill fw-bold btn-portal btn-shine"><i
-                                class="bi bi-heart-fill me-2"></i> Partner With Us (Submit EoI)</a>
-                        <a href="about-district.html" class="btn btn-outline-light py-3 px-4 rounded-pill fw-bold btn-portal btn-shine"><i
-                                class="bi bi-info-circle-fill me-2"></i> About District</a>
+                        <a href="projects.html" class="btn btn-primary py-3 px-4 rounded-pill fw-bold btn-portal btn-shine text-nowrap">
+                            Browse Projects
+                        </a>
+                        <a href="#partner-form" class="btn btn-info text-white py-3 px-4 rounded-pill fw-bold btn-portal btn-shine text-nowrap">
+                            Partner With Us
+                        </a>
+                        <a href="about-district.html" class="btn btn-outline-light py-3 px-4 rounded-pill fw-bold btn-portal btn-shine text-nowrap">
+                            About District
+                        </a>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="scroll-rail scroll-rail--hero" aria-hidden="true">
-            <span class="scroll-rail-thumb" id="hero-scroll-thumb"></span>
-        </div>
-    </div>
+    </header>
     <!-- Hero Banner End -->
 
     <!-- Facts / Impact Stats Start -->
@@ -285,14 +133,13 @@
             <div class="row g-4 g-lg-5 align-items-center">
                 <div class="col-lg-7">
                     <div class="section-title position-relative pb-2 pb-lg-3 mb-3 mb-lg-4">
-                        <h5 class="fw-bold text-primary text-uppercase">Official District Overview</h5>
                         <h2 class="mb-0">Sri Sathya Sai District Administration</h2>
                     </div>
                     <p class="lead district-overview-text">
                         Formed on 4 April 2022 from Dharmavaram, Penukonda, Kadiri, Madakasira, and Puttaparthi revenue
                         divisions, Sri Sathya Sai District encompasses 32 mandals and 467 villages with headquarters at
-                        Puttaparthi. Named after Bhagawan Sri Sathya Sai Baba, the district is globally renowned for its
-                        legacy of social service, world-class education, and super-speciality health institutions.
+                        Puttaparthi. Named after Bhagawan Sri Sathya Sai Baba, the district is celebrated for its
+                        legacy of social service, specialized education, and super-speciality health institutions.
                     </p>
                     <p class="text-muted district-overview-text">
                         Under the leadership of District Collector <strong>Sri A. Shyam Prasad, I.A.S</strong> and Joint
@@ -300,13 +147,16 @@
                         closely with corporate partners to deliver transparent, high-impact projects in safe water
                         supply, smart education, mobile healthcare, and solar energy.
                     </p>
-                    <a href="about-district.html" class="btn btn-primary py-2 px-4 rounded-pill fw-bold btn-read-profile btn-shine"><i
-                            class="bi bi-arrow-right-circle-fill me-2"></i> Read Full District Profile & Mandals</a>
+                    <a href="about-district.html" class="btn btn-primary py-2 px-4 rounded-pill fw-bold btn-read-profile btn-shine text-nowrap">
+                        Read District Profile
+                    </a>
                 </div>
                 <div class="col-lg-5">
                     <div class="bg-light p-3 p-lg-4 rounded-4 shadow-sm border district-mandate-box">
-                        <h5 class="fw-bold text-dark mb-2 mb-lg-3"><i class="bi bi-shield-lock-fill text-primary me-2"></i>
-                            District CSR Mandate</h5>
+                        <div class="d-flex align-items-center gap-2 mb-2 mb-lg-3">
+                            <span class="text-primary fs-5" aria-hidden="true"><i class="bi bi-shield-lock-fill"></i></span>
+                            <h3 class="h5 fw-bold text-dark mb-0">District CSR Mandate</h3>
+                        </div>
                         <ul class="list-unstyled d-flex flex-column gap-2 gap-lg-3 mb-0">
                             <li class="d-flex align-items-start gap-2">
                                 <i class="bi bi-check-circle-fill text-success fs-5 mt-1"></i>
@@ -338,10 +188,9 @@
     <!-- About District Brief End -->
 
     <!-- Focus Sectors Section Start -->
-    <div id="focus-sectors" class="container-fluid py-3 py-lg-5 style-sectors-bg" style="background-color: #F1F5F9;">
+    <div id="focus-sectors" class="container-fluid py-3 py-lg-5 style-sectors-bg">
         <div class="container py-2 py-lg-4">
             <div class="section-title text-center position-relative pb-2 pb-lg-3 mb-3 mb-lg-5 mx-auto" style="max-width: 700px;">
-                <h5 class="fw-bold text-primary text-uppercase">Our Priority Sectors</h5>
                 <h2 class="mb-0">Key Development Sectors for CSR Collaboration</h2>
             </div>
 
@@ -439,7 +288,6 @@
         <div class="container py-2 py-lg-4">
             <div class="d-flex flex-column flex-md-row align-items-md-end justify-content-between mb-3 mb-lg-5">
                 <div>
-                    <h5 class="fw-bold text-primary text-uppercase mb-1 mb-lg-2">Schedule VII Priority Projects</h5>
                     <h2 class="mb-0 fw-bold">Featured District Statutory CSR Projects</h2>
                 </div>
                 <div class="mt-2 mt-md-0">
@@ -455,17 +303,17 @@
                 <div class="col-xl-3 col-lg-6 col-md-6 mobile-proj-col">
                     <div class="project-card">
                         <div class="p-3 p-lg-4">
-                            <span class="badge bg-light text-info border border-info mb-2">Schedule VII (i) • Health</span>
-                            <h5 class="fw-bold text-dark mb-2 proj-title">Mobile Medical Vans & Tele-Medicine</h5>
-                            <p class="text-muted small mb-3 proj-desc">Deploying 5 advanced mobile medical units with diagnostic kits & tele-medicine across Kadiri & Penukonda habitations.</p>
+                            <h3 class="h5 fw-bold text-dark mb-1 proj-title">Mobile Medical Vans &amp; Tele-Medicine</h3>
+                            <span class="badge bg-light text-info border border-info mb-2 d-inline-block">Schedule VII (i) • Health</span>
+                            <p class="text-muted small mb-3 proj-desc">Deploying 5 advanced mobile medical units with diagnostic kits &amp; tele-medicine across Kadiri &amp; Penukonda habitations.</p>
 
                             <div class="mb-3 pt-2 border-top">
                                 <div class="d-flex justify-content-between small fw-bold">
                                     <span class="text-muted">Estimated Outlay</span>
-                                    <span class="text-info">₹2.50 Cr</span>
+                                    <span class="text-info num">₹2.50 Cr</span>
                                 </div>
                             </div>
-                            <a href="#partner-form" class="btn btn-sm btn-primary rounded-pill w-100 py-2 fw-bold propose-btn btn-shine" data-sector="Healthcare, Sanitation &amp; Water">Propose to Sponsor</a>
+                            <a href="#partner-form" class="btn btn-sm btn-primary rounded-pill w-100 py-2 fw-bold propose-btn btn-shine text-nowrap" data-sector="Healthcare, Sanitation &amp; Water">Propose to Sponsor</a>
                         </div>
                     </div>
                 </div>
@@ -474,17 +322,17 @@
                 <div class="col-xl-3 col-lg-6 col-md-6 mobile-proj-col">
                     <div class="project-card">
                         <div class="p-3 p-lg-4">
-                            <span class="badge bg-light text-primary border border-primary mb-2">Schedule VII (ii) • Education</span>
-                            <h5 class="fw-bold text-dark mb-2 proj-title">Smart Classrooms & STEM Labs</h5>
+                            <h3 class="h5 fw-bold text-dark mb-1 proj-title">Smart Classrooms &amp; STEM Labs</h3>
+                            <span class="badge bg-light text-primary border border-primary mb-2 d-inline-block">Schedule VII (ii) • Education</span>
                             <p class="text-muted small mb-3 proj-desc">Equipping 50 Government ZP High Schools with interactive smart panels, robotics kits, and digital libraries.</p>
 
                             <div class="mb-3 pt-2 border-top">
                                 <div class="d-flex justify-content-between small fw-bold">
                                     <span class="text-muted">Estimated Outlay</span>
-                                    <span class="text-primary">₹1.80 Cr</span>
+                                    <span class="text-primary num">₹1.80 Cr</span>
                                 </div>
                             </div>
-                            <a href="#partner-form" class="btn btn-sm btn-primary rounded-pill w-100 py-2 fw-bold propose-btn btn-shine" data-sector="Smart Education &amp; Vocational Skills">Propose to Sponsor</a>
+                            <a href="#partner-form" class="btn btn-sm btn-primary rounded-pill w-100 py-2 fw-bold propose-btn btn-shine text-nowrap" data-sector="Smart Education &amp; Vocational Skills">Propose to Sponsor</a>
                         </div>
                     </div>
                 </div>
@@ -493,17 +341,17 @@
                 <div class="col-xl-3 col-lg-6 col-md-6 mobile-proj-col">
                     <div class="project-card">
                         <div class="p-3 p-lg-4">
-                            <span class="badge bg-light text-success border border-success mb-2">Schedule VII (i) • Water</span>
-                            <h5 class="fw-bold text-dark mb-2 proj-title">Community RO Drinking Water Hubs</h5>
-                            <p class="text-muted small mb-3 proj-desc">Installing 25 solar-powered RO water filtration plants in fluorosis-affected habitations of Dharmavaram & Kadiri.</p>
+                            <h3 class="h5 fw-bold text-dark mb-1 proj-title">Community RO Drinking Water Hubs</h3>
+                            <span class="badge bg-light text-success border border-success mb-2 d-inline-block">Schedule VII (i) • Water</span>
+                            <p class="text-muted small mb-3 proj-desc">Installing 25 solar-powered RO water filtration plants in fluorosis-affected habitations of Dharmavaram &amp; Kadiri.</p>
 
                             <div class="mb-3 pt-2 border-top">
                                 <div class="d-flex justify-content-between small fw-bold">
                                     <span class="text-muted">Estimated Outlay</span>
-                                    <span class="text-success">₹1.20 Cr</span>
+                                    <span class="text-success num">₹1.20 Cr</span>
                                 </div>
                             </div>
-                            <a href="#partner-form" class="btn btn-sm btn-primary rounded-pill w-100 py-2 fw-bold propose-btn btn-shine" data-sector="Healthcare, Sanitation &amp; Water">Propose to Sponsor</a>
+                            <a href="#partner-form" class="btn btn-sm btn-primary rounded-pill w-100 py-2 fw-bold propose-btn btn-shine text-nowrap" data-sector="Healthcare, Sanitation &amp; Water">Propose to Sponsor</a>
                         </div>
                     </div>
                 </div>
@@ -512,17 +360,17 @@
                 <div class="col-xl-3 col-lg-6 col-md-6 mobile-proj-col">
                     <div class="project-card">
                         <div class="p-3 p-lg-4">
-                            <span class="badge bg-light text-warning border border-warning mb-2">Schedule VII (iv) • Energy</span>
-                            <h5 class="fw-bold text-dark mb-2 proj-title">Solar Rooftop & Smart Lighting</h5>
+                            <h3 class="h5 fw-bold text-dark mb-1 proj-title">Solar Rooftop &amp; Smart Lighting</h3>
+                            <span class="badge bg-light text-warning border border-warning mb-2 d-inline-block">Schedule VII (iv) • Energy</span>
                             <p class="text-muted small mb-3 proj-desc">Decentralized rooftop solar systems for 35 primary healthcare centres and community street lighting networks.</p>
 
                             <div class="mb-3 pt-2 border-top">
                                 <div class="d-flex justify-content-between small fw-bold">
                                     <span class="text-muted">Estimated Outlay</span>
-                                    <span class="text-warning">₹1.45 Cr</span>
+                                    <span class="text-warning num">₹1.45 Cr</span>
                                 </div>
                             </div>
-                            <a href="#partner-form" class="btn btn-sm btn-primary rounded-pill w-100 py-2 fw-bold propose-btn btn-shine" data-sector="Environmental Sustainability">Propose to Sponsor</a>
+                            <a href="#partner-form" class="btn btn-sm btn-primary rounded-pill w-100 py-2 fw-bold propose-btn btn-shine text-nowrap" data-sector="Environmental Sustainability">Propose to Sponsor</a>
                         </div>
                     </div>
                 </div>
@@ -535,8 +383,7 @@
     <div id="messages" class="container-fluid py-3 py-lg-5 bg-white border-top border-bottom">
         <div class="container py-2 py-lg-4">
             <div class="section-title text-center position-relative pb-2 pb-lg-3 mb-3 mb-lg-5 mx-auto" style="max-width: 650px;">
-                <h5 class="fw-bold text-primary text-uppercase">Leadership Message</h5>
-                <h2 class="mb-0">Collector & District Magistrate's Message</h2>
+                <h2 class="mb-0">Collector &amp; District Magistrate's Message</h2>
             </div>
 
             <div class="row justify-content-center">
@@ -550,7 +397,7 @@
                             </div>
                             <div class="col-md-8">
                                 <div class="p-3 p-md-5">
-                                    <h4 class="text-primary mb-1 fw-bold leader-name">Sri A. Shyam Prasad, I.A.S</h4>
+                                    <h3 class="h4 text-primary mb-1 fw-bold leader-name">Sri A. Shyam Prasad, I.A.S</h3>
                                     <small
                                         class="text-uppercase fw-semibold text-muted d-block mb-2 mb-md-3 pb-2 pb-md-3 border-bottom leader-title">Collector
                                         & District Magistrate</small>
@@ -577,7 +424,6 @@
     <div id="district-map-section" class="container-fluid py-3 py-lg-5 bg-light border-top border-bottom">
         <div class="container py-2 py-lg-4">
             <div class="section-title text-center position-relative pb-2 pb-lg-3 mb-3 mb-lg-4 mx-auto" style="max-width: 650px;">
-                <h5 class="fw-bold text-primary text-uppercase">Geo-Tagged CSR Project Map</h5>
                 <h2 class="mb-0">Explore CSR Projects Across 32 Mandals</h2>
             </div>
             <div class="bg-white p-2 p-lg-3 rounded-4 shadow-sm border">
@@ -595,29 +441,28 @@
     <div id="partners" class="container-fluid py-3 py-lg-5">
         <div class="container py-2 py-lg-4">
             <div class="section-title text-center position-relative pb-2 pb-lg-3 mb-3 mb-lg-5 mx-auto" style="max-width: 650px;">
-                <h5 class="fw-bold text-primary text-uppercase">Our Collaborators & Industrial Partners</h5>
                 <h2 class="mb-0">Corporate Social Responsibility Partners</h2>
             </div>
 
             <div class="row g-2 g-lg-4 mb-3 mb-lg-5 mobile-collaborators-row">
                 <div class="col-4 col-md-4">
                     <div class="bg-white p-2 p-lg-4 rounded-4 shadow-sm border h-100 text-center collab-card">
-                        <i class="bi bi-award-fill display-6 text-primary mb-1 mb-lg-3 collab-icon"></i>
-                        <h6 class="fw-bold text-dark collab-title">Statutory Tax Benefits</h6>
+                        <i class="bi bi-award-fill display-6 text-primary mb-1 mb-lg-3 collab-icon" aria-hidden="true"></i>
+                        <h3 class="h6 fw-bold text-dark collab-title">Statutory Tax Benefits</h3>
                         <p class="text-muted small mb-0 collab-desc">Projects eligible for 80G and Section 35AC exemptions.</p>
                     </div>
                 </div>
                 <div class="col-4 col-md-4">
                     <div class="bg-white p-2 p-lg-4 rounded-4 shadow-sm border h-100 text-center collab-card">
-                        <i class="bi bi-graph-up-arrow display-6 text-success mb-1 mb-lg-3 collab-icon"></i>
-                        <h6 class="fw-bold text-dark collab-title">Transparent Impact</h6>
+                        <i class="bi bi-graph-up-arrow display-6 text-success mb-1 mb-lg-3 collab-icon" aria-hidden="true"></i>
+                        <h3 class="h6 fw-bold text-dark collab-title">Transparent Impact</h3>
                         <p class="text-muted small mb-0 collab-desc">Geo-tagged milestone tracking and quarterly audits.</p>
                     </div>
                 </div>
                 <div class="col-4 col-md-4">
                     <div class="bg-white p-2 p-lg-4 rounded-4 shadow-sm border h-100 text-center collab-card">
-                        <i class="bi bi-signpost-split-fill display-6 text-warning mb-1 mb-lg-3 collab-icon"></i>
-                        <h6 class="fw-bold text-dark collab-title">Single Window</h6>
+                        <i class="bi bi-signpost-split-fill display-6 text-warning mb-1 mb-lg-3 collab-icon" aria-hidden="true"></i>
+                        <h3 class="h6 fw-bold text-dark collab-title">Single Window</h3>
                         <p class="text-muted small mb-0 collab-desc">Fast-tracked land allocation and local NOCs.</p>
                     </div>
                 </div>
@@ -629,24 +474,24 @@
                     <div class="partner-card-item">
                         <img src="img/partners/kia-india.svg" alt="Kia India logo" class="partner-logo-img">
                         <div>
+                            <h3 class="mb-0 fw-bold text-dark h6">Kia India</h3>
                             <span class="badge bg-primary text-white mb-1" style="font-size: 10px;">Industrial CSR Partner</span>
-                            <h6 class="mb-0 fw-bold text-dark" style="font-size: 14px;">Kia India</h6>
                             <small class="text-muted d-block" style="font-size: 11px;">Penukonda Plant, SSS District</small>
                         </div>
                     </div>
                     <div class="partner-card-item">
                         <img src="img/partners/sungwoo-hitech-india.jpg" alt="Sungwoo Hitech India logo" class="partner-logo-img">
                         <div>
+                            <h3 class="mb-0 fw-bold text-dark h6">Sungwoo Hitech India</h3>
                             <span class="badge bg-info text-dark mb-1" style="font-size: 10px;">CSR / Amenity Partner</span>
-                            <h6 class="mb-0 fw-bold text-dark" style="font-size: 14px;">Sungwoo Hitech India</h6>
                             <small class="text-muted d-block" style="font-size: 11px;">Ammavaripalli, Penukonda</small>
                         </div>
                     </div>
                     <div class="partner-card-item">
                         <img src="img/partners/ksh-automotive.gif" alt="KSH Automotive Saehan logo" class="partner-logo-img">
                         <div>
+                            <h3 class="mb-0 fw-bold text-dark h6">KSH Automotive</h3>
                             <span class="badge bg-success text-white mb-1" style="font-size: 10px;">CSR Partner</span>
-                            <h6 class="mb-0 fw-bold text-dark" style="font-size: 14px;">KSH Automotive</h6>
                             <small class="text-muted d-block" style="font-size: 11px;">Saehan Ind. · Penukonda plant</small>
                         </div>
                     </div>
@@ -654,24 +499,24 @@
                     <div class="partner-card-item" aria-hidden="true">
                         <img src="img/partners/kia-india.svg" alt="Kia India logo" class="partner-logo-img">
                         <div>
+                            <h3 class="mb-0 fw-bold text-dark h6">Kia India</h3>
                             <span class="badge bg-primary text-white mb-1" style="font-size: 10px;">Industrial CSR Partner</span>
-                            <h6 class="mb-0 fw-bold text-dark" style="font-size: 14px;">Kia India</h6>
                             <small class="text-muted d-block" style="font-size: 11px;">Penukonda Plant, SSS District</small>
                         </div>
                     </div>
                     <div class="partner-card-item" aria-hidden="true">
                         <img src="img/partners/sungwoo-hitech-india.jpg" alt="Sungwoo Hitech India logo" class="partner-logo-img">
                         <div>
+                            <h3 class="mb-0 fw-bold text-dark h6">Sungwoo Hitech India</h3>
                             <span class="badge bg-info text-dark mb-1" style="font-size: 10px;">CSR / Amenity Partner</span>
-                            <h6 class="mb-0 fw-bold text-dark" style="font-size: 14px;">Sungwoo Hitech India</h6>
                             <small class="text-muted d-block" style="font-size: 11px;">Ammavaripalli, Penukonda</small>
                         </div>
                     </div>
                     <div class="partner-card-item" aria-hidden="true">
                         <img src="img/partners/ksh-automotive.gif" alt="KSH Automotive Saehan logo" class="partner-logo-img">
                         <div>
+                            <h3 class="mb-0 fw-bold text-dark h6">KSH Automotive</h3>
                             <span class="badge bg-success text-white mb-1" style="font-size: 10px;">CSR Partner</span>
-                            <h6 class="mb-0 fw-bold text-dark" style="font-size: 14px;">KSH Automotive</h6>
                             <small class="text-muted d-block" style="font-size: 11px;">Saehan Ind. · Penukonda plant</small>
                         </div>
                     </div>
@@ -697,7 +542,6 @@
             <div class="row g-5 align-items-center">
                 <div class="col-lg-5">
                     <div class="section-title position-relative pb-3 mb-4">
-                        <h5 class="fw-bold text-primary text-uppercase">Corporate Portal</h5>
                         <h2 class="mb-0">Submit CSR Partnership Proposal</h2>
                     </div>
                     <p class="mb-4">
@@ -828,8 +672,9 @@
                                 </div>
                                 <div class="col-12">
                                     <button type="submit"
-                                        class="btn btn-primary py-3 px-5 rounded-pill w-100 fw-bold btn-portal btn-shine"><i
-                                            class="bi bi-send-fill me-2"></i> Submit Proposal to Collectorate</button>
+                                        class="btn btn-primary py-3 px-5 rounded-pill w-100 fw-bold btn-portal btn-shine text-nowrap">
+                                        Submit Proposal
+                                    </button>
                                     <p id="eoi-form-status" class="small mt-3 mb-0 eoi-form-status" role="status" aria-live="polite"></p>
                                 </div>
                             </div>

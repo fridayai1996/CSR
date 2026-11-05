@@ -4,11 +4,8 @@
 <head>
     <meta charset="utf-8">
     <title>Contact Us &amp; CSR Helpdesk | Sri Sathya Sai District, Govt of AP</title>
-
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <meta
-        content="Contact Us, Sri Sathya Sai District CSR Facilitation Cell, Web Information Manager, District Collectorate, Puttaparthi, Andhra Pradesh"
-        name="description">
+    <meta content="Contact Sri Sathya Sai District CSR Facilitation Cell, District Collectorate Puttaparthi, Nodal Officers, Andhra Pradesh" name="description">
 
     <!-- Favicon -->
     <link href="img/csr_logo.png" rel="icon" type="image/png">
@@ -17,130 +14,53 @@
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700;800&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
     <!-- Icon Font Stylesheet -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
 
-    <!-- Libraries Stylesheet -->
-    <link href="animate.min.css" rel="stylesheet">
-    <link href="bootstrap.min.css" rel="stylesheet">
+    <!-- Vendor CSS via CDN -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Bespoke Tokens & Stylesheets -->
+    <link href="css/tokens.css" rel="stylesheet">
+    <link href="css/base.css" rel="stylesheet">
     <link href="style.css" rel="stylesheet">
     <link href="css/premium.css" rel="stylesheet">
     <link href="css/ui21.css?v=20260901d" rel="stylesheet">
-
-    <style>
-        :root {
-            --primary: #06A3DA;
-            --secondary: #34AD54;
-            --dark-navy: #002858;
-        }
-
-        body {
-            font-family: 'Inter', sans-serif;
-            color: #334455;
-            background-color: #F8FAFC;
-        }
-
-        h1,
-        h2,
-        h3,
-        h4,
-        h5,
-        h6 {
-            font-family: 'Bai Jamjuree', sans-serif;
-        }
-
-        .bg-contact-header {
-            background:
-                radial-gradient(circle at 15% 20%, rgba(6, 163, 218, 0.35), transparent 45%),
-                radial-gradient(circle at 85% 75%, rgba(52, 173, 84, 0.30), transparent 50%),
-                linear-gradient(135deg, #001838, #002858 55%, #003a6b);
-            padding: 70px 0;
-            color: #FFFFFF;
-        }
-
-        .contact-card {
-            background: #FFFFFF;
-            border-radius: 16px;
-            border: 1px solid #E2E8F0;
-            padding: 35px;
-            box-shadow: 0 4px 20px rgba(0, 40, 88, 0.04);
-            height: 100%;
-        }
-
-        .contact-icon-box {
-            width: 52px;
-            height: 52px;
-            border-radius: 12px;
-            background: rgba(6, 163, 218, 0.1);
-            color: #06A3DA;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 24px;
-            margin-bottom: 20px;
-        }
-
-        .contact-form-card {
-            background: #FFFFFF;
-            border-radius: 16px;
-            border: 1px solid #E2E8F0;
-            padding: 35px;
-            box-shadow: 0 10px 30px rgba(0, 40, 88, 0.06);
-        }
-
-        .eoi-honeypot {
-            position: absolute;
-            left: -9999px;
-            top: auto;
-            width: 1px;
-            height: 1px;
-            overflow: hidden;
-        }
-    </style>
 </head>
 
 <body>
-    <!-- Spinner Start -->
-    <div id="spinner"
-        class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
-        <div class="spinner"></div>
-    </div>
-    <!-- Spinner End -->
+    <!-- Skip to main content -->
+    <a class="skip-link" href="#main-content">Skip to main content</a>
 
     <!-- Header Component Start -->
     <div id="site-header"></div>
     <!-- Header Component End -->
 
     <!-- Page Header Start -->
-    <div id="main-content" class="container-fluid bg-contact-header text-center">
-        <div class="container py-4">
-            <span class="badge bg-primary px-3 py-2 rounded-pill fs-6 mb-3"><i class="bi bi-telephone-fill me-1"></i>
-                Official Single Window Helpdesk</span>
-            <h1 class="display-5 text-white fw-bold mb-3">Contact Us &amp; Support</h1>
-            <p class="lead text-light mb-0 mx-auto" style="max-width: 800px;">
-                Connect directly with the Sri Sathya Sai District CSR Facilitation Cell, District Collectorate, and Nodal Officers for collaboration and assistance.
+    <header id="main-content" class="hero-banner text-center" role="banner">
+        <div class="container">
+            <h1 class="display-4 fw-bold mx-auto">Contact Us &amp; Support</h1>
+            <p class="hero-lede mx-auto">
+                Direct single window contact for corporate CSR inquiries and nodal officers.
             </p>
         </div>
-    </div>
+    </header>
     <!-- Page Header End -->
 
     <!-- Main Content Start -->
-    <div class="container py-5">
+    <main class="container py-5" role="main">
         <div class="row g-4 mb-5">
             <!-- Left: Interactive Contact Form -->
             <div class="col-lg-7">
-                <div class="contact-form-card">
+                <section class="partner-card" aria-labelledby="form-heading">
                     <div class="d-flex align-items-center gap-3 mb-4">
-                        <div class="contact-icon-box mb-0">
-                            <i class="bi bi-envelope-paper-fill"></i>
-                        </div>
+                        <span class="text-primary fs-3" aria-hidden="true"><i class="bi bi-envelope-paper-fill"></i></span>
                         <div>
-                            <h4 class="fw-bold text-dark mb-1">Send a Message to CSR Cell</h4>
+                            <h2 id="form-heading" class="h4 fw-bold text-dark mb-1">Send a Message to CSR Cell</h2>
                             <p class="text-muted small mb-0">Inquiries regarding CSR proposals, tax exemptions (80G), or project partnerships.</p>
                         </div>
                     </div>
@@ -152,7 +72,7 @@
                                 <input type="text" id="contact-name" name="name" class="form-control" placeholder="e.g. Ramesh Kumar" required maxlength="120">
                             </div>
                             <div class="col-md-6">
-                                <label class="form-label small fw-semibold" for="contact-email">Official / Personal Email *</label>
+                                <label class="form-label small fw-semibold" for="contact-email">Email Address *</label>
                                 <input type="email" id="contact-email" name="email" class="form-control" placeholder="name@domain.com" required maxlength="120">
                             </div>
                             <div class="col-md-6">
@@ -190,69 +110,65 @@
                             </div>
 
                             <div class="col-12">
-                                <button type="submit" class="btn btn-primary py-3 px-5 rounded-pill w-100 fw-bold btn-shine">
-                                    <i class="bi bi-send-fill me-2"></i> Submit Inquiry to Helpdesk
+                                <button type="submit" class="btn btn-primary py-3 px-5 rounded-pill w-100 fw-bold btn-shine text-nowrap">
+                                    Submit Inquiry
                                 </button>
                                 <p id="contact-form-status" class="small mt-3 mb-0 eoi-form-status" role="status" aria-live="polite"></p>
                             </div>
                         </div>
                     </form>
-                </div>
+                </section>
             </div>
 
             <!-- Right: Official Directory & Postal Address -->
             <div class="col-lg-5">
                 <div class="d-flex flex-column gap-4 h-100">
                     <!-- Postal Address Card -->
-                    <div class="contact-card">
-                        <div class="contact-icon-box" style="background: rgba(52, 173, 84, 0.1); color: #34AD54;">
-                            <i class="bi bi-geo-alt-fill"></i>
-                        </div>
-                        <h4 class="fw-bold text-dark mb-2">District Collectorate</h4>
-                        <p class="text-secondary small mb-3">Administrative headquarters of Sri Sathya Sai District:</p>
+                    <section class="partner-card" aria-labelledby="heading-collectorate">
+                        <span class="text-success fs-3 mb-2 d-block" aria-hidden="true"><i class="bi bi-geo-alt-fill"></i></span>
+                        <h2 id="heading-collectorate" class="h4 fw-bold text-dark mb-2">District Collectorate</h2>
+                        <p class="text-muted small mb-3">Administrative headquarters of Sri Sathya Sai District:</p>
                         <div class="p-3 bg-light rounded-3 border">
-                            <h6 class="fw-bold text-dark mb-1"><i class="bi bi-building me-2 text-success"></i>Collectorate Complex</h6>
-                            <p class="mb-1 text-secondary small">Main Administrative Block,</p>
+                            <h3 class="h6 fw-bold text-dark mb-1">Collectorate Complex</h3>
+                            <p class="mb-1 text-muted small">Main Administrative Block,</p>
                             <p class="fw-bold text-dark mb-0 small">Puttaparthi, Sri Sathya Sai District - 515134, Andhra Pradesh</p>
                         </div>
-                    </div>
+                    </section>
 
                     <!-- Web Information Manager Card -->
-                    <div class="contact-card">
-                        <div class="contact-icon-box">
-                            <i class="bi bi-person-workspace"></i>
-                        </div>
-                        <h4 class="fw-bold text-dark mb-2">Web Information Manager</h4>
-                        <p class="text-secondary small mb-3">For technical or content queries regarding the portal:</p>
+                    <section class="partner-card" aria-labelledby="heading-wim">
+                        <span class="text-primary fs-3 mb-2 d-block" aria-hidden="true"><i class="bi bi-person-workspace"></i></span>
+                        <h2 id="heading-wim" class="h4 fw-bold text-dark mb-2">Web Information Manager</h2>
+                        <p class="text-muted small mb-3">For technical or content queries regarding the portal:</p>
                         <div class="p-3 bg-light rounded-3 border mb-2">
-                            <small class="text-uppercase text-muted fw-bold d-block" style="font-size: 11px;">Official Email</small>
+                            <span class="text-uppercase text-muted fw-bold d-block small" style="font-size: 11px;">Official Email</span>
                             <a href="mailto:apapr@nic.in" class="fw-bold text-primary text-decoration-none">
-                                <i class="bi bi-envelope-check me-1"></i> apapr@nic.in
+                                apapr@nic.in
                             </a>
                         </div>
                         <p class="small text-muted mb-0" style="font-size: 12px;">
                             National Informatics Centre (NIC) • AP State Center
                         </p>
-                    </div>
+                    </section>
                 </div>
             </div>
         </div>
 
         <!-- CSR Facilitation Cell Officers -->
-        <div class="bg-white rounded-4 border p-4 shadow-sm">
-            <h4 class="fw-bold text-dark mb-4 border-bottom pb-3">
-                <i class="bi bi-shield-check text-primary me-2"></i>CSR Facilitation Cell Officers
-            </h4>
+        <section class="partner-card p-4" aria-labelledby="heading-officers">
+            <h2 id="heading-officers" class="h4 fw-bold text-dark mb-4 border-bottom pb-3">
+                CSR Facilitation Cell Officers
+            </h2>
             <div class="row g-4">
                 <div class="col-md-6">
                     <div class="d-flex align-items-center gap-3 p-3 rounded-3 bg-light border">
                         <div class="rounded-circle bg-primary text-white d-flex align-items-center justify-content-center fw-bold fs-5"
-                            style="width: 52px; height: 52px; flex-shrink: 0;">DC</div>
+                            style="width: 52px; height: 52px; flex-shrink: 0;" aria-hidden="true">DC</div>
                         <div>
-                            <h6 class="fw-bold text-dark mb-1">Sri A. Shyam Prasad, I.A.S</h6>
+                            <h3 class="h6 fw-bold text-dark mb-1">Sri A. Shyam Prasad, I.A.S</h3>
                             <small class="text-muted d-block">District Collector &amp; District Magistrate</small>
                             <a href="mailto:collector-sssai@ap.gov.in" class="text-primary fw-semibold small text-decoration-none">
-                                <i class="bi bi-envelope-fill me-1"></i>collector-sssai@ap.gov.in
+                                collector-sssai@ap.gov.in
                             </a>
                         </div>
                     </div>
@@ -260,20 +176,19 @@
                 <div class="col-md-6">
                     <div class="d-flex align-items-center gap-3 p-3 rounded-3 bg-light border">
                         <div class="rounded-circle bg-success text-white d-flex align-items-center justify-content-center fw-bold fs-5"
-                            style="width: 52px; height: 52px; flex-shrink: 0;">JC</div>
+                            style="width: 52px; height: 52px; flex-shrink: 0;" aria-hidden="true">JC</div>
                         <div>
-                            <h6 class="fw-bold text-dark mb-1">Sri Mantri Mourya Bharadwaj, I.A.S</h6>
+                            <h3 class="h6 fw-bold text-dark mb-1">Sri Mantri Mourya Bharadwaj, I.A.S</h3>
                             <small class="text-muted d-block">Joint Collector &amp; CSR Nodal Officer</small>
                             <a href="mailto:csr.sssdistrict@gmail.com" class="text-success fw-semibold small text-decoration-none">
-                                <i class="bi bi-envelope-fill me-1"></i>csr.sssdistrict@gmail.com
+                                csr.sssdistrict@gmail.com
                             </a>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-
-    </div>
+        </section>
+    </main>
     <!-- Main Content End -->
 
     <!-- Footer Start -->
@@ -281,16 +196,13 @@
     <!-- Footer End -->
 
     <!-- Back to Top -->
-    <a href="#" class="btn btn-lg btn-primary btn-lg-square rounded-circle back-to-top"><i
-            class="bi bi-arrow-up"></i></a>
+    <a href="#main-content" class="btn btn-primary rounded-circle btn-lg-square back-to-top" aria-label="Back to top">
+        <i class="bi bi-arrow-up" aria-hidden="true"></i>
+    </a>
 
     <!-- JavaScript Libraries -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="wow.min.js"></script>
-    <script src="easing.min.js"></script>
-
-    <!-- Custom Portal Modules -->
     <script src="js/i18n.js"></script>
     <script src="js/csr-client.js"></script>
     <script src="js/csr-api.js"></script>

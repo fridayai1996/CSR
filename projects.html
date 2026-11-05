@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Priority CSR Projects | Sri Sathya Sai District, Govt of AP</title>
+    <title>Priority CSR Projects Directory | Sri Sathya Sai District, Govt of AP</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="Sri Sathya Sai District Priority Projects Directory, CSR Investment Opportunities, Andhra Pradesh, Penukonda, Puttaparthi" name="description">
 
@@ -20,116 +20,82 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
 
-    <!-- Stylesheets -->
-    <link href="animate.min.css" rel="stylesheet">
-    <link href="bootstrap.min.css" rel="stylesheet">
+    <!-- Vendor CSS via CDN -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Bespoke Design Tokens & Stylesheets -->
+    <link href="css/tokens.css" rel="stylesheet">
+    <link href="css/base.css" rel="stylesheet">
     <link href="style.css" rel="stylesheet">
     <link href="css/premium.css" rel="stylesheet">
     <link href="css/ui21.css?v=20260901d" rel="stylesheet">
-
-    <style>
-        :root {
-            --primary: #06A3DA;
-            --secondary: #34AD54;
-            --dark-navy: #002858;
-        }
-
-        body {
-            font-family: 'Inter', sans-serif;
-            color: #334455;
-            background-color: #F8FAFC;
-        }
-
-        h1, h2, h3, h4, h5, h6 {
-            font-family: 'Bai Jamjuree', sans-serif;
-        }
-
-        .topbar {
-            background-color: #001838;
-            color: #CBD5E1;
-            font-size: 13.5px;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-        }
-
-        .header-brand-container {
-            background: #FFFFFF;
-            padding: 14px 0;
-            box-shadow: 0 4px 20px rgba(0, 40, 88, 0.06);
-        }
-
-        .project-card {
-            background: #FFFFFF;
-            border: 1px solid #E2E8F0;
-            border-radius: 16px;
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 15px rgba(0, 40, 88, 0.04);
-            height: 100%;
-            display: flex;
-            flex-direction: column;
-        }
-
-        .project-card:hover {
-            transform: translateY(-5px);
-            border-color: var(--primary);
-            box-shadow: 0 12px 30px rgba(6, 163, 218, 0.12);
-        }
-
-        .filter-box {
-            background: #FFFFFF;
-            border-radius: 16px;
-            padding: 24px;
-            border: 1px solid #E2E8F0;
-            box-shadow: 0 4px 20px rgba(0, 40, 88, 0.04);
-        }
-    </style>
 </head>
 
 <body>
+    <!-- Skip to main content for accessibility -->
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+
     <!-- Header Component Start -->
     <div id="site-header"></div>
     <!-- Header Component End -->
 
     <!-- Hero Title Header -->
-    <div id="main-content" class="container-fluid bg-primary py-5 bg-header mb-5">
-        <div class="row py-4">
-            <div class="col-12 text-center">
-                <h1 class="display-5 text-white animated zoomIn fw-bold" data-i18n="nav_projects">Priority Projects Directory</h1>
-                <p class="text-white-50 lead mb-0">Browse pre-cleared district development projects open for Corporate Social Responsibility funding.</p>
+    <header id="main-content" class="hero-banner text-center" role="banner">
+        <div class="container">
+            <h1 class="display-4 mx-auto fw-bold" data-i18n="nav_projects">Priority Projects Directory</h1>
+            <p class="hero-lede mx-auto">Pre-cleared civic and rural development projects open for corporate adoption.</p>
+            <div class="d-flex justify-content-center align-items-center gap-3 flex-wrap">
+                <a href="#directory" class="btn btn-primary rounded-pill px-4 py-2 fw-bold btn-shine text-nowrap">
+                    Explore Sectors
+                </a>
+                <a href="index.html#partner-form" class="btn btn-outline-light rounded-pill px-4 py-2 fw-bold text-nowrap">
+                    Submit General EOI
+                </a>
             </div>
         </div>
-    </div>
+    </header>
 
     <!-- Main Directory Content -->
-    <div class="container py-4">
+    <main id="directory" class="container py-5" role="main">
         <!-- Interactive Filter Toolbar -->
-        <div class="filter-box mb-5">
-            <h5 class="fw-bold text-dark mb-3"><i class="bi bi-funnel-fill text-primary me-2"></i>Filter & Search Projects</h5>
-            <div class="row g-3">
-                <div class="col-md-4">
-                    <label class="form-label small fw-semibold">Search Keywords</label>
-                    <input type="text" id="search-input" class="form-control" placeholder="Search title, location, details...">
+        <section class="partner-card mb-5" aria-label="Filter Priority Projects">
+            <div class="d-flex justify-content-between align-items-center flex-wrap gap-2 mb-3">
+                <div class="d-flex align-items-center gap-2">
+                    <span class="text-primary fs-5" aria-hidden="true"><i class="bi bi-sliders"></i></span>
+                    <h2 class="h5 fw-bold mb-0 text-dark">Filter Pre-Cleared Projects</h2>
                 </div>
-                <div class="col-md-3">
-                    <label class="form-label small fw-semibold">Focus Sector</label>
-                    <select id="sector-filter" class="form-select">
+                <span id="results-count" class="badge bg-light text-dark border px-3 py-2 fw-semibold">
+                    Showing 12 Projects
+                </span>
+            </div>
+
+            <div class="row g-3">
+                <div class="col-lg-4 col-md-6">
+                    <label for="search-input" class="form-label small">Search Keywords</label>
+                    <input type="text" id="search-input" class="form-control" placeholder="Search title, mandal, keywords..." aria-label="Search projects by keyword">
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <label for="sector-filter" class="form-label small">Schedule VII Sector</label>
+                    <select id="sector-filter" class="form-select" aria-label="Filter by Schedule VII focus sector">
                         <option value="All">All 12 Schedule VII Sectors</option>
-                        <option value="Healthcare & Sanitation">Healthcare & Sanitation (Item i)</option>
-                        <option value="Smart Education & Skills">Smart Education & Skills (Item ii)</option>
-                        <option value="Gender Equality & Women Care">Gender Equality & Women Care (Item iii)</option>
+                        <option value="Healthcare & Sanitation">Healthcare &amp; Sanitation (Item i)</option>
+                        <option value="Smart Education & Skills">Smart Education &amp; Skills (Item ii)</option>
+                        <option value="Gender Equality & Women Care">Gender Equality &amp; Women Care (Item iii)</option>
                         <option value="Environmental Sustainability">Environmental Sustainability (Item iv)</option>
-                        <option value="Heritage & Culture">Heritage & Culture (Item v)</option>
-                        <option value="Armed Forces & Veteran Welfare">Armed Forces & Veteran Welfare (Item vi)</option>
-                        <option value="Rural & Olympic Sports">Rural & Olympic Sports (Item vii)</option>
+                        <option value="Heritage & Culture">Heritage &amp; Culture (Item v)</option>
+                        <option value="Armed Forces & Veteran Welfare">Armed Forces &amp; Veteran Welfare (Item vi)</option>
+                        <option value="Rural & Olympic Sports">Rural &amp; Olympic Sports (Item vii)</option>
                         <option value="Socio-Economic Welfare Funds">Socio-Economic Welfare Funds (Item viii)</option>
-                        <option value="Incubators, R&D & SDGs">Incubators, R&D & SDGs (Item ix)</option>
+                        <option value="Incubators, R&D & SDGs">Incubators, R&amp;D &amp; SDGs (Item ix)</option>
                         <option value="Rural Development Projects">Rural Development Projects (Item x)</option>
                         <option value="Slum Area Development">Slum Area Development (Item xi)</option>
                         <option value="Disaster Management">Disaster Management (Item xii)</option>
                     </select>
                 </div>
-                <div class="col-md-3">
-                    <label class="form-label small fw-semibold">Mandal / Division</label>
-                    <select id="mandal-filter" class="form-select">
+                <div class="col-lg-3 col-md-6">
+                    <label for="mandal-filter" class="form-label small">Mandal / Division</label>
+                    <select id="mandal-filter" class="form-select" aria-label="Filter by Mandal or Revenue Division">
                         <option value="All">All 32 Mandals</option>
                         <option value="Penukonda">Penukonda Division</option>
                         <option value="Puttaparthi">Puttaparthi Division</option>
@@ -139,25 +105,33 @@
                         <option value="Madakasira">Madakasira Division</option>
                     </select>
                 </div>
-                <div class="col-md-2 d-flex align-items-end">
-                    <button class="btn btn-outline-secondary w-100 fw-bold" onclick="resetFilters()"><i class="bi bi-arrow-counterclockwise me-1"></i> Reset</button>
+                <div class="col-lg-1 col-md-6 d-flex align-items-end">
+                    <button class="btn btn-outline-secondary w-100 fw-bold py-2" onclick="resetFilters()" title="Reset All Filters">
+                        <i class="bi bi-arrow-counterclockwise" aria-hidden="true"></i><span class="visually-hidden">Reset</span>
+                    </button>
                 </div>
             </div>
-        </div>
+        </section>
 
         <!-- Project Cards Grid -->
-        <div class="row g-4" id="project-grid-container">
-            <!-- Dynamic project cards rendered via js/project-tracker.js -->
+        <div class="row g-4" id="project-grid-container" aria-live="polite">
+            <!-- Dynamic project cards rendered via renderProjectCards -->
         </div>
-    </div>
+    </main>
 
     <!-- Footer Start -->
     <div id="site-footer"></div>
     <!-- Footer End -->
 
+    <!-- Back to top button -->
+    <a href="#main-content" class="btn btn-primary rounded-circle btn-lg-square back-to-top" aria-label="Back to top">
+        <i class="bi bi-arrow-up" aria-hidden="true"></i>
+    </a>
+
     <!-- JS Libraries -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
     <script src="js/i18n.js"></script>
     <script src="js/pdf-generator.js"></script>
     <script src="js/csr-client.js"></script>
@@ -166,7 +140,7 @@
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
     <script src="js/premium-motion.js?v=20260901d"></script>
-    
+
     <script>
         const sampleProjects = [
             {
@@ -219,7 +193,7 @@
                 mandal: "Lepakshi",
                 sector: "Heritage & Culture",
                 budget: "₹85 Lakhs",
-                sponsor: "JSW Foundation",
+                sponsor: "Open for Corporate Adoption",
                 status: "Proposed",
                 progressPct: 0,
                 description: "Schedule VII (v): Restoration of historical sites at Penukonda & Lepakshi, public e-libraries, and traditional handicraft artisan support."
@@ -230,7 +204,7 @@
                 mandal: "Puttaparthi",
                 sector: "Armed Forces & Veteran Welfare",
                 budget: "₹50 Lakhs",
-                sponsor: "Open for Adoption",
+                sponsor: "Open for Corporate Adoption",
                 status: "Proposed",
                 progressPct: 0,
                 description: "Schedule VII (vi): Healthcare, vocational retraining, and education scholarships for CAPF/CPMF veterans, ex-servicemen, and war widows."
@@ -241,7 +215,7 @@
                 mandal: "Dharmavaram",
                 sector: "Rural & Olympic Sports",
                 budget: "₹75 Lakhs",
-                sponsor: "Open for Adoption",
+                sponsor: "Open for Corporate Adoption",
                 status: "Proposed",
                 progressPct: 0,
                 description: "Schedule VII (vii): Multi-purpose sports grounds, paralympic coaching camps, and equipment for nationally recognized rural sports."
@@ -252,7 +226,7 @@
                 mandal: "Madakasira",
                 sector: "Socio-Economic Welfare Funds",
                 budget: "₹1.10 Crores",
-                sponsor: "Open for Adoption",
+                sponsor: "Open for Corporate Adoption",
                 status: "Proposed",
                 progressPct: 0,
                 description: "Schedule VII (viii): Targeted socio-economic development, community halls, and welfare amenities for Scheduled Castes, STs, and OBC habitations."
@@ -263,7 +237,7 @@
                 mandal: "Puttaparthi",
                 sector: "Incubators, R&D & SDGs",
                 budget: "₹2.50 Crores",
-                sponsor: "Open for Adoption",
+                sponsor: "Open for Corporate Adoption",
                 status: "Proposed",
                 progressPct: 0,
                 description: "Schedule VII (ix): Technology incubators and research grants for Sustainable Development Goals (SDGs) in partnership with IITs and CSIR labs."
@@ -274,7 +248,7 @@
                 mandal: "Hindupur",
                 sector: "Rural Development Projects",
                 budget: "₹3.00 Crores",
-                sponsor: "Open for Adoption",
+                sponsor: "Open for Corporate Adoption",
                 status: "Proposed",
                 progressPct: 0,
                 description: "Schedule VII (x): All-weather rural roads, drainage networks, solar street lighting, and Gram Panchayat civic infrastructure."
@@ -285,7 +259,7 @@
                 mandal: "Kadiri",
                 sector: "Slum Area Development",
                 budget: "₹1.40 Crores",
-                sponsor: "Open for Adoption",
+                sponsor: "Open for Corporate Adoption",
                 status: "Proposed",
                 progressPct: 0,
                 description: "Schedule VII (xi): Upgrading sanitation, drinking water pipelines, underground drainage, and civic facilities in declared urban slums."
@@ -296,7 +270,7 @@
                 mandal: "Bukkapatnam",
                 sector: "Disaster Management",
                 budget: "₹1.60 Crores",
-                sponsor: "Open for Adoption",
+                sponsor: "Open for Corporate Adoption",
                 status: "Proposed",
                 progressPct: 0,
                 description: "Schedule VII (xii): Rainwater check-dams, cyclone shelters, emergency response kits, and post-disaster reconstruction infrastructure."
@@ -305,65 +279,71 @@
 
         function renderProjectCards(list) {
             const container = document.getElementById("project-grid-container");
+            const countBadge = document.getElementById("results-count");
             if (!container) return;
+
+            if (countBadge) {
+                countBadge.textContent = `Showing ${list.length} of ${sampleProjects.length} Projects`;
+            }
 
             if (list.length === 0) {
                 container.innerHTML = `
                     <div class="col-12 text-center py-5">
-                        <i class="bi bi-search display-4 text-muted mb-3 d-block"></i>
-                        <h5>No projects found matching your criteria</h5>
+                        <i class="bi bi-search display-4 text-muted mb-3 d-block" aria-hidden="true"></i>
+                        <h3 class="h5 fw-bold">No projects found matching your criteria</h3>
                         <p class="text-muted">Try adjusting your keyword search or sector filters.</p>
+                        <button class="btn btn-outline-primary rounded-pill mt-3 px-4" onclick="resetFilters()">Reset All Filters</button>
                     </div>
                 `;
                 return;
             }
 
             container.innerHTML = list.map(p => `
-                <div class="col-xl-3 col-lg-6 col-md-6 col-12">
-                    <div class="project-card p-4">
+                <div class="col-xl-4 col-lg-6 col-md-6 col-12">
+                    <article class="project-card p-4 h-100 d-flex flex-column" aria-labelledby="title-${p.id}">
                         <div class="d-flex justify-content-between align-items-center mb-2">
-                            <span class="badge bg-primary px-3 py-1">${p.sector}</span>
-                            <span class="badge bg-light text-dark border"><i class="bi bi-geo-alt-fill text-primary me-1"></i>${p.mandal}</span>
+                            <span class="badge bg-light text-primary border">${p.sector}</span>
+                            <span class="badge bg-light text-dark border"><i class="bi bi-geo-alt-fill text-primary me-1" aria-hidden="true"></i>${p.mandal}</span>
                         </div>
-                        <h5 class="fw-bold text-dark mt-2 mb-2" style="font-size: 17px;">${p.title}</h5>
+                        <h3 id="title-${p.id}" class="h5 fw-bold text-dark mt-2 mb-2">${p.title}</h3>
                         <p class="text-muted small mb-3 flex-grow-1">${p.description}</p>
                         
-                        <div class="p-3 bg-light rounded-3 mb-3">
+                        <div class="p-3 bg-light rounded-3 mb-3 border">
                             <div class="d-flex justify-content-between mb-1">
-                                <small class="text-muted fw-semibold">Target Outlay:</small>
-                                <span class="fw-bold text-success">${p.budget}</span>
+                                <span class="small text-muted fw-semibold">Target Outlay:</span>
+                                <span class="fw-bold text-success num">${p.budget}</span>
                             </div>
                             <div class="d-flex justify-content-between">
-                                <small class="text-muted fw-semibold">Sponsor:</small>
-                                <small class="fw-bold text-dark">${p.sponsor}</small>
+                                <span class="small text-muted fw-semibold">Status:</span>
+                                <span class="small fw-bold text-dark">${p.sponsor}</span>
                             </div>
                             ${p.progressPct > 0 ? `
                                 <div class="progress mt-2" style="height: 6px;">
-                                    <div class="progress-bar bg-success" style="width: ${p.progressPct}%"></div>
+                                    <div class="progress-bar bg-success" role="progressbar" style="width: ${p.progressPct}%;" aria-valuenow="${p.progressPct}" aria-valuemin="0" aria-valuemax="100"></div>
                                 </div>
                             ` : ''}
                         </div>
 
-                        <div class="d-flex gap-2">
-                            <button class="btn btn-sm btn-outline-primary w-50 fw-bold" data-project-id="${p.id}" onclick="downloadProjectPDF(sampleProjects.find(x=>x.id==='${p.id}'))">
-                                <i class="bi bi-file-earmark-pdf me-1"></i> PDF Brief
+                        <div class="d-flex gap-2 mt-auto">
+                            <button class="btn btn-sm btn-outline-primary w-50 fw-bold rounded-pill" data-project-id="${p.id}" onclick="downloadProjectPDF(sampleProjects.find(x=>x.id==='${p.id}'))">
+                                <i class="bi bi-file-earmark-pdf me-1" aria-hidden="true"></i> PDF Brief
                             </button>
-                            <a href="index.html?sector=${encodeURIComponent(p.sector)}&project=${encodeURIComponent(p.title)}#partner-form" class="btn btn-sm btn-primary w-50 fw-bold btn-shine">
-                                <i class="bi bi-heart-fill me-1"></i> Adopt
+                            <a href="index.html?sector=${encodeURIComponent(p.sector)}&project=${encodeURIComponent(p.title)}#partner-form" class="btn btn-sm btn-primary w-50 fw-bold rounded-pill btn-shine">
+                                <i class="bi bi-heart-fill me-1" aria-hidden="true"></i> Adopt
                             </a>
                         </div>
-                    </div>
+                    </article>
                 </div>
             `).join('');
         }
 
         function filterProjects() {
-            const query = document.getElementById("search-input").value.toLowerCase();
+            const query = (document.getElementById("search-input").value || "").toLowerCase().trim();
             const sector = document.getElementById("sector-filter").value;
             const mandal = document.getElementById("mandal-filter").value;
 
             const filtered = sampleProjects.filter(p => {
-                const matchQuery = p.title.toLowerCase().includes(query) || p.description.toLowerCase().includes(query) || p.mandal.toLowerCase().includes(query);
+                const matchQuery = !query || p.title.toLowerCase().includes(query) || p.description.toLowerCase().includes(query) || p.mandal.toLowerCase().includes(query);
                 const matchSector = (sector === "All") || (p.sector === sector);
                 const matchMandal = (mandal === "All") || (p.mandal === mandal);
                 return matchQuery && matchSector && matchMandal;

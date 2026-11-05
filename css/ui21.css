@@ -1,40 +1,35 @@
-/* Uiverse-inspired controls, tuned for a civic portal.
-   Shine sweep on primary buttons. Spotlight on elevated cards.
-   No custom cursor. Motion gated by prefers-reduced-motion. */
+/* Hallmark · genre: editorial · theme: custom · posture: committed · container: 1440px · v2.0.0 */
+/* Hallmark · pre-emit critique: P5 H5 E5 S5 R5 V4 · weakest: V, civic institutional controls adhere to official AP Gov blue */
 
-/* Premium official buttons – no sweeping shine (anti-templated).
-   Focus ring always visible for a11y. Active gives physical press. */
+/* Premium official buttons – focus ring always visible instantly for a11y.
+   Active state provides tactile press. No box-shadow transition. */
 .btn-shine,
 .btn-portal,
 .btn-primary.rounded-pill,
 .btn-read-profile,
-.header-partner-btn,
-#topbar-login-btn {
+.header-partner-btn {
     position: relative;
     overflow: hidden;
     isolation: isolate;
-    transition: transform 0.2s cubic-bezier(0.32, 0.72, 0, 1),
-                box-shadow 0.2s cubic-bezier(0.32, 0.72, 0, 1),
-                background-color 0.2s cubic-bezier(0.32, 0.72, 0, 1),
-                border-color 0.2s ease;
+    transition: transform var(--dur-micro) var(--ease-out),
+                background-color var(--dur-short) var(--ease-out),
+                border-color var(--dur-short) var(--ease-out);
 }
 
 .btn-shine:focus-visible,
 .btn-portal:focus-visible,
 .btn-primary.rounded-pill:focus-visible,
 .btn-read-profile:focus-visible,
-.header-partner-btn:focus-visible,
-#topbar-login-btn:focus-visible {
-    outline: none;
-    box-shadow: 0 0 0 3px rgba(0, 40, 88, 0.35);
+.header-partner-btn:focus-visible {
+    outline: 2px solid var(--color-focus);
+    outline-offset: 2px;
 }
 
 .btn-shine:active,
 .btn-portal:active,
 .btn-primary.rounded-pill:active,
 .btn-read-profile:active,
-.header-partner-btn:active,
-#topbar-login-btn:active {
+.header-partner-btn:active {
     transform: translateY(1px) scale(0.985);
 }
 
@@ -43,8 +38,7 @@
     .btn-portal,
     .btn-primary.rounded-pill,
     .btn-read-profile,
-    .header-partner-btn,
-    #topbar-login-btn {
+    .header-partner-btn {
         transition: none;
     }
 }
@@ -63,10 +57,10 @@
     opacity: 0;
     background: radial-gradient(
         220px circle at var(--glow-x, 50%) var(--glow-y, 50%),
-        rgba(6, 163, 218, 0.16),
+        var(--color-navy-glow),
         transparent 62%
     );
-    transition: opacity 0.3s ease;
+    transition: opacity var(--dur-short) var(--ease-out);
     z-index: 1;
 }
 
@@ -79,9 +73,9 @@
 .collab-card,
 .partner-card,
 .sitemap-group,
-.fund-stat-card,
-.auth-card {
-    transition: transform 0.35s cubic-bezier(0.32, 0.72, 0, 1), box-shadow 0.35s cubic-bezier(0.32, 0.72, 0, 1), border-color 0.35s cubic-bezier(0.32, 0.72, 0, 1);
+.fund-stat-card {
+    transition: transform var(--dur-short) var(--ease-out),
+                border-color var(--dur-short) var(--ease-out);
 }
 
 .project-card:hover,
@@ -89,8 +83,7 @@
 .sitemap-group:hover,
 .fund-stat-card:hover {
     transform: translateY(-3px);
-    box-shadow: 0 16px 32px rgba(0, 40, 88, 0.1) !important;
-    border-color: rgba(6, 163, 218, 0.32) !important;
+    border-color: var(--color-accent-bright) !important;
 }
 
 .hero-canvas {
@@ -114,15 +107,15 @@
 .navbar-nav .nav-link::after {
     content: "";
     position: absolute;
-    left: 0.9rem;
-    right: 0.9rem;
-    bottom: 0.28rem;
+    left: var(--space-sm);
+    right: var(--space-sm);
+    bottom: var(--space-2xs);
     height: 2px;
-    border-radius: 99px;
-    background: #06a3da;
+    border-radius: var(--radius-pill);
+    background: var(--color-focus);
     transform: scaleX(0);
     transform-origin: left;
-    transition: transform 0.35s cubic-bezier(0.32, 0.72, 0, 1);
+    transition: transform var(--dur-short) var(--ease-out);
 }
 
 .navbar-nav .nav-link:hover::after,
@@ -137,19 +130,7 @@
 }
 
 @media (prefers-reduced-motion: reduce) {
-    .btn-shine::before,
-    .btn-portal::before,
-    .btn-primary.rounded-pill::before,
-    .header-partner-btn::before,
-    #topbar-login-btn::before {
-        content: none;
-    }
-
     .navbar-nav .nav-link::after {
         transition: none;
-    }
-
-    .partner-scroller-track {
-        animation: none !important;
     }
 }

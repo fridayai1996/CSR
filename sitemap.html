@@ -5,65 +5,69 @@
     <meta charset="utf-8">
     <title>Site Map | Sri Sathya Sai District CSR Portal</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <meta name="description"
-        content="HTML site map for the official Sri Sathya Sai District CSR Portal covering public pages, priority projects, and district policies.">
+    <meta name="description" content="HTML site map for the official Sri Sathya Sai District CSR Portal covering public pages, priority projects, and district policies.">
     <link rel="canonical" href="https://www.srisathyasaicsr.com/sitemap.html">
-    <meta property="og:title" content="Site Map | Sri Sathya Sai District CSR Portal">
-    <meta property="og:url" content="https://www.srisathyasaicsr.com/sitemap.html">
-    <meta property="og:type" content="website">
     <link href="img/csr_logo.png" rel="icon" type="image/png">
+    
+    <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Icon Font Stylesheet -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
-    <link href="bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Vendor CSS via CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Bespoke Tokens & Stylesheets -->
+    <link href="css/tokens.css" rel="stylesheet">
+    <link href="css/base.css" rel="stylesheet">
     <link href="style.css" rel="stylesheet">
     <link href="css/premium.css" rel="stylesheet">
     <link href="css/ui21.css?v=20260901d" rel="stylesheet">
 </head>
 
 <body class="sitemap-page">
-    <div id="spinner"
-        class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
-        <div class="spinner"></div>
-    </div>
+    <!-- Skip to main content -->
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+
     <div id="site-header"></div>
 
-    <main id="main-content" class="py-5">
-        <div class="container sitemap-shell">
-            <p class="text-uppercase fw-semibold mb-2" style="letter-spacing: 0.12em; font-size: 0.72rem; color: #06a3da;">
-                Official directory
-            </p>
-            <h1 class="display-6 fw-bold mb-3">Site map</h1>
-            <p class="lead mb-5" style="max-width: 62ch;">Find every public page on the Sri Sathya Sai District CSR Portal, including priority development projects, focus sectors, and governance policies.</p>
+    <header class="hero-banner text-center" role="banner">
+        <div class="container">
+            <h1 class="display-4 fw-bold mx-auto">Portal Site Map</h1>
+            <p class="hero-lede mx-auto">Directory of all public pages, project indexes, and statutory policies.</p>
+        </div>
+    </header>
 
+    <main id="main-content" class="py-5" role="main">
+        <div class="container sitemap-shell">
             <div class="row g-4">
                 <div class="col-md-6">
-                    <nav class="sitemap-group" aria-labelledby="sm-public">
-                        <h2 id="sm-public">Public Pages & Portals</h2>
+                    <nav class="sitemap-group h-100" aria-labelledby="sm-public">
+                        <h2 id="sm-public">Public Pages &amp; Portals</h2>
                         <a href="index.html">Home / CSR Facilitation Desk</a>
                         <a href="about-district.html">About the District</a>
                         <a href="projects.html">Priority Projects Directory</a>
-                        <a href="contact-us.html">Contact Us & Helpdesk</a>
+                        <a href="contact-us.html">Contact Us &amp; Helpdesk</a>
                         <a href="index.html#focus-sectors">Focus Sectors</a>
                         <a href="index.html#partners">Corporate Partners</a>
-                        <a href="index.html#partner-form">Expression of Interest (EoI) Form</a>
+                        <a href="index.html#partner-form">Expression of Interest (EOI) Form</a>
                     </nav>
                 </div>
                 <div class="col-md-6">
-                    <nav class="sitemap-group" aria-labelledby="sm-policy">
-                        <h2 id="sm-policy">Policies & Legal Framework</h2>
+                    <nav class="sitemap-group h-100" aria-labelledby="sm-policy">
+                        <h2 id="sm-policy">Policies &amp; Legal Framework</h2>
                         <a href="website-policies.html">Website Policies</a>
-                        <a href="privacy-policy.html">Privacy Policy / DPDP Notice</a>
+                        <a href="privacy-policy.html">Privacy Policy &amp; DPDP Notice</a>
                         <a href="https://srisathyasai.ap.gov.in/help/" target="_blank" rel="noopener noreferrer">District Helpdesk (ap.gov.in)</a>
                         <a href="https://srisathyasai.ap.gov.in/feedback/" target="_blank" rel="noopener noreferrer">District Feedback (ap.gov.in)</a>
                     </nav>
                 </div>
                 <div class="col-md-6">
-                    <nav class="sitemap-group" aria-labelledby="sm-index">
+                    <nav class="sitemap-group h-100" aria-labelledby="sm-index">
                         <h2 id="sm-index">Machine-Readable Index</h2>
                         <a href="sitemap.xml">XML sitemap</a>
                         <a href="robots.txt">robots.txt</a>
@@ -74,8 +78,10 @@
     </main>
 
     <div id="site-footer"></div>
-    <a href="#" class="btn btn-lg btn-primary btn-lg-square rounded-circle back-to-top" aria-label="Back to top"><i
-            class="bi bi-arrow-up"></i></a>
+    <a href="#main-content" class="btn btn-primary rounded-circle btn-lg-square back-to-top" aria-label="Back to top">
+        <i class="bi bi-arrow-up" aria-hidden="true"></i>
+    </a>
+
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="js/csr-client.js"></script>
