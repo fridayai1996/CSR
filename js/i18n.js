@@ -22,7 +22,7 @@
 
             // Hero Section
             "hero_badge": "Official District CSR Cell",
-            "hero_title": "Connecting Corporate Social Responsibility with District Development",
+            "hero_title": "Connecting CSR & Philanthropy with District Development",
             "hero_subtitle": "Facilitating single-window CSR approvals, transparent milestone tracking, and high-impact rural development across Sri Sathya Sai District.",
             "btn_explore_projects": "Explore Priority Projects",
             "btn_submit_eoi": "Partner With Us",
@@ -52,20 +52,20 @@
             // Collector's Message
             "collector_name": "Sri A. Shyam Prasad, I.A.S",
             "collector_designation": "Collector & District Magistrate, AP",
-            "collector_quote": "\"Corporate partnerships are a transformative force capable of driving positive change across education, healthcare, environmental sustainability, skill development, and infrastructure. I extend an invitation to corporate leaders and foundations to join hands with the Sri Sathya Sai District Administration in building model, resilient communities.\"",
+            "collector_quote": "\"Partnerships are a transformative force capable of driving positive change across education, healthcare, environmental sustainability, skill development, and infrastructure. I extend an invitation to development leaders, trusts, and foundations to join hands with the Sri Sathya Sai District Administration in building model, resilient communities.\"",
 
             // Partners & Scroller
-            "partner_title": "Corporate Social Responsibility Partners",
+            "partner_title": "CSR & Development Partners",
             "partner_subtitle": "Featuring Major Industrial Contributors in Sri Sathya Sai District",
             "partner_stream_dmf": "District Mineral Foundation (DMF)",
             "partner_stream_csr": "District CSR Facilitation Stream",
             "partner_onboarding": "Onboarding Open",
-            "partner_join_title": "Your Company Logo",
+            "partner_join_title": "Your Organisation",
             "partner_join_sub": "Join as Founding CSR Partner",
 
             // Form
             "form_title": "Submit CSR Partnership Proposal",
-            "form_company": "Company / Foundation Name",
+            "form_company": "Organisation / Foundation Name",
             "form_person": "Contact Person Name",
             "form_email": "Official Email",
             "form_phone": "Phone Number",
@@ -79,17 +79,17 @@
             "login_subtitle": "Select your authorization role to access the workspace",
             "role_collector": "District Collector",
             "role_nodal": "CSR Nodal Officer",
-            "role_sponsor": "Corporate Sponsor",
+            "role_sponsor": "Development Partner",
 
             // Dashboard Headers
             "dash_collector_title": "District Collectorate Executive Dashboard",
             "dash_nodal_title": "CSR Nodal Officer Workspace & User Management",
-            "dash_sponsor_title": "Corporate Partner CSR Impact Dashboard",
+            "dash_sponsor_title": "Partner CSR Impact Dashboard",
 
             // Footer & DPDP Compliance
             "privacy_policy": "Privacy Policy & DPDP Compliance",
             "dpdp_consent_title": "Digital Personal Data Protection Act, 2023 Notice",
-            "dpdp_consent_label": "I hereby give free, specific, informed, and explicit consent to Sri Sathya Sai District Administration to collect and process my contact details for corporate CSR proposal facilitation and verification under the Digital Personal Data Protection Act, 2023."
+            "dpdp_consent_label": "I hereby give free, specific, informed, and explicit consent to Sri Sathya Sai District Administration to collect and process my contact details for CSR proposal facilitation and verification under the Digital Personal Data Protection Act, 2023."
         },
         te: {
             // Header & Navigation
@@ -144,12 +144,12 @@
             "partner_stream_dmf": "డిస్ట్రిక్ట్ మినరల్ ఫౌండేషన్ (DMF)",
             "partner_stream_csr": "జిల్లా సి.ఎస్.ఆర్ ఫెసిలిటేషన్ విభాగం",
             "partner_onboarding": "భాగస్వామ్య అవకాశం ఉంది",
-            "partner_join_title": "మీ కంపెనీ లోగో",
+            "partner_join_title": "మీ సంస్థ",
             "partner_join_sub": "సి.ఎస్.ఆర్ భాగస్వామిగా చేరండి",
 
             // Form
             "form_title": "సి.ఎస్.ఆర్ ప్రతిపాదన సమర్పణ పత్రం",
-            "form_company": "కంపెనీ / ఫౌండేషన్ పేరు",
+            "form_company": "సంస్థ / ఫౌండేషన్ పేరు",
             "form_person": "సంప్రదించాల్సిన వ్యక్తి పేరు",
             "form_email": "అధికారిక ఈమెయిల్",
             "form_phone": "ఫోన్ నంబరు",
@@ -163,12 +163,12 @@
             "login_subtitle": "మీ హోదాకు తగిన లాగిన్‌ను ఎంచుకోండి",
             "role_collector": "జిల్లా కలెక్టర్ గారు",
             "role_nodal": "సి.ఎస్.ఆర్ నోడల్ అధికారి",
-            "role_sponsor": "కార్పొరేట్ స్పాన్సర్",
+            "role_sponsor": "అభివృద్ధి భాగస్వామి",
 
             // Dashboard Headers
             "dash_collector_title": "జిల్లా కలెక్టరేట్ ఎగ్జిక్యూటివ్ డ్యాష్‌బోర్డ్",
             "dash_nodal_title": "నోడల్ ఆఫీసర్ నిర్వహణ వర్క్‌స్పేస్",
-            "dash_sponsor_title": "కార్పొరేట్ భాగస్వామి సి.ఎస్.ఆర్ డ్యాష్‌బోర్డ్",
+            "dash_sponsor_title": "భాగస్వామి సి.ఎస్.ఆర్ డ్యాష్‌బోర్డ్",
 
             // Footer & DPDP Compliance
             "privacy_policy": "డిజిటల్ వ్యక్తిగత డేటా రక్షణ విధానం (DPDP)",

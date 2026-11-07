@@ -16,7 +16,7 @@
             lng: 77.5898,
             sector: "Education",
             budget: "₹1.20 Crores",
-            sponsor: "Open for Corporate Adoption",
+            sponsor: "In Progress",
             status: "In Progress",
             description: "Advanced EV automotive skills lab and youth training facility adjacent to Penukonda Industrial Hub."
         },
@@ -28,7 +28,7 @@
             lng: 77.8114,
             sector: "Health",
             budget: "₹85 Lakhs",
-            sponsor: "Available for Sponsorship",
+            sponsor: "Open for Adoption",
             status: "Proposed",
             description: "Solar-powered tele-consultation kiosks connecting rural mandal health centers to Puttaparthi specialists."
         },
@@ -40,7 +40,7 @@
             lng: 77.4932,
             sector: "Drains",
             budget: "₹2.50 Crores",
-            sponsor: "Available for Sponsorship",
+            sponsor: "Open for Adoption",
             status: "Proposed",
             description: "High-capacity closed storm drainage and bio-filter water treatment plant for Hindupur sub-division."
         },
@@ -64,7 +64,7 @@
             lng: 78.1585,
             sector: "Drains",
             budget: "₹60 Lakhs",
-            sponsor: "Available for Sponsorship",
+            sponsor: "Open for Adoption",
             status: "Proposed",
             description: "High-yield community RO water plants serving 15 fluoride-affected habitations in Kadiri division."
         },
@@ -76,7 +76,7 @@
             lng: 77.6083,
             sector: "Solar",
             budget: "₹35 Lakhs",
-            sponsor: "Available for Sponsorship",
+            sponsor: "Open for Adoption",
             status: "Proposed",
             description: "Smart solar street illumination and avenue tree plantation along the historical Lepakshi tourist corridor."
         },
@@ -88,7 +88,7 @@
             lng: 77.2694,
             sector: "Health",
             budget: "₹50 Lakhs",
-            sponsor: "Available for Sponsorship",
+            sponsor: "Open for Adoption",
             status: "Proposed",
             description: "Mobile medical unit equipped with diagnostic kits servicing remote border mandals."
         },
@@ -100,7 +100,7 @@
             lng: 78.2667,
             sector: "Solar",
             budget: "₹1.80 Crores",
-            sponsor: "Available for Sponsorship",
+            sponsor: "Open for Adoption",
             status: "Proposed",
             description: "Rooftop solar installations for government hospitals and gram panchayat buildings."
         }

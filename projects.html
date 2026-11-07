@@ -86,15 +86,19 @@
                 <div class="col-lg-3 col-md-6">
                     <label for="sector-filter" class="form-label small fw-semibold text-muted">Priority Sector</label>
                     <select id="sector-filter" class="form-select form-select-sm" aria-label="Filter by priority sector">
-                        <option value="All">All Priority Sectors</option>
-                        <option value="Education & Digital Learning">Education &amp; Digital Learning</option>
-                        <option value="Healthcare & Diagnostics">Healthcare &amp; Diagnostics</option>
-                        <option value="Social Welfare & Hostels">Social Welfare &amp; Hostels</option>
-                        <option value="Anganwadi & Child Development">Anganwadi &amp; Child Development</option>
-                        <option value="Livelihoods & Women’s Empowerment">Livelihoods &amp; Women’s Empowerment</option>
-                        <option value="Skill Development & Employment">Skill Development &amp; Employment</option>
-                        <option value="Drinking Water & Sanitation">Drinking Water &amp; Sanitation</option>
-                        <option value="Environmental Sustainability">Environmental Sustainability</option>
+                        <option value="All">All Statutory Sectors (Schedule VII)</option>
+                        <option value="Healthcare & Sanitation">1. Healthcare &amp; Sanitation (Item i)</option>
+                        <option value="Smart Education & Skills">2. Smart Education &amp; Skills (Item ii)</option>
+                        <option value="Gender Equality & Women Care">3. Gender Equality &amp; Women Care (Item iii)</option>
+                        <option value="Environmental Sustainability">4. Environmental Sustainability (Item iv)</option>
+                        <option value="Heritage & Culture">5. Heritage &amp; Culture (Item v)</option>
+                        <option value="Armed Forces & Veteran Welfare">6. Armed Forces &amp; Veteran Welfare (Item vi)</option>
+                        <option value="Rural & Olympic Sports">7. Rural &amp; Olympic Sports (Item vii)</option>
+                        <option value="Socio-Economic Welfare Funds">8. SC/ST &amp; Socio-Economic Welfare (Item viii)</option>
+                        <option value="Incubators, R&D & SDGs">9. Incubators, R&amp;D &amp; SDGs (Item ix)</option>
+                        <option value="Rural Development Projects">10. Rural Development Projects (Item x)</option>
+                        <option value="Slum Area Development">11. Slum Area Development (Item xi)</option>
+                        <option value="Disaster Management">12. Disaster Management (Item xii)</option>
                     </select>
                 </div>
 
@@ -186,119 +190,175 @@
     <script>
         let allProjects = [];
 
-        // Fallback verified proposals adhering to the Concept Note PDF (Zero company names)
+        // Fallback verified proposals adhering to the Concept Note PDF (Zero company names - All 12 Statutory Sectors)
         const DEFAULT_PROPOSALS = [
             {
                 id: 1,
-                title: "Digital Learning Infrastructure for Government High Schools",
-                mandal: "District-wide",
-                sector: "Education & Digital Learning",
-                budget: "₹25.00 Lakhs",
-                sponsor: "Open for Corporate Adoption",
+                title: "Safe RO Drinking Water Hubs & Community Nutrition Centers",
+                mandal: "Kadiri & NP Kunta",
+                sector: "Healthcare & Sanitation",
+                budget: "₹1.50 Crores",
+                sponsor: "Open for Adoption",
                 status: "Proposed",
-                beneficiaries: "1,000 students across 10 high schools",
+                beneficiaries: "15,000 rural residents across fluorosis habitations",
                 priority: "High Priority",
-                components: "Computer lab setup, interactive digital smartboards, teacher ICT orientation, 3-year warranty and maintenance",
-                outcomes: "Measurable improvement in STEM learning outcomes and 100% digital literacy for secondary grades",
-                dpr_code: "DPR-EDU-2026-01"
+                components: "15 community solar-powered RO water filtration hubs, 2,000 LPH treatment plants, automated smart-card dispensing, nutrition counseling suites",
+                outcomes: "100% elimination of water-borne and fluorosis-induced ailments, assured potable water security",
+                dpr_code: "DPR-WTR-01"
             },
             {
                 id: 2,
-                title: "Primary Health Centre (PHC) Diagnostic & Mobile Screening Equipment",
-                mandal: "Puttaparthi & Penukonda",
-                sector: "Healthcare & Diagnostics",
-                budget: "₹45.00 Lakhs",
-                sponsor: "Open for Corporate Adoption",
-                status: "Proposed",
-                beneficiaries: "12,000 rural residents & expectant mothers",
+                title: "Smart Digital High Schools, STEM Labs & EV Skill Hub",
+                mandal: "Penukonda & Puttaparthi",
+                sector: "Smart Education & Skills",
+                budget: "₹2.00 Crores",
+                sponsor: "In Progress",
+                status: "In Progress",
+                beneficiaries: "2,500 students & 400 youth trainees",
                 priority: "High Priority",
-                components: "Fully equipped Mobile Health Screening Unit, digital X-ray, automated hematology analyzers, ultrasound diagnostic kit",
-                outcomes: "Early detection of non-communicable diseases, routine maternal screenings, reduced referral transit times",
-                dpr_code: "DPR-HLT-2026-02"
+                components: "Interactive smart digital panels across 25 ZP schools, STEM robotics kits, high-speed computer labs, EV technician diagnostics workstations",
+                outcomes: "Measurable jump in secondary board STEM results, 100% digital literacy, certified EV technician employability",
+                dpr_code: "DPR-EDU-02"
             },
             {
                 id: 3,
-                title: "SC & BC Welfare Hostels Modernization & Sanitation Overhaul",
-                mandal: "District-wide (42 Hostels)",
-                sector: "Social Welfare & Hostels",
-                budget: "₹65.00 Lakhs",
-                sponsor: "District CSR Facilitation Stream",
-                status: "In Progress",
-                beneficiaries: "3,200 residential students",
+                title: "Working Women Hostels & Senior Citizen Daycare Homes",
+                mandal: "Dharmavaram",
+                sector: "Gender Equality & Women Care",
+                budget: "₹1.20 Crores",
+                sponsor: "Open for Adoption",
+                status: "Proposed",
+                beneficiaries: "450 women weavers & 120 senior citizens",
                 priority: "High Priority",
-                components: "High-capacity RO drinking water plants, solar hot water geysers, hygienic modern dining halls, tiled sanitation blocks",
-                outcomes: "Safe residential living conditions, zero water-borne infections, dignified stay for marginalized students",
-                dpr_code: "DPR-WLF-2026-03"
+                components: "Safe residential hostel accommodation, hygienic dining halls, solar hot water geysers, medical emergency room, daycare recreational wing",
+                outcomes: "Safe working environment for silk artisan women, dignified elderly care, reduced socioeconomic inequality",
+                dpr_code: "DPR-WLF-03"
             },
             {
                 id: 4,
-                title: "Model Anganwadi Child-Friendly Centers & Toddler Nutrition Upgrades",
-                mandal: "Dharmavaram & Madakasira",
-                sector: "Anganwadi & Child Development",
-                budget: "₹30.00 Lakhs",
-                sponsor: "Open for Corporate Adoption",
+                title: "Soil-Water Conservation & Solar Micro-Grid Network",
+                mandal: "NP Kunta & Mudigubba",
+                sector: "Environmental Sustainability",
+                budget: "₹1.80 Crores",
+                sponsor: "Open for Adoption",
                 status: "Proposed",
-                beneficiaries: "850 infants, toddlers & nursing mothers",
-                priority: "High Priority",
-                components: "Child-safe learning spaces, educational toys & play equipment, clean drinking water systems, fortified food prep counters",
-                outcomes: "Drastic reduction in severe acute malnutrition (SAM) and improved pre-school cognitive readiness",
-                dpr_code: "DPR-ICDS-2026-04"
+                beneficiaries: "8,000 farming households & 20 public facilities",
+                priority: "Medium Priority",
+                components: "Check-dam watershed catchment treatment, rooftop solar micro-grids with lithium-ion storage, automated soil monitors",
+                outcomes: "1.8m groundwater table recharge, 120 metric tons CO2 offset annually, uninterrupted green power for rural institutions",
+                dpr_code: "DPR-ENV-04"
             },
             {
                 id: 5,
-                title: "Rural Women Self-Help Group (SHG) Sericulture & Weaving Enterprises",
-                mandal: "Dharmavaram & Lepakshi",
-                sector: "Livelihoods & Women’s Empowerment",
-                budget: "₹50.00 Lakhs",
-                sponsor: "Open for Corporate Adoption",
+                title: "Lepakshi Heritage Restoration & E-Library Network",
+                mandal: "Lepakshi",
+                sector: "Heritage & Culture",
+                budget: "₹85.00 Lakhs",
+                sponsor: "Open for Adoption",
                 status: "Proposed",
-                beneficiaries: "450 women artisans & silk weavers",
+                beneficiaries: "35,000 annual visitors & 1,200 local students",
                 priority: "Medium Priority",
-                components: "Modern motorized silk reeling machines, computerized jacquard design workstations, common processing center, market linkages",
-                outcomes: "Direct monthly income increase of ₹6,500+ per artisan household and revival of traditional Lepakshi craft motifs",
-                dpr_code: "DPR-LIV-2026-05"
+                components: "Heritage corridor illumination, artisan craft facilitation kiosk, digital archive library, tourist eco-amenities",
+                outcomes: "Preservation of historical Vijayanagara monuments, cultural education, livelihood boost for local craft clusters",
+                dpr_code: "DPR-HRT-05"
             },
             {
                 id: 6,
-                title: "Youth Vocational Technical Skill Development & EV Training Hub",
-                mandal: "Penukonda Industrial Corridor",
-                sector: "Skill Development & Employment",
-                budget: "₹80.00 Lakhs",
-                sponsor: "District CSR Facilitation Stream",
-                status: "In Progress",
-                beneficiaries: "600 rural youths per annum",
-                priority: "High Priority",
-                components: "Electric Vehicle (EV) assembly & battery diagnostics lab, CNC mechatronics tools, industry certification curriculum",
-                outcomes: "Guaranteed 85%+ formal sector placements in Penukonda automobile manufacturing hub",
-                dpr_code: "DPR-SKL-2026-06"
+                title: "Armed Forces Veterans & Veer Nari Welfare Facilities",
+                mandal: "Puttaparthi",
+                sector: "Armed Forces & Veteran Welfare",
+                budget: "₹50.00 Lakhs",
+                sponsor: "Open for Adoption",
+                status: "Proposed",
+                beneficiaries: "850 ex-servicemen & widows",
+                priority: "Medium Priority",
+                components: "Nodal health and rehabilitation clinic, legal aid desk, counseling suites, skill retraining lab for dependents",
+                outcomes: "Assured medical rehabilitation, dignified pension assistance, employment transition for military families",
+                dpr_code: "DPR-VET-06"
             },
             {
                 id: 7,
-                title: "Rural Habitations Solar-Powered Safe Drinking Water RO Network",
-                mandal: "Kadiri & NP Kunta",
-                sector: "Drinking Water & Sanitation",
-                budget: "₹40.00 Lakhs",
-                sponsor: "Open for Corporate Adoption",
+                title: "Rural Sports Training Complex & Paralympic Coaching",
+                mandal: "Dharmavaram & Penukonda",
+                sector: "Rural & Olympic Sports",
+                budget: "₹75.00 Lakhs",
+                sponsor: "Open for Adoption",
                 status: "Proposed",
-                beneficiaries: "8,500 villagers across 8 fluorosis-affected habitations",
+                beneficiaries: "1,500 rural youth athletes",
                 priority: "High Priority",
-                components: "2,000 LPH RO water treatment plants powered by dedicated solar PV rooftop arrays and automated smart water-card dispensing",
-                outcomes: "Complete elimination of fluoride-induced ailments and assured potable water security",
-                dpr_code: "DPR-WTR-2026-07"
+                components: "400m synthetic running track, multi-sport indoor hall, para-athlete coaching equipment, athletic nutrition clinic",
+                outcomes: "Grassroots athletic talent development, district-level sports tournaments, inclusive para-sport participation",
+                dpr_code: "DPR-SPT-07"
             },
             {
                 id: 8,
-                title: "Solar Micro-Grid & Energy Self-Sufficiency for Government High Schools",
-                mandal: "NP Kunta & Puttaparthi",
-                sector: "Environmental Sustainability",
-                budget: "₹35.00 Lakhs",
-                sponsor: "Open for Corporate Adoption",
+                title: "SC & ST Welfare Hostels Sanitation & Living Infrastructure",
+                mandal: "District-wide (42 Hostels)",
+                sector: "Socio-Economic Welfare Funds",
+                budget: "₹1.10 Crores",
+                sponsor: "In Progress",
+                status: "In Progress",
+                beneficiaries: "3,200 residential students",
+                priority: "High Priority",
+                components: "Commercial RO drinking water plants, solar hot water systems, modern student dormitories, hygienic tiled sanitation blocks",
+                outcomes: "Dignified living conditions, 100% elimination of skin and water-borne infections, improved academic retention",
+                dpr_code: "DPR-SCST-08"
+            },
+            {
+                id: 9,
+                title: "Rural AgTech Incubator & Sustainable Farming Research",
+                mandal: "Puttaparthi & Gorantla",
+                sector: "Incubators, R&D & SDGs",
+                budget: "₹2.50 Crores",
+                sponsor: "Open for Adoption",
                 status: "Proposed",
-                beneficiaries: "4,500 students & administrative facilities",
+                beneficiaries: "12,000 small and marginal dryland farmers",
                 priority: "Medium Priority",
-                components: "5 kW to 10 kW hybrid solar rooftop installations with lithium-ion battery banks, net-metering synchronization, energy monitors",
-                outcomes: "Zero power disruption for digital smart classes and offset of 65 metric tons of CO2 annually",
-                dpr_code: "DPR-ENV-2026-08"
+                components: "Soil IoT testing labs, climate-resilient seed trial beds, drone spraying demonstration, farmer producer center",
+                outcomes: "22% reduction in farm input costs, adoption of drought-hardy millets, scientific farming advice dissemination",
+                dpr_code: "DPR-RND-09"
+            },
+            {
+                id: 10,
+                title: "All-Weather Rural Connectivity, Solar Lighting & Water",
+                mandal: "Hindupur & Somandepalli",
+                sector: "Rural Development Projects",
+                budget: "₹3.00 Crores",
+                sponsor: "Open for Adoption",
+                status: "Proposed",
+                beneficiaries: "18,000 rural residents",
+                priority: "High Priority",
+                components: "Village approach roads, solar smart streetlights, underground drainage bio-filters, community waste disposal",
+                outcomes: "Year-round transport connectivity, public safety, reduction in stagnant vector breeding sites",
+                dpr_code: "DPR-RUR-10"
+            },
+            {
+                id: 11,
+                title: "Municipal Slum Habitations Drainage & Housing Upgrades",
+                mandal: "Kadiri & Hindupur",
+                sector: "Slum Area Development",
+                budget: "₹1.40 Crores",
+                sponsor: "Open for Adoption",
+                status: "Proposed",
+                beneficiaries: "6,500 urban poor residents",
+                priority: "High Priority",
+                components: "Closed masonry storm drains, paved internal lanes, shared community water points, solid waste segregation units",
+                outcomes: "Eradication of monsoon waterlogging, improved sanitation indices, dignified urban living",
+                dpr_code: "DPR-SLM-11"
+            },
+            {
+                id: 12,
+                title: "Drought Mitigation Check-Dams & Multi-Purpose Shelters",
+                mandal: "Bukkapatnam & Amadagur",
+                sector: "Disaster Management",
+                budget: "₹1.60 Crores",
+                sponsor: "Open for Adoption",
+                status: "Proposed",
+                beneficiaries: "9,200 residents in drought-vulnerable blocks",
+                priority: "High Priority",
+                components: "8 cascading stone check-dams, cyclone & disaster response shelters, emergency solar power backup, medical stores",
+                outcomes: "Sub-surface water conservation, safe emergency sheltering during flash floods, assured community resilience",
+                dpr_code: "DPR-DIS-12"
             }
         ];
 
@@ -422,8 +482,8 @@
                             <p class="mb-0"><strong>Expected Outcomes:</strong> ${p.outcomes || 'Measurable social & community impact.'}</p>
                         </div>
                         <div class="d-flex justify-content-between align-items-center pt-3 border-top mt-auto">
-                            <span class="badge bg-light text-dark border" style="font-size: 0.7rem;">
-                                ${p.sponsor || 'Open for Corporate Adoption'}
+                            <span class="badge bg-light text-primary border" style="font-size: 0.72rem;">
+                                <i class="bi bi-file-earmark-code me-1"></i>${p.dpr_code || 'DPR-VERIFIED'}
                             </span>
                             <div class="d-flex gap-2">
                                 <button type="button" class="btn btn-sm btn-outline-secondary rounded-pill px-3 py-1.5 fw-bold text-nowrap" onclick="openDprModal(${p.id})">
